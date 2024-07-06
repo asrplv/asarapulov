@@ -1,0 +1,2146 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>//asarapulov.ru</title>
+        <link>https://asarapulov.ru/</link>
+        <description>Recent content on //asarapulov.ru</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>ru-ru</language>
+        <lastBuildDate>Thu, 14 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://asarapulov.ru/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Alfred для macOS: пара автоматизаций</title>
+        <link>https://asarapulov.ru/p/alfred-dlya-macos-para-avtomatizaciy/</link>
+        <pubDate>Thu, 14 Dec 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://asarapulov.ru/p/alfred-dlya-macos-para-avtomatizaciy/</guid>
+        <description>&lt;img src="https://asarapulov.ru/p/alfred-dlya-macos-para-avtomatizaciy/index.jpg" alt="Featured image of post Alfred для macOS: пара автоматизаций" /&gt;&lt;p&gt;Иногда нам страсть как нужна автоматизация простых действий: для этого на mac как никто другой подойдет Alfred:  мощный инструмент для автоматизации задач и управления файлами на macOS. Кстати, для Windows рекомендую &lt;a class=&#34;link&#34; href=&#34;https://www.listary.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Listary&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;отделение-id-от-адреса-видео-youtube&#34;&gt;Отделение id от адреса видео Youtube&lt;/h2&gt;
+&lt;p&gt;Иными словами, нам нужно превратить &lt;a class=&#34;link&#34; href=&#34;https://www.youtube.com/watch?v=h9DuoJ6Tcrk&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.youtube.com/watch?v=h9DuoJ6Tcrk&lt;/a&gt; в &lt;em&gt;h9DuoJ6Tcrk&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Работать это будет так: пользователь вызывает Alfred (option + пробел), пишет команду &lt;code&gt;cu https://www.youtube.com/watch?v=h9DuoJ6Tcrk&lt;/code&gt;, нажимает Ввод и в буфере получает id.&lt;/p&gt;
+&lt;p&gt;
+
+&lt;img src=&#34;https://asarapulov.ru/p/alfred-dlya-macos-para-avtomatizaciy/2023-12-14_22-10-39.jpg&#34;
+	width=&#34;1562&#34;
+	height=&#34;416&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Примерно так выглядит процесс в Alfred&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;375&#34;
+		data-flex-basis=&#34;901px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Создайте новый рабочий поток:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Откройте настройки Alfred и перейдите в раздел &amp;ldquo;Workflows&amp;rdquo;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Нажмите на &amp;ldquo;+&amp;rdquo; в нижнем левом углу, чтобы добавить новый рабочий поток.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;Добавьте &amp;ldquo;Input&amp;rdquo; (Ввод):&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Выберите &amp;ldquo;Inputs&amp;rdquo; (Ввод) в левом боковом меню и добавьте &amp;ldquo;Keyword&amp;rdquo; (Ключевое слово).&lt;/li&gt;
+&lt;li&gt;Назовите ключевое слово, например, &amp;ldquo;cu&amp;rdquo; (что означает &amp;ldquo;YouTube Code&amp;rdquo;).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;Добавьте &amp;ldquo;Run Script&amp;rdquo; (Запустить сценарий):&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Выберите &amp;ldquo;Actions&amp;rdquo; (Действия) в левом боковом меню и добавьте &amp;ldquo;Run Script&amp;rdquo; (Запустить сценарий).&lt;/li&gt;
+&lt;li&gt;В разделе &amp;ldquo;Script&amp;rdquo; выберите &amp;ldquo;Bash Script&amp;rdquo; (Сценарий на Bash).&lt;/li&gt;
+&lt;li&gt;Введите следующий скрипт на Bash:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;url=$1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;videoID=$(echo $url | awk -F &amp;#39;[=&amp;amp;]&amp;#39; &amp;#39;/watch\?/{print $2}&amp;#39;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;echo $videoID | tr -d &amp;#39;\n&amp;#39; | pbcopy
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Этот скрипт извлекает идентификатор видео из URL YouTube и копирует его в буфер обмена.&lt;/p&gt;
+&lt;p&gt;
+
+&lt;img src=&#34;https://asarapulov.ru/p/alfred-dlya-macos-para-avtomatizaciy/2023-12-14_21-43-36.jpg&#34;
+	width=&#34;1178&#34;
+	height=&#34;1026&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;А вот так в Alfred можно добавить две команды на вызов в обеих раскладках&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;114&#34;
+		data-flex-basis=&#34;275px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;получение-favicon-по-url-сайта&#34;&gt;Получение favicon по URL-сайта&lt;/h2&gt;
+&lt;p&gt;Более сложная задача, которая потребует установки Python, но, насколько я помню, в macOS он устанавлен по умолчанию.&lt;/p&gt;
+&lt;p&gt;В чем заключается задача: пользователь вызывает Alfred и в поисковой строке пишет команду: &lt;code&gt;fav https://n-ber.ru&lt;/code&gt;, в ответ скрипт открывает в новой вкладке браузера фавиконку сайта.&lt;/p&gt;
+&lt;p&gt;Поиск фавиконок - та еще задача, поэтому я решил подключить библиотеку favicon: &lt;code&gt;pip install favicon&lt;/code&gt;. В процессе неизбежны ошибки, поэтому скрипт должен о них сообщать &amp;ndash; там же, в браузере.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Создайте новый рабочий поток:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Откройте настройки Alfred и перейдите в раздел &amp;ldquo;Workflows&amp;rdquo;.&lt;/li&gt;
+&lt;li&gt;Нажмите на &amp;ldquo;+&amp;rdquo; в нижнем левом углу, чтобы добавить новый рабочий поток.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;Добавьте &amp;ldquo;Input&amp;rdquo; (Ввод):&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Выберите &amp;ldquo;Inputs&amp;rdquo; (Ввод) в левом боковом меню и добавьте &amp;ldquo;Keyword&amp;rdquo; (Ключевое слово).&lt;/li&gt;
+&lt;li&gt;Назовите ключевое слово, например, &amp;ldquo;fav&amp;rdquo; (от &amp;ldquo;favicon&amp;rdquo;).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;Добавьте &amp;ldquo;Run Script&amp;rdquo; (Запустить сценарий):&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Выберите &amp;ldquo;Actions&amp;rdquo; (Действия) в левом боковом меню и добавьте &amp;ldquo;Run Script&amp;rdquo; (Запустить сценарий).&lt;/li&gt;
+&lt;li&gt;В разделе &amp;ldquo;Script&amp;rdquo; выберите &amp;ldquo;Language: /usr/bin/python3&amp;rdquo; и вставьте код на Python.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;Сохраните и настройте триггер:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Нажмите &amp;ldquo;Save&amp;rdquo; (Сохранить) в верхнем правом углу.&lt;/li&gt;
+&lt;li&gt;Присвойте триггер (комбинацию клавиш или ключевое слово) для активации этого рабочего потока.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;А вот и скрипт:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;import sys
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;from favicon import get
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;import webbrowser
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;url = sys.argv[1]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;user_agent = &amp;#39;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.47 Safari/537.36&amp;#39;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;headers = {&amp;#39;User-Agent&amp;#39;: user_agent}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;try:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    icons = get(url, headers=headers, timeout=2)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    if icons:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        icon_url = icons[0].url
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        print(f&amp;#34;Открываю фавикон: {icon_url}&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        sys.stdout.flush()
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        webbrowser.open(icon_url)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    else:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        error_message = f&amp;#34;Favicon not found for the site: {url}. &amp;#34; \
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                        f&amp;#34;Open &amp;lt;a target=&amp;#39;_blank&amp;#39; href=&amp;#39;view-source:{url}&amp;#39;&amp;gt;site&amp;#39;s source code&amp;lt;/a&amp;gt; manually.&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        webbrowser.open(f&amp;#34;data:text/html,{error_message}&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;except Exception as e:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    error_message = f&amp;#34;An error occurred: {e}. &amp;#34; \
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                    f&amp;#34;Open &amp;lt;a target=&amp;#39;_blank&amp;#39; href=&amp;#39;view-source:{url}&amp;#39;&amp;gt;site&amp;#39;s source code&amp;lt;/a&amp;gt; manually.&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    webbrowser.open(f&amp;#34;data:text/html,{error_message}&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Вот такие очень узкоспециализированные скрипта для Alfred, но на то он и Alfred, чтобы помогать в прикладных задачах :-)&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Яндекс Браузер не переводит Reddit, что делать?</title>
+        <link>https://asarapulov.ru/p/yandeks-brauzer-ne-perevodit-reddit-chto-delat/</link>
+        <pubDate>Wed, 04 Oct 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://asarapulov.ru/p/yandeks-brauzer-ne-perevodit-reddit-chto-delat/</guid>
+        <description>&lt;img src="https://asarapulov.ru/p/yandeks-brauzer-ne-perevodit-reddit-chto-delat/index.jpg" alt="Featured image of post Яндекс Браузер не переводит Reddit, что делать?" /&gt;&lt;p&gt;Проблема в следующем: если в Яндекс Браузере перейти на Reddit и выполнить полный перевод страницы через ПКМ -&amp;gt; Перевести на русский, то текст на сайте просто исчезает.&lt;/p&gt;
+&lt;p&gt;
+
+&lt;img src=&#34;https://asarapulov.ru/p/yandeks-brauzer-ne-perevodit-reddit-chto-delat/ya-browser-translator-reddit.gif&#34;
+	width=&#34;1338&#34;
+	height=&#34;629&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Причем текст исчезает по мере загрузки страницы&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;212&#34;
+		data-flex-basis=&#34;510px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Если быть точнее, то переведенный Яндекс Браузером текст на Реддите приобретает CSS-стиль &lt;code&gt;visibility: hidden;&lt;/code&gt;. Причем, в Chrome всё работает отлично. Я писал в техподдержку, но, к сожалению, проблема так и не была решена.&lt;/p&gt;
+&lt;p&gt;Берём всё в свои руки:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Устанавливаем расширение  &lt;a class=&#34;link&#34; href=&#34;https://chrome.google.com/webstore/detail/user-javascript-and-css/nbhcbdghjpllgmfilhnhkllmkecfmpld&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;User JavaScript and CSS&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Переходим на Reddit, справа вверху нажимаем на кнопку расширения и на жёлтую кнопку “Добавить”&lt;/li&gt;
+&lt;li&gt;В открывшемся окне в поле имя вводим &lt;code&gt;Reddit-translate-fix&lt;/code&gt;, в поле с адресом  &lt;code&gt;https://www.reddit.com/*&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;В правой большой текстовой области (CSS) вставляем следующее:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;:not(:defined):not(faceplate-auto-height-animator,faceplate-dropdown-menu,faceplate-expandable-section-helper,faceplate-hovercard,faceplate-tracker){
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;visibility: visible !important;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Нажимаем кнопку Сохранить, после чего видим, что страница отображается нормально, и Яндекс Браузер корректно показывает переведённую страницу Reddit’a.&lt;/p&gt;
+&lt;p&gt;
+
+&lt;img src=&#34;https://asarapulov.ru/p/yandeks-brauzer-ne-perevodit-reddit-chto-delat/result.jpg&#34;
+	width=&#34;794&#34;
+	height=&#34;587&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Результат работы расширения&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;135&#34;
+		data-flex-basis=&#34;324px&#34;
+	
+&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Удалённый мёд</title>
+        <link>https://asarapulov.ru/p/udalennyi-med/</link>
+        <pubDate>Mon, 18 Sep 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://asarapulov.ru/p/udalennyi-med/</guid>
+        <description>&lt;img src="https://asarapulov.ru/p/udalennyi-med/index.jpg" alt="Featured image of post Удалённый мёд" /&gt;&lt;h2 id=&#34;пчёлы-на-вуоксе&#34;&gt;Пчёлы на Вуоксе&lt;/h2&gt;
+&lt;p&gt;Неделю назад я с друзьями бывал на озере Вуокса в районе города Приозерск. Место это усеяно десятками островов с оборудованными стоянками. Можно приплыть на моторной лодке на один из них, тем самым разнообразить щепоткой “робинзониады” свой отдых на природе.&lt;/p&gt;
+&lt;p&gt;
+
+&lt;img src=&#34;https://asarapulov.ru/p/udalennyi-med/2023-09-0907-46-51.JPG&#34;
+	width=&#34;4032&#34;
+	height=&#34;3024&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Стоянка на острове Щук&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;133&#34;
+		data-flex-basis=&#34;320px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Мы выбрали место на острове Щук, напротив острова Цоя. Пожалуй, одна из самых продвинутых стоянок: балаган с каркасом под тент, стол со скамьями, качели, костровое место и даже туалет, стоящий в отдалении.&lt;/p&gt;
+&lt;p&gt;
+
+&lt;img src=&#34;https://asarapulov.ru/p/udalennyi-med/2023-09-0908-55-16.JPG&#34;
+	width=&#34;4032&#34;
+	height=&#34;3024&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Карельские валуны&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;133&#34;
+		data-flex-basis=&#34;320px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Так вот, к чему я об этом пишу? А к тому, что нашими “соседями” по этому месту стал рой пчёл, точнее какая-то часть роя. Несколько десятков насекомых облепили наши стол и все вещи, лежащие на нем. Особенно интересовались сладким и равномерно распределились за трехметровым столом, знатно потеснив нас.&lt;/p&gt;
+&lt;p&gt;
+
+&lt;img src=&#34;https://asarapulov.ru/p/udalennyi-med/stol.png&#34;
+	width=&#34;1754&#34;
+	height=&#34;1292&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Длинный стол в балагане на стоянке&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;135&#34;
+		data-flex-basis=&#34;325px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Пчёлы прилетали и улетали каждые 20 минут. А в это время мы перемыли посуду, убрали сладкое, помыли стол. Пчел стало меньше, но они так и продолжали летать до захода солнца. Аэрозоли от насекомых, дым от костра особо не помогали. К концу дня мы даже к ним привыкли, тем более, что они не проявляли никакой агрессии.&lt;/p&gt;
+&lt;p&gt;Уже позже я узнал, что где-то на Вуоксе есть пасека, а местные пчелы, похоже, таким образом “пасутся” на туристических стоянках. Зачем цветочный нектар, если есть, к примеру, сладкая кола в стакане?&lt;/p&gt;
+&lt;p&gt;
+
+&lt;img src=&#34;https://asarapulov.ru/p/udalennyi-med/vqDnclqgBG4.jpg&#34;
+	width=&#34;1280&#34;
+	height=&#34;905&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Пасека на Вуоксе&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;141&#34;
+		data-flex-basis=&#34;339px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Насекомые меня “любят” и тот факт, что пчёлы меня проигнорировали, и я благополучно провел выходные с кучей опасных насекомых меня немного озадачил.&lt;/p&gt;
+&lt;h2 id=&#34;пчелошеринг---что-это-такое&#34;&gt;Пчелошеринг - что это такое?&lt;/h2&gt;
+&lt;p&gt;И тут я вспомнил про то, как в комментариях к “субботнему самопиару” на VC, я познакомился с Артёмом Жаровым, основателем продвинутой пасеки в горах Кавказа.&lt;/p&gt;
+&lt;p&gt;
+
+&lt;img src=&#34;https://asarapulov.ru/p/udalennyi-med/1671792730149161695.jpg&#34;
+	width=&#34;700&#34;
+	height=&#34;468&#34;
+	
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;149&#34;
+		data-flex-basis=&#34;358px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://%d0%bf%d1%87%d0%b5%d0%bb%d0%be%d1%88%d0%b5%d1%80%d0%b8%d0%bd%d0%b3.%d1%80%d1%84/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Пчелошеринг&lt;/a&gt; - агротех стартап, который предлагает арендовать пчелиный улей из любой точки страны. Всю работу за вас сделают профессионалы, вы можете контролировать через свой аккаунт на сайте. Результат работы пчелофермеров - мёд, суммарным количеством до 20-23 кг за сезон - упакуют так, как вам нужно и отправят к вашему столу.&lt;/p&gt;
+&lt;p&gt;
+
+&lt;img src=&#34;https://asarapulov.ru/p/udalennyi-med/pchelosharing.png&#34;
+	width=&#34;2432&#34;
+	height=&#34;1320&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Сайт Пчелошеринга&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;184&#34;
+		data-flex-basis=&#34;442px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;По приезду домой я задал вопрос Артёму об этой ситуации на Вуоксе и тот подтвердил, что пчёл, скорее всего, привлекло что-то сладкое. Они  чувствительны к запахам, скорее всего, что-то было на нашем столе или рядом.&lt;/p&gt;
+&lt;h2 id=&#34;посылка-от-пчелошеринга&#34;&gt;Посылка от Пчелошеринга&lt;/h2&gt;
+&lt;p&gt;Кстати, там же в каментах на vc я попросил банку мёда на пробу с этой пасеки…&lt;/p&gt;
+&lt;p&gt;
+
+&lt;img src=&#34;https://asarapulov.ru/p/udalennyi-med/vc_comment.png&#34;
+	width=&#34;1332&#34;
+	height=&#34;598&#34;
+	
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;222&#34;
+		data-flex-basis=&#34;534px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;…И через пару недель на СДЭК пришла вот такая коробка:&lt;/p&gt;
+&lt;p&gt;
+
+&lt;img src=&#34;https://asarapulov.ru/p/udalennyi-med/2023-09-1219-14-27.JPG&#34;
+	width=&#34;4032&#34;
+	height=&#34;3024&#34;
+	
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;133&#34;
+		data-flex-basis=&#34;320px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Внутри под слоем упаковки лежало две баночки мёда, одна из которых, к сожалению, умудрилась лопнуть при транспортировке.&lt;/p&gt;
+&lt;p&gt;
+
+&lt;img src=&#34;https://asarapulov.ru/p/udalennyi-med/2023-09-1219-16-08.JPG&#34;
+	width=&#34;4032&#34;
+	height=&#34;3024&#34;
+	
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;133&#34;
+		data-flex-basis=&#34;320px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Не беда, в моей семье все любят мёд (особенно башкирский), поэтому целая баночка была мгновенно вскрыта.&lt;/p&gt;
+&lt;p&gt;
+
+&lt;img src=&#34;https://asarapulov.ru/p/udalennyi-med/2023-09-1219-15-19.JPG&#34;
+	width=&#34;4032&#34;
+	height=&#34;3024&#34;
+	
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;133&#34;
+		data-flex-basis=&#34;320px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;А еще в посылку была приложена прикольная деревянная ложка, детям очень понравилась.&lt;/p&gt;
+&lt;p&gt;Не стану расписывать как сомелье, но мёд, который отправили Пчелошеринг - ароматный и вкусный, каким бывает свежий мёд. Фотографий мёда не будет, потому что его съели за один день =)&lt;/p&gt;
+&lt;p&gt;Иногда неожиданные встречи с пчёлами на природе или с интересными проектами, как Пчелошеринг (в комментариях на vc), могут добавить ярких красок в нашу повседневную жизнь. И вдвойне приятно, когда инновации могут донести до нас дары природы. Пчелошеринг 👍.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Как в Яндекс Браузере скрыть значки расширений?</title>
+        <link>https://asarapulov.ru/p/kak-v-yandeks-brauzere-skryt-znachki-rasshireniy/</link>
+        <pubDate>Thu, 14 Sep 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://asarapulov.ru/p/kak-v-yandeks-brauzere-skryt-znachki-rasshireniy/</guid>
+        <description>&lt;img src="https://asarapulov.ru/p/kak-v-yandeks-brauzere-skryt-znachki-rasshireniy/index.jpg" alt="Featured image of post Как в Яндекс Браузере скрыть значки расширений?" /&gt;&lt;p&gt;Пару лет пользуюсь Яндекс Браузером, но всегда удручал вид верхней панели, в которой беспрепятственно &amp;ldquo;селились&amp;rdquo; разноцветные значки расширений.&lt;/p&gt;
+&lt;p&gt;Да, их можно скрыть по ПКМ → Скрыть расширение, но вернуть обратно будет уже не так просто: Настройки → Дополнения → прокрутить вниз, чтобы пропустить рекламный мусор и передвинуть ползунок напротив того дополнения, которое нужно вернуть на панель.&lt;/p&gt;
+&lt;p&gt;
+
+&lt;img src=&#34;https://asarapulov.ru/p/kak-v-yandeks-brauzere-skryt-znachki-rasshireniy/extensions-menu-chrome-image.jpg&#34;
+	width=&#34;1374&#34;
+	height=&#34;557&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Работа с расширениями в браузере Chrome&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;246&#34;
+		data-flex-basis=&#34;592px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;В Chrome выглядит все гораздо проще: нажатие на кнопку с иконкой пазла и можно открыть или закрепить любое дополнение.&lt;/p&gt;
+&lt;p&gt;
+
+&lt;img src=&#34;https://asarapulov.ru/p/kak-v-yandeks-brauzere-skryt-znachki-rasshireniy/extensions-menu-yabrowser-image.jpg&#34;
+	width=&#34;1374&#34;
+	height=&#34;557&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Так это выглядит в Яндекс Браузере&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;246&#34;
+		data-flex-basis=&#34;592px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Короче, в Яндекс Браузере такой кнопки нет. Как нет ни одной настройки, посвященной этому. Поэтому, чтобы убрать этот зоопарк с панели, нужно потянуть за разделитель, который начинается сразу за правым краем адресной строки. И тогда значки расширений скроется в кнопку с тремя точками. Вот такой UI в Яндекс Браузере.&lt;/p&gt;
+&lt;p&gt;
+
+&lt;img src=&#34;https://asarapulov.ru/p/kak-v-yandeks-brauzere-skryt-znachki-rasshireniy/ya-browser-extensions-hide.gif&#34;
+	width=&#34;1176&#34;
+	height=&#34;629&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;GIF: что нужно сделать, чтобы скрыть (свернуть) значки расширений в Яндекс Браузере&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;186&#34;
+		data-flex-basis=&#34;448px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;P.S. Еще бы добавили пару пикселей пэддинга снизу к панели быстрого доступа, уж больно выглядит &amp;ldquo;поджатой&amp;rdquo;.
+P.P.S. Devtools, открывающийся по F12, в Яндекс Браузере зачем-то подгружает панель быстрого доступа и имеет ограничения по минимальной ширине окна - очень неудобно.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Каждый раз, когда я перезагружаю macOS, мои обои рабочего стола удаляются</title>
+        <link>https://asarapulov.ru/p/kazhdyy-raz-kogda-ya-perezagruzhayu-macos-moi-oboi-rabochego-stola-udalyayutsya/</link>
+        <pubDate>Fri, 01 Sep 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://asarapulov.ru/p/kazhdyy-raz-kogda-ya-perezagruzhayu-macos-moi-oboi-rabochego-stola-udalyayutsya/</guid>
+        <description>&lt;img src="https://asarapulov.ru/p/kazhdyy-raz-kogda-ya-perezagruzhayu-macos-moi-oboi-rabochego-stola-udalyayutsya/title.png" alt="Featured image of post Каждый раз, когда я перезагружаю macOS, мои обои рабочего стола удаляются" /&gt;&lt;p&gt;MacOS не имеет приличного менеджера для работы с обоями рабочего стола. В отличие от Windows, здесь нельзя установить обои из меню правой кнопки мыши, нельзя установить обои из экрана просмотра изображения, как впрочем, нельзя и просто так установить любую скачанную картинку на рабочий стол. Для этого нужно открыть Системные настройки -&amp;gt; Обои и внизу добавить папку, в которой лежит файл.&lt;/p&gt;
+&lt;p&gt;В принципе, эту не сложную, но нудную операцию я проделал и в этот раз на своем Macbook Air с Ventura на борту: я скачал картинку на рабочий стол, добавил папку Desktop в &amp;ldquo;Обоях&amp;rdquo; и выбрал нужный файл. Но проблема оказалась в следующем: после перезагрузки изображение на рабочем столе попросту удалялось, иными словами обои возвращались на те, что были установлены по умолчанию.&lt;/p&gt;
+&lt;p&gt;
+
+&lt;img src=&#34;https://asarapulov.ru/p/kazhdyy-raz-kogda-ya-perezagruzhayu-macos-moi-oboi-rabochego-stola-udalyayutsya/title.png&#34;
+	width=&#34;947&#34;
+	height=&#34;737&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Экран настроек macOS, раздел Обои&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;128&#34;
+		data-flex-basis=&#34;308px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Решение простое:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Копируем файл с обоей в буфер обмена&lt;/li&gt;
+&lt;li&gt;В Finder нажимаем Command + Shift + H - откроется домашняя директория&lt;/li&gt;
+&lt;li&gt;Открываем папку Изображения и вставляем в нее файл&lt;/li&gt;
+&lt;li&gt;В настройках Системные настройки -&amp;gt; Обои появится ваше изображение, его нужно выбрать.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Собственно, вот после таких манипуляций обои на маке не должны удаляться после перезагрузки системы.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Как я использую Eagle для дизайнеров</title>
+        <link>https://asarapulov.ru/p/kak-ya-ispolzuyu-eagle-dlya-dizaynerov/</link>
+        <pubDate>Mon, 24 Jul 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://asarapulov.ru/p/kak-ya-ispolzuyu-eagle-dlya-dizaynerov/</guid>
+        <description>&lt;img src="https://asarapulov.ru/p/kak-ya-ispolzuyu-eagle-dlya-dizaynerov/index.png" alt="Featured image of post Как я использую Eagle для дизайнеров" /&gt;&lt;p&gt;Eagle - первоклассная программа для дизайнеров, которая позволяет прокачивать насмотренность - чувство, которое расширяет креативное воображение и вдохновляет на создание удивительных произведений искусства.&lt;/p&gt;
+&lt;p&gt;
+
+&lt;img src=&#34;https://asarapulov.ru/p/kak-ya-ispolzuyu-eagle-dlya-dizaynerov/Pastedimage20230724120354.png&#34;
+	width=&#34;2384&#34;
+	height=&#34;1576&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Главное окно Eagle&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;151&#34;
+		data-flex-basis=&#34;363px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Более десяти лет проработав бок о бок со сферой веб-дизайна, недавно я и сам, наконец, прошёл обучение и получил сертификат UI-дизайнера.&lt;/p&gt;
+&lt;p&gt;И тем не менее, первым вопросом, который у меня повявился еще до скачивания Eagle был такой:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Можно ли использовать Eagle не только как дизайнер?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Второй вопрос был более приземленный: &lt;strong&gt;как пополнять коллекцию Eagle с телефона?&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Скачать Eagle можно отсюда: &lt;a class=&#34;link&#34; href=&#34;https://ru.eagle.cool/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://ru.eagle.cool/&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;eagle-не-для-дизайнеров&#34;&gt;Eagle не для дизайнеров&lt;/h2&gt;
+&lt;p&gt;О том, как Eagle помогает работать всем, кому для творчества нужно накапливать &lt;em&gt;assets&lt;/em&gt; или ресурсы, я слышал не раз. Обзоры Eagle, которые я читал или просматривал - все они о том, что изображения, видео, аудио и даже ссылки (всего около сотни форматов файлов) можно удобно каталогизировать - с тем усердием, которое вас устраивает.&lt;/p&gt;
+&lt;p&gt;Как правило, речь в этих обзорах идёт о облегчении работы дизайнеров, художников, видеопродюсеров. Но что, если направить в Eagle другие ресурсы? Например, мой исторический архив: снимки людей, исторические карты, старинные фотографии и некоторые другие типы документов, о которых я напишу чуть ниже.&lt;/p&gt;
+&lt;p&gt;У меня была бесплатная 30-дневная версия и я рискнул истратить часть дней именно на эту работу.&lt;/p&gt;
+&lt;p&gt;
+
+&lt;img src=&#34;https://asarapulov.ru/p/kak-ya-ispolzuyu-eagle-dlya-dizaynerov/Pastedimage20230724123904.png&#34;
+	width=&#34;1824&#34;
+	height=&#34;1824&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Из 30 дней осталось 24&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;100&#34;
+		data-flex-basis=&#34;240px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Я веду &lt;a class=&#34;link&#34; href=&#34;https://n-ber.ru/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;блог о старинном селе Николо-Берёзовка&lt;/a&gt;, почти пятивековой возраст которого позволил ему “повидать” некоторых исторических личностей и “поучаствовать” во многих исторических событиях.&lt;/p&gt;
+&lt;p&gt;Ресурсы для этого блога - фотографии, карты, схемы, открытки, буклеты в PDF, были незамедлительно отправлены в Eagle, сразу после того, как я завел новую библиотеку.&lt;/p&gt;
+&lt;p&gt;
+
+&lt;img src=&#34;https://asarapulov.ru/p/kak-ya-ispolzuyu-eagle-dlya-dizaynerov/Pastedimage20230724120109.png&#34;
+	width=&#34;2296&#34;
+	height=&#34;1488&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Создаем “гнездо орла“&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;154&#34;
+		data-flex-basis=&#34;370px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Важно понимать, что библиотека Eagle - является внутренним хранилищем программы - папкой, в которой будет хранится вся информация, в том числе, ваши ресурсы.
+К примеру, если отправить фотографию в Eagle, то хранить ее где-то еще дополнительно не нужно.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Я рекомендую содавать библиотеку Eagle в облачном сервисе: в России лучше всего подойдет Яндекс Диск. Mail Облако тоже прекрасно, но его лимиты по скорости могут вас разочаровать.&lt;/p&gt;
+&lt;h3 id=&#34;папки-в-eagle&#34;&gt;Папки в Eagle&lt;/h3&gt;
+&lt;p&gt;Первым делом я целиком перетягиваю папку с названием “Николо-Берёзовка” прямо из Finder в Eagle. Копируются не только все файлы, но и все вложенные папки с сохранением структуры. Разумеется, всё это можно было сделать вручную.&lt;/p&gt;
+&lt;p&gt;
+
+&lt;img src=&#34;https://asarapulov.ru/p/kak-ya-ispolzuyu-eagle-dlya-dizaynerov/WeACdrzO11.gif&#34;
+	width=&#34;860&#34;
+	height=&#34;534&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;GIF: как я скопировал папки из Finder в Eagle&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;161&#34;
+		data-flex-basis=&#34;386px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Одним движением я скопировал свой архив в Eagle. Осталось “раздать” каждой папке по своему цвету или даже назначить собственный значок.&lt;/p&gt;
+&lt;h3 id=&#34;теги-в-eagle&#34;&gt;Теги в Eagle&lt;/h3&gt;
+&lt;p&gt;Теги в Eagle помогли решить проблему каталогизирования изображений и ресурсов. Они делают вашу библиотеку более структурированной и упорядоченной. Вы можете легко создавать, редактировать, удалять и управлять тегами с помощью Eagle.&lt;/p&gt;
+&lt;p&gt;Поэтому далее стоит заняться тегами. И здесь можно дать волю фантазии: в Eagle можно создать группы тегов, внутри которых будут теги, объединенные по смыслу.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Я не раз переписывал и переделывал теги своих ресурсов, но вот какой совет я могу дать: открывайте раздел “Без тегов” и начинайте обрабатывать свои ресурсы по-порядку, в том числе, добавляя сразу несколько тегов через запятую - все они автоматически обработаются Eagle.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+
+&lt;img src=&#34;https://asarapulov.ru/p/kak-ya-ispolzuyu-eagle-dlya-dizaynerov/Pastedimage20230724125223.png&#34;
+	width=&#34;1230&#34;
+	height=&#34;504&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Работа с тегами в одном поле ввода - один из множества приёмов использования Eagle&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;244&#34;
+		data-flex-basis=&#34;585px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Кроме того, можно выделить сразу несколько файлов и назначить им одни и те же теги, а также комментарии, ссылки и даже рейтинг из звезд.&lt;/p&gt;
+&lt;p&gt;
+
+&lt;img src=&#34;https://asarapulov.ru/p/kak-ya-ispolzuyu-eagle-dlya-dizaynerov/9Ii99mVANc.gif&#34;
+	width=&#34;583&#34;
+	height=&#34;499&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;GIF: работа с несколькими файлами&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;116&#34;
+		data-flex-basis=&#34;280px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Расскажу небольшую хитрость: работа с историческими материалами преполагает интервью с очервидцами, поэтому я записал несколько спонтанных воспоминаний с помощью моих Apple Watch и программы Just Press Record. Полученные аудифайлы я просто скинул в Eagle и присвоил им соответствующий тег.&lt;/p&gt;
+&lt;p&gt;Когда придет время, я расшифрую свои аудиофайлы и также размещу тексты в Eagle с нужным мне тегом (очень хотелось бы сохранять и просматривать в Eagle файлы с разметкой Markdown)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;eagle-для-дизайнеров&#34;&gt;Eagle для дизайнеров&lt;/h2&gt;
+&lt;p&gt;Eagle и его широкие возможности помогают мне создавать группы ресурсов, при помощи которых я готовлю новые статьи и заметки по истории своей малой родины. Но что насчет дизайна?&lt;/p&gt;
+&lt;h3 id=&#34;импорт-в-eagle&#34;&gt;Импорт в Eagle&lt;/h3&gt;
+&lt;p&gt;Дизайн - это то, в чем Eagle раскрывается на 100%. А раз уж я являюсь UI-дизайнером, то я должен рассказать и об этой стороне. Вот как я действовал сначала:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Установил &lt;a class=&#34;link&#34; href=&#34;https://en.eagle.cool/extensions&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;официальное расширение Eagle для своего браузера&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Отправился на Behance, Dribble, Pinterest, а также заглянул в свой любимый дизайнерский журнал - &lt;a class=&#34;link&#34; href=&#34;https://zhurnalus.artlebedev.ru&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Журналус&lt;/a&gt; (в котором я узнал об Eagle), где без труда обычно нахожу референсы&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;
+
+&lt;img src=&#34;https://asarapulov.ru/p/kak-ya-ispolzuyu-eagle-dlya-dizaynerov/Pastedimage20230724125936.png&#34;
+	width=&#34;2686&#34;
+	height=&#34;1296&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Это Журналус&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;207&#34;
+		data-flex-basis=&#34;497px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;Любое понравившееся мне изображение может сразу отправиться в нужную папку Eagle. Достаточно сделать долгий клик на нем и перетянуть файл в нужный каталог в удобном всплывающем меню. Кроме того, я могу сохранить все изображения с нужной мне страницы (здесь нужно быть осторожным с длинными ajax-лентами как в Pinterest).&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;
+
+&lt;img src=&#34;https://asarapulov.ru/p/kak-ya-ispolzuyu-eagle-dlya-dizaynerov/MJk94YMPSd.gif&#34;
+	width=&#34;1136&#34;
+	height=&#34;683&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;GIF: работа расширения Eagle для браузера&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;166&#34;
+		data-flex-basis=&#34;399px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;Примерно таким же путем в Eagle попадают шрифты, ссылки на сайты с красивым дизайном, видеоуроки, аудиофайлы - всё то, что представляет для меня интерес.&lt;/li&gt;
+&lt;li&gt;Если я пользуюсь мобильным телефоном, то временно отправляю всё найденное в избранное своего Telegram-аккаунта, чтобы после разобрать и отправить в “гнездо Орла”. Это тонкий момент, который тоже хотелось бы решать по-другому. Я никогда не слышал о планах Eagle запустить мобильное приложение. но, как минимум, разрабочики имеют &lt;a class=&#34;link&#34; href=&#34;https://docs-en.eagle.cool/article/804-will-eagle-have-a-mobile-or-tablet-version-in-the-future&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;некоторую позицию&lt;/a&gt; по этому поводу. Важное дополнение, оказывается, можно настроить автоимпорт в Eagle из любой папки. Я создал папку в облаке на Яндекс Диске. Теперь могу наполнять ее и с телефона (например, могу написать Telegram-бота). При включении Eagle отсканирует эту папку и загрузит ее содержимое к себе, очистив папку.&lt;/li&gt;
+&lt;li&gt;Далее - раскладывание по папкам и теггирование.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;работа-с-ресурсами&#34;&gt;Работа с ресурсами&lt;/h3&gt;
+&lt;p&gt;Напкопительство ресурсов - не самое важное в дизайне. Главное - уметь воспользоваться, уметь вспомнить и найти нужный файл.&lt;/p&gt;
+&lt;h4 id=&#34;фильтрация-по-цвету&#34;&gt;Фильтрация по цвету&lt;/h4&gt;
+&lt;p&gt;Одна из полезных функций Eagle — это фильтрация по цвету. Фильтрация по цвету позволяет быстро найти изображения, которые имеют определенную цветовую тональность&lt;/p&gt;
+&lt;p&gt;
+
+&lt;img src=&#34;https://asarapulov.ru/p/kak-ya-ispolzuyu-eagle-dlya-dizaynerov/Pastedimage20230724141350.png&#34;
+	width=&#34;1190&#34;
+	height=&#34;644&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Фильтрация по цвету в Eagle&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;184&#34;
+		data-flex-basis=&#34;443px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Это очень полезно, когда вы хотите найти изображения, которые соответствуют определенной цветовой схеме или настроению.&lt;/p&gt;
+&lt;h4 id=&#34;еще-фильтры&#34;&gt;Еще фильтры&lt;/h4&gt;
+&lt;p&gt;Кроме фильтрации по цвету, Eagle также предлагает другие виды фильтрации, которые помогают вам находить нужные ресурсы по разным критериям.&lt;/p&gt;
+&lt;p&gt;
+
+&lt;img src=&#34;https://asarapulov.ru/p/kak-ya-ispolzuyu-eagle-dlya-dizaynerov/bYajuGgOYJ.gif&#34;
+	width=&#34;596&#34;
+	height=&#34;455&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Другие фильтры в Eagle&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;130&#34;
+		data-flex-basis=&#34;314px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Например, вы можете использовать фильтр по тегам, чтобы искать изображения по тегам и их комбинациям. Вы также можете использовать расширенный фильтр, чтобы комбинировать разные условия поиска, такие как формат файла, форма изображения, размер изображения, оценка и т.д.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Мне очень понравилась работа формы поиска: можно написать теги, по которым нужен результат, но в то же время, можно написать ислючающие теги, результаты по которым не нужны!
+Делается это так: &lt;em&gt;тег_1 -тег_2&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;смарт-папки&#34;&gt;Смарт-папки&lt;/h4&gt;
+&lt;p&gt;Еще один вид фильтрации ресурсов в Eagle - это смарт-папки, которые позволяют вам автоматически сортировать и группировать ваши изображения по заданным критериям. Смарт-папки - это не обычные папки, а динамические коллекции, которые обновляются в реальном времени в соответствии с вашими настройками.&lt;/p&gt;
+&lt;p&gt;Иными словами, вы можете настроить свои собственные комбинации фильтров и время от времени к ним обращаться через одно нажатие.&lt;/p&gt;
+&lt;h2 id=&#34;самое-большое-изменение-которое-принес-eagle&#34;&gt;Самое большое изменение, которое принес Eagle&lt;/h2&gt;
+&lt;p&gt;Самое большое изменение, которое принес мне Eagle - это возможность усадить кого угодно перед экраном, взмахнуть волшебной палочкой, нажать на пробел и сказать - &lt;strong&gt;смотри, что у меня есть&lt;/strong&gt;!&lt;/p&gt;
+&lt;p&gt;И чаще всего я усаживаю перед экраном с Eagle самого себя, чтобы снова заглянуть в свои усердно упорядоченные сокровищницы и найти самый яркий на сегодняшний день бриллиант.&lt;/p&gt;
+&lt;h2 id=&#34;p-s&#34;&gt;P. S.&lt;/h2&gt;
+&lt;p&gt;Еще одна интересная особенность в Eagle - это Сообщество, которое встроено в программу и позволяет вам обмениваться своими ресурсами дизайна с другими пользователями. Сообщество - это специальный раздел в Eagle, где вы можете просматривать, скачивать и комментировать коллекции изображений, созданные другими дизайнерами. Вы также можете загружать свои собственные коллекции и делиться ими с миром.&lt;/p&gt;
+&lt;h2 id=&#34;хотелки&#34;&gt;Хотелки&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;ИИ-анализ изображений&lt;/li&gt;
+&lt;li&gt;Удобное пополнение библиотеки через смартфон&lt;/li&gt;
+&lt;li&gt;Удобный просмотр библиотеки через смартфон&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+        </item>
+        <item>
+        <title>Пользователи Whatsapp дождались новую функцию</title>
+        <link>https://asarapulov.ru/p/polzovateli-whatsapp-dozhdalis-novuyu-funkciyu/</link>
+        <pubDate>Thu, 20 Jul 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://asarapulov.ru/p/polzovateli-whatsapp-dozhdalis-novuyu-funkciyu/</guid>
+        <description>&lt;img src="https://asarapulov.ru/p/polzovateli-whatsapp-dozhdalis-novuyu-funkciyu/title.jpg" alt="Featured image of post Пользователи Whatsapp дождались новую функцию" /&gt;&lt;p&gt;Несмотря на неоднозначное отношение к Whatsapp, все, так или иначе, но сталкиваются с ним. Буквально на днях в сельском музее я пытался начать переписку со специалистом, работающим там. Но пришлось по-старинке искать как добавить контакт, затем добавлять контакт, начинать чат. В конце концов, пришлось обратиться к старому-доброму ВК.&lt;/p&gt;
+&lt;p&gt;Но теперь в новых версиях WhatsApp для iOS и Android можно начать общение с абонентом вне адресной книги. Для этого нужно выбрать опцию «Начать новый чат» и ввести номер телефона.&lt;/p&gt;
+&lt;p&gt;
+
+&lt;img src=&#34;https://asarapulov.ru/p/polzovateli-whatsapp-dozhdalis-novuyu-funkciyu/title.jpg&#34;
+	width=&#34;828&#34;
+	height=&#34;967&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Whatsapp: новая фукнция&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;85&#34;
+		data-flex-basis=&#34;205px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Функция упрощает общение с неизвестными номерами и делает его более конфиденциальным.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Умный выключатель WiFi Switch L, No Neutral X801A-L White  - как подключить</title>
+        <link>https://asarapulov.ru/p/umnyy-vyklyuchatel-wifi-switch-l-no-neutral-x801a-l-white-kak-podklyuchit/</link>
+        <pubDate>Wed, 19 Jul 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://asarapulov.ru/p/umnyy-vyklyuchatel-wifi-switch-l-no-neutral-x801a-l-white-kak-podklyuchit/</guid>
+        <description>&lt;img src="https://asarapulov.ru/p/umnyy-vyklyuchatel-wifi-switch-l-no-neutral-x801a-l-white-kak-podklyuchit/title.jpg" alt="Featured image of post Умный выключатель WiFi Switch L, No Neutral X801A-L White  - как подключить" /&gt;&lt;p&gt;Умный выключатель одноклавишный без нуля WiFi Switch (L, No Neutral) X801A-L White - как сделать так, чтобы им можно было управлять со смартфона?&lt;/p&gt;
+&lt;p&gt;В инструкции к WiFi Switch (L, No Neutral) X801A-L White на английском языке рекомендуется скачать Digma SmartLife, но в этом приложении нет нужного устройства. Расскажу - как быть.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Первым делом бросаем Digma SmartLife куда-нибудь в корзину и скачиваем просто “Smart Life”, вот ссылки:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;iOS: &lt;a class=&#34;link&#34; href=&#34;https://apps.apple.com/ru/app/smart-life-smart-living/id1115101477&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://apps.apple.com/ru/app/smart-life-smart-living/id1115101477&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Android: &lt;a class=&#34;link&#34; href=&#34;https://play.google.com/store/apps/details?id=com.tuya.smartlife&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://play.google.com/store/apps/details?id=com.tuya.smartlife&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Android доп: &lt;a class=&#34;link&#34; href=&#34;https://4pda.to/forum/index.php?showtopic=975327&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://4pda.to/forum/index.php?showtopic=975327&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;Устанавливаем Smart Life и регистрируемся&lt;/li&gt;
+&lt;li&gt;Находим в меню свой выключатель и производим его сброс, вводим данные вашего WI-FI и начинаем пользоваться&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;
+
+&lt;img src=&#34;https://asarapulov.ru/p/umnyy-vyklyuchatel-wifi-switch-l-no-neutral-x801a-l-white-kak-podklyuchit/1.jpg&#34;
+	width=&#34;1280&#34;
+	height=&#34;778&#34;
+	
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;164&#34;
+		data-flex-basis=&#34;394px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Кстати, по умолчанию если выключатель - выключен, то индикатор также держится в выключенном состоянии. Это можно будет перенастроить в настройках выключателя в приложении Smart Life!&lt;/p&gt;
+&lt;p&gt;К Умному дому Яндекса и Алисе этот выключатель подключаем также - через приложение Яндекс и набор от Smart Life, не от Digma.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Монитор Xiaomi Mi Curved Gaming: как поменять источник сигнала?</title>
+        <link>https://asarapulov.ru/p/monitor-xiaomi-mi-curved-gaming-kak-pomenyat-istochnik-signala/</link>
+        <pubDate>Mon, 19 Jun 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://asarapulov.ru/p/monitor-xiaomi-mi-curved-gaming-kak-pomenyat-istochnik-signala/</guid>
+        <description>&lt;img src="https://asarapulov.ru/p/monitor-xiaomi-mi-curved-gaming-kak-pomenyat-istochnik-signala/index.jpg" alt="Featured image of post Монитор Xiaomi Mi Curved Gaming: как поменять источник сигнала?" /&gt;&lt;p&gt;Возник вопрос: как поменять источник сигнала на мониторе Xiaomi Mi Curved Gaming Monitor 34, не отсоединяя кабели?&lt;/p&gt;
+&lt;p&gt;Достаточно просто. &lt;strong&gt;В Windows&lt;/strong&gt; в поиске пишем &amp;ldquo;PowerShell&amp;rdquo; и запускаем Windows PowerShell (возможно понадобится запуск от администратора), в ней пишем команду, которая программно отключит текущий монитор, после чего система переключится на другой:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;(Add-Type -MemberDefinition &amp;#34;[DllImport(&amp;#34;&amp;#34;user32.dll&amp;#34;&amp;#34;)]`npublic static extern int SendMessage(int hWnd, int hMsg, int wParam, int lParam);&amp;#34; -Name &amp;#34;Win32SendMessage&amp;#34; -Namespace Win32Functions -PassThru)::SendMessage(0xffff, 0x0112, 0xF170, 2)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Для Linux тоже есть аналогичная команда:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;xset dpms force off&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Для Mac:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;pmset displaysleepnow&lt;/code&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Быстрая регистрация и использование ChatGPT (МАЙ 2023)</title>
+        <link>https://asarapulov.ru/p/fast-reg-chatgpt/</link>
+        <pubDate>Mon, 22 May 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://asarapulov.ru/p/fast-reg-chatgpt/</guid>
+        <description>&lt;img src="https://asarapulov.ru/p/fast-reg-chatgpt/chatgpt.jpg" alt="Featured image of post Быстрая регистрация и использование ChatGPT (МАЙ 2023)" /&gt;&lt;p&gt;Этап №1. Подготовка&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Скачиваем и устанавливаем &lt;a class=&#34;link&#34; href=&#34;https://freevpnplanet.com/ru/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Planet VPN&lt;/a&gt;. VPN понадобится только на первом шаге следующего этапа.&lt;/li&gt;
+&lt;li&gt;Переходим на &lt;a class=&#34;link&#34; href=&#34;https://onlinesim.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://onlinesim.io/&lt;/a&gt; и регистрируемся (легче всего через аккаунт Google)&lt;/li&gt;
+&lt;li&gt;Нажимаем Пополнить и пополняем любым удобным способом на 40-50 рублей&lt;/li&gt;
+&lt;li&gt;Нажимаем Прием смс, выбираем страну Нидерланды, в правой части таблицы выбираем Chat GPT, у меня была стоимость номера 34 рубля.&lt;/li&gt;
+&lt;li&gt;Нажатие на эту сумму активирует номер &lt;strong&gt;на 15 минут&lt;/strong&gt;. Он появится справа в таблице Мои номера.  &lt;strong&gt;Страницу не закрываем.&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Этап №2. Регистрация&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Включаем Planet VPN, выбираем Netherlands&lt;/li&gt;
+&lt;li&gt;Переходим на &lt;a class=&#34;link&#34; href=&#34;https://chat.openai.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://chat.openai.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Нажмите на кнопку «Sing up». Укажите Email и нажмите «Continue». Придумайте пароль и кликните «Continue».&lt;/li&gt;
+&lt;li&gt;Подтвердите email: Откройте почту, Найдите письмо с темой «OpenAI — Verify your email», Кликните по кнопке «Verify email address». Введите ваше имя, фамилию и нажмите «Continue».&lt;/li&gt;
+&lt;li&gt;Укажите номер телефона, который вы получили от onlinesim.io и нажмите «Send code».
+Код прилетит под ваш номер на сайте onlinesim.io (раздел Мои номера). Полученный код укажите в соответствующем поле.&lt;/li&gt;
+&lt;li&gt;После ввода должен открыться интерфейс чат-бота. Готово!&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Еще немного информации:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Не забывайте включать VPN при любом заходе на сайт!&lt;/li&gt;
+&lt;li&gt;Если вы видите сообщение типа Access denied, то очищайте кэш браузера вручную или с помощью &lt;a class=&#34;link&#34; href=&#34;https://chrome.google.com/webstore/detail/clear-site-data/aihgofjefdlhpnmeakpnjjeajofpcbhj?hl=ru&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;расширений&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Может случиться так, что ваш аккаунт забанят и очистка кэша + использование VPN не поможет. В этом случае придется регистрироваться заново.&lt;/li&gt;
+&lt;li&gt;В Telegram нет ChatGPT от OpenAI, не смотря на то, что об этом пишут в рекламных постах. 90% ботов из телеги не раскрывают потенциала оригинального бота.&lt;/li&gt;
+&lt;li&gt;Аккаунт для ChatGPT можно купить на Плати.ру, но придется повозиться с оплатой и еще возникает вопрос о конфиденциальности, если о ней вообще можно говорить, т.к. вы общаетесь с коммерческим ботом.&lt;/li&gt;
+&lt;li&gt;Не нравится ChatGPT - используйте Bing, он тоже требует регистрации и VPN, но зато не нужно создавать виртуальный номер.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Другие текстовые чат-боты смотри на сайте &lt;a class=&#34;link&#34; href=&#34;https://ailibri.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;AIlibri.com&lt;/a&gt;.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>5 главных инструментов, которые продвинут любого новичка в изучении Figma</title>
+        <link>https://asarapulov.ru/p/5-glavnyh-instrumentov-kotorye-prodvinut-lyubogo-novichka-v-izuchenii-figma/</link>
+        <pubDate>Wed, 19 Apr 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://asarapulov.ru/p/5-glavnyh-instrumentov-kotorye-prodvinut-lyubogo-novichka-v-izuchenii-figma/</guid>
+        <description>&lt;img src="https://asarapulov.ru/p/5-glavnyh-instrumentov-kotorye-prodvinut-lyubogo-novichka-v-izuchenii-figma/title.jpg" alt="Featured image of post 5 главных инструментов, которые продвинут любого новичка в изучении Figma" /&gt;&lt;p&gt;Привет потоку UI-802 и всем осваивающим путь UI-дизайна! В этом небольшом тексте я собрал те инструменты, которые позволят вам закрыть большую часть вопросов по освоению любого ПО, в том числе и Figma.&lt;/p&gt;
+&lt;h2 id=&#34;установите-яндекс-браузер-на-ваш-пк-ноутбук-планшет-телефон&#34;&gt;Установите Яндекс Браузер на ваш ПК, ноутбук, планшет, телефон&lt;/h2&gt;
+&lt;p&gt;В &lt;a class=&#34;link&#34; href=&#34;https://browser.yandex.ru/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Яндекс Браузере&lt;/a&gt; можно включить любое учебное видео по Figma и смотреть его с русской озвучкой. Просто включаешь любой ролик - браузер сам предложит его перевести на русский язык.&lt;/p&gt;
+&lt;p&gt;
+
+&lt;img src=&#34;https://asarapulov.ru/p/5-glavnyh-instrumentov-kotorye-prodvinut-lyubogo-novichka-v-izuchenii-figma/ya.jpg&#34;
+	width=&#34;563&#34;
+	height=&#34;204&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Используйте Яндекс Браузер для просмотра учебного видео на иностранных языках&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;275&#34;
+		data-flex-basis=&#34;662px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;используйте-telegram&#34;&gt;Используйте Telegram&lt;/h2&gt;
+&lt;p&gt;Несмотря на то, что часть учебного процесса и так происходит в &amp;ldquo;телеге&amp;rdquo;, вы можете помочь себе вот так:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Используйте &amp;ldquo;Избранное&amp;rdquo;, пересылайте себе полезные ссылки, целые сообщения, изображения, задания преподавателя, делайте себе напоминания&lt;/li&gt;
+&lt;li&gt;Участвуйте в профессиональных сообществах. Раз уж вы собрались быть дизайнером, то почему бы не задать вопросы в профильных чатах? Чаты можно найти в поиске Telegram, не факт, что сразу найдутся лучшие сообщества, но со временем вы найдете свои.&lt;/li&gt;
+&lt;li&gt;Используйте чат как каталог: в чате нажмите на его название и смотрите фото, видео, файлы и ссылки отдельно от сообщений из чата.&lt;/li&gt;
+&lt;li&gt;Наконец, создайте канал начинающего дизайнера и отправляйте в него все свои последние работы. Даже если за них стыдно. Со временем, вы сможете вдохновиться, как минимум, своим прогрессом.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;
+
+&lt;img src=&#34;https://asarapulov.ru/p/5-glavnyh-instrumentov-kotorye-prodvinut-lyubogo-novichka-v-izuchenii-figma/telegram.jpg&#34;
+	width=&#34;560&#34;
+	height=&#34;204&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Telegram - для профессиональных связей&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;274&#34;
+		data-flex-basis=&#34;658px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;используйте-онлайн-переводчики-добавьте-в-закладки-например-яндекс-переводчик-или-deepl-translate&#34;&gt;Используйте онлайн-переводчики. Добавьте в закладки, например, Яндекс Переводчик или DeepL Translate.&lt;/h2&gt;
+&lt;p&gt;➡️Проблема №1. &lt;strong&gt;Вам нужна иконка в виде ладони. В плагине Iconify не получается искать по-русски.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Переводчик вам подскажет, что ладонь по-английски - это palm, а Iconify покажет кучу иконок, проблема закрыта.&lt;/p&gt;
+&lt;p&gt;➡️Проблема №2.  &lt;strong&gt;Вам нужно сделать пунктирную обводку прямоугольника, вы не знаете как&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;В переводчике пишите: &amp;ldquo;пунктирная обводка прямоугольника Figma&amp;rdquo;, получаете готовый запрос для Google или искусственного интеллекта (ИИ): &amp;ldquo;dotted outline of a Figma rectangle&amp;rdquo;. Информация о Google и ИИ - ниже.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Яндекс Переводчик: &lt;a class=&#34;link&#34; href=&#34;https://translate.yandex.ru/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://translate.yandex.ru/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;DeepL Translate: &lt;a class=&#34;link&#34; href=&#34;https://www.deepl.com/translator&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.deepl.com/translator&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+
+&lt;img src=&#34;https://asarapulov.ru/p/5-glavnyh-instrumentov-kotorye-prodvinut-lyubogo-novichka-v-izuchenii-figma/translator.jpg&#34;
+	width=&#34;562&#34;
+	height=&#34;204&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Переводите всё подряд&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;275&#34;
+		data-flex-basis=&#34;661px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;для-поиска-используйте-и-google-и-яндекс--обе-поисковые-системы-одновременно&#34;&gt;Для поиска используйте и Google, и Яндекс — обе поисковые системы одновременно&lt;/h2&gt;
+&lt;p&gt;Большая часть сообщества Figma говорит на английском языке. Отказываясь от Google, вы частично лишаете себя чужого богатейшего опыта. Поэтому гоняйте Google и в хвост и в гриву: делайте запрос и на русском и на английском, перефразируйте - и он даст ответ.&lt;/p&gt;
+&lt;p&gt;Яндекс определенно хуже ищет по англоязычным запросам, но зато как будто бы лучше ориентируется в Рунете.&lt;/p&gt;
+&lt;p&gt;Если поиск не помог - обращайтесь к искусственному интеллекту! Об этом следующий пункт.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.google.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Google&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://ya.ru/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Яндекс&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+
+&lt;img src=&#34;https://asarapulov.ru/p/5-glavnyh-instrumentov-kotorye-prodvinut-lyubogo-novichka-v-izuchenii-figma/google.jpg&#34;
+	width=&#34;563&#34;
+	height=&#34;204&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Заставьте Google и Яндекс работать&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;275&#34;
+		data-flex-basis=&#34;662px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;используйте-инструменты-искусственного-интеллекта-например-perplexity&#34;&gt;Используйте инструменты искусственного интеллекта, например, Perplexity&lt;/h2&gt;
+&lt;p&gt;➡️Проблема №1. &lt;strong&gt;Вы не знаете, как называется темное поле в Figma, в котором происходит работа и вам нужно поменять его цвет.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;В Perplexity пишете: &amp;ldquo;&lt;em&gt;Подскажи, как называется темное поле в Figma, в котором происходит основная работа с графикой?&lt;/em&gt;&amp;rdquo;. Ответ будет таким:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Темное поле в Figma, в котором происходит основная работа с графикой, называется &amp;ldquo;холст&amp;rdquo; (canvas).&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Классно, теперь вы знаете, что это поле называется canvas или холст. Ниже дополнительно спросим: &amp;ldquo;&lt;em&gt;как поменять его цвет?&lt;/em&gt;&amp;rdquo;. Ответ будет таким:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Чтобы изменить цвет холста в Figma, нужно выбрать холст и затем выбрать нужный цвет в палитре цветов. Для этого нужно открыть новую рабочую область, выбрать &amp;ldquo;Фон&amp;rdquo; на панели инструментов справа и использовать палитру цветов, чтобы изменить цвет фона. По умолчанию, все новые объекты, созданные в файле, имеют серый цвет&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;➡️Проблема №2. &lt;strong&gt;Вы выделяете текст, но не можете сделать его жирным, т. к. поле &amp;ldquo;regular&amp;rdquo; подсвечено серым&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Пишете такой запрос: &lt;em&gt;Подскажи, почему в Figma у моего текста в настройках шрифта не активна настройка &amp;ldquo;regular&amp;rdquo;? Ответь на русском языке&lt;/em&gt;. Ответ Perplexity:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;К сожалению, предоставленные результаты поиска не содержат информации, которая бы непосредственно отвечала на заданный вопрос. Однако, возможно, проблема заключается в том, что выбранный шрифт не имеет начертания &amp;ldquo;regular&amp;rdquo;. В таком случае, можно попробовать выбрать другой шрифт или начертание, которое подходит для нужного текста. Также, возможно, проблема связана с ошибкой программы, и в этом случае стоит обратиться к документации или технической поддержке Figma.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Точно, речь о начертаниях. Если подозреваем ошибку, то перезагружаем Фигму. Если проблема сохранилась - меняем шрифт на другой, в котором работают все нужные начертания.&lt;/p&gt;
+&lt;p&gt;Многие новейшие инструменты, основанные на искусственном интеллекте, имеют бесконечное терпение и немыслимый запас знаний. Если не устраивает Perplexity, то найдите знакомого, который &amp;ldquo;подружит&amp;rdquo; вас с другими отличными чат-ботами, например, Chat GPT, Bing, You.com - они помогут решить львиную долю проблем в освоении профессии.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.perplexity.ai/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Ссылка на чат-бота Perplexity&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://ailibri.com/education-assistant/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Список ИИ-помощников в обучении&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://ailibri.com/search-engine/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Список поисковых ИИ-помощников, чат-ботов&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+
+&lt;img src=&#34;https://asarapulov.ru/p/5-glavnyh-instrumentov-kotorye-prodvinut-lyubogo-novichka-v-izuchenii-figma/robot.jpg&#34;
+	width=&#34;563&#34;
+	height=&#34;204&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;ИИ чат-бот - это самый терпеливый наставник&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;275&#34;
+		data-flex-basis=&#34;662px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Статью написал Андрей Сарапулов, если у вас есть вопросы, пишите в Telegram: &lt;a class=&#34;link&#34; href=&#34;https://t.me/a_sarapulov&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://t.me/a_sarapulov&lt;/a&gt;.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>NOW или никогда: обзор неинстаграмщика</title>
+        <link>https://asarapulov.ru/p/now-ili-nikogda-obzor-neinstagramschika/</link>
+        <pubDate>Mon, 20 Mar 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://asarapulov.ru/p/now-ili-nikogda-obzor-neinstagramschika/</guid>
+        <description>&lt;img src="https://asarapulov.ru/p/now-ili-nikogda-obzor-neinstagramschika/now.jpg" alt="Featured image of post NOW или никогда: обзор неинстаграмщика" /&gt;&lt;h2 id=&#34;факты-и-домыслы&#34;&gt;Факты и домыслы&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Now — это новая соцсеть в узнаваемом формате.&lt;/li&gt;
+&lt;li&gt;Весна 2022 — более удачного времени для выхода российского аналога Instagram* и не придумаешь.&lt;/li&gt;
+&lt;li&gt;Весна 2022 — более неудачного времени для выхода российского IT-продукта не придумаешь.&lt;/li&gt;
+&lt;li&gt;Now разработали бывшие работники Яндекса.&lt;/li&gt;
+&lt;li&gt;Они хранят контент в облачных решениях от Google и Яндекс.&lt;/li&gt;
+&lt;li&gt;Приложение работает даже из Крыма.&lt;/li&gt;
+&lt;li&gt;Now app не хотели регистрировать в Appgallery от Huawei, из-за “общих слов” в названии.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Ссылки:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://nowapp.me/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://nowapp.me/&lt;/a&gt; - сайт&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://apps.apple.com/ru/app/urbanspoon/id1615654829&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://apps.apple.com/ru/app/urbanspoon/id1615654829&lt;/a&gt; - для Айфона&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://play.google.com/store/apps/details?id=com.marinin.nowapp&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://play.google.com/store/apps/details?id=com.marinin.nowapp&lt;/a&gt; - для Андроида&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;моя-история&#34;&gt;Моя история&lt;/h2&gt;
+&lt;p&gt;Итак, май 2022, у меня уже есть рабочий аккаунт в новой соцсети, одной из тех, “которая должна заменить Instagram”. Я еду в метро и, поглощенный толпой, открываю знакомый тёмный интерфейс и завожу &lt;em&gt;свой&lt;/em&gt; аккаунт @ruphoto. Слегка удивляюсь тому, что такой ник может быть свободен.&lt;/p&gt;
+&lt;p&gt;Конечно, я хочу создать аккаунт, аналогичный тысячам популярнейших каналов в Инсте - с фотографиями российской глубинки, добиться хороших показателей и продавать рекламу. Все горизонты свободны.&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://nowapp.me/p/bc4096a0-c932-11ec-9b3f-bd8e34b788e1&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Первой фотографией&lt;/a&gt; я заливаю работу С. М. Прокудина-Горского “Река Вытегра в Вологодской области”. Нет никаких сомнений, что русский пейзаж столетней давности отзовется в сердцах пока еще не существующих подписчиков. Так и происходит. Первых лайков ждать не пришлось и мне отсыпали достаточное количество “сетевого внимания”.&lt;/p&gt;
+&lt;p&gt;
+
+&lt;img src=&#34;https://asarapulov.ru/p/now-ili-nikogda-obzor-neinstagramschika/old.jpg&#34;
+	width=&#34;591&#34;
+	height=&#34;1280&#34;
+	
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;46&#34;
+		data-flex-basis=&#34;110px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Уже потом, через несколько месяцев, сотни постов и отработку некоторого количества аккаунтов, я понимаю, что если уж и заниматься чем-то, то &lt;strong&gt;с душой&lt;/strong&gt;, поэтому сильно сбавляю темпы, переключаю внимание на другие проекты.&lt;/p&gt;
+&lt;p&gt;Сейчас у меня в комплекте личный аккаунт @asarapulov, @nseti - дополнение к &lt;a class=&#34;link&#34; href=&#34;https://n-seti.ru/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;сайту о нейросетях&lt;/a&gt; и @ruphoto, о котором я писал выше.&lt;/p&gt;
+&lt;h2 id=&#34;обзор-now-глазами-обычного-человека&#34;&gt;Обзор Now глазами обычного человека&lt;/h2&gt;
+&lt;p&gt;Как вы поняли, гонка за рекламными воротилами (и накрутчиками) оказалась не по мне. Зато теперь пользуюсь Now в своё удовольствие. И вот благодаря чему.&lt;/p&gt;
+&lt;p&gt;Первое, что я увидел еще в 22-м - темная тема, сетка фотографий, лента и поиск. И уже тогда это было хорошим и рабочим приложением.&lt;/p&gt;
+&lt;h3 id=&#34;темы&#34;&gt;Темы&lt;/h3&gt;
+&lt;p&gt;Сейчас в Now три темы: светлая, тёмная и тёмный океан.&lt;/p&gt;
+&lt;p&gt;
+
+&lt;img src=&#34;https://asarapulov.ru/p/now-ili-nikogda-obzor-neinstagramschika/0001_white.jpg&#34;
+	width=&#34;591&#34;
+	height=&#34;1280&#34;
+	
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;46&#34;
+		data-flex-basis=&#34;110px&#34;
+	
+&gt;
+
+
+&lt;img src=&#34;https://asarapulov.ru/p/now-ili-nikogda-obzor-neinstagramschika/0002_black.jpg&#34;
+	width=&#34;591&#34;
+	height=&#34;1280&#34;
+	
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;46&#34;
+		data-flex-basis=&#34;110px&#34;
+	
+&gt;
+
+
+&lt;img src=&#34;https://asarapulov.ru/p/now-ili-nikogda-obzor-neinstagramschika/0003_ocean.jpg&#34;
+	width=&#34;591&#34;
+	height=&#34;1280&#34;
+	
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;46&#34;
+		data-flex-basis=&#34;110px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;быстродействие&#34;&gt;Быстродействие&lt;/h3&gt;
+&lt;p&gt;Приложение очень шустрое, я ни разу не встречал даже подлагиваний, хотя в 2022-м видел сообщения о том, что лента могла бы скроллиться плавнее, скорее всего, теперь исправили и это.&lt;/p&gt;
+&lt;h3 id=&#34;моменты--сториз&#34;&gt;Моменты — сториз&lt;/h3&gt;
+&lt;p&gt;Вместо сториз здесь “Моменты”. Они доступны из домашнего экрана и по тапу на аватар.&lt;/p&gt;
+&lt;p&gt;
+
+&lt;img src=&#34;https://asarapulov.ru/p/now-ili-nikogda-obzor-neinstagramschika/0005_momets.jpg&#34;
+	width=&#34;591&#34;
+	height=&#34;1280&#34;
+	
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;46&#34;
+		data-flex-basis=&#34;110px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;При создании собственных моментов можно добавлять текст в нескольких вариантах оформления,  хэштеги, упоминание и ссылку, можно что-то изобразить кистью, а так любимых многими GIF-анимаций здесь пока нет.&lt;/p&gt;
+&lt;p&gt;
+
+&lt;img src=&#34;https://asarapulov.ru/p/now-ili-nikogda-obzor-neinstagramschika/0006_momets_create_1.jpg&#34;
+	width=&#34;828&#34;
+	height=&#34;1086&#34;
+	
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;76&#34;
+		data-flex-basis=&#34;182px&#34;
+	
+&gt;
+
+
+&lt;img src=&#34;https://asarapulov.ru/p/now-ili-nikogda-obzor-neinstagramschika/0007_momets_create_2.jpg&#34;
+	width=&#34;828&#34;
+	height=&#34;753&#34;
+	
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;109&#34;
+		data-flex-basis=&#34;263px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;сообщения--директ&#34;&gt;Сообщения — директ&lt;/h3&gt;
+&lt;p&gt;Сообщения (Директ) доступны по свайпу вправо от домашнего экрана с лентой или по тапу в правом верхнем углу.&lt;/p&gt;
+&lt;p&gt;
+
+&lt;img src=&#34;https://asarapulov.ru/p/now-ili-nikogda-obzor-neinstagramschika/0008_soobshenia.jpg&#34;
+	width=&#34;828&#34;
+	height=&#34;1104&#34;
+	
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;75&#34;
+		data-flex-basis=&#34;180px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Абсолютно идентичные инсте диалоги (во всех смыслах):
+
+
+&lt;img src=&#34;https://asarapulov.ru/p/now-ili-nikogda-obzor-neinstagramschika/0008_soobshenia_2.jpg&#34;
+	width=&#34;591&#34;
+	height=&#34;1280&#34;
+	
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;46&#34;
+		data-flex-basis=&#34;110px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;лента&#34;&gt;Лента&lt;/h3&gt;
+&lt;p&gt;Лента (кажется) выстроена в хронологическом порядке, поэтому пользователи Now не пропускают публикации из-за сложных систем рейтинга.&lt;/p&gt;
+&lt;div class=&#34;video-wrapper&#34;&gt;
+    &lt;video
+    controls
+    src=&#34;0004_scrolling.mp4&#34;
+    
+    
+    &gt;
+        &lt;p&gt;
+            Your browser doesn&#39;t support HTML5 video. Here is a
+            &lt;a href=&#34;0004_scrolling.mp4&#34;&gt;link to the video&lt;/a&gt; instead.
+        &lt;/p&gt;
+    &lt;/video&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Посты, как и положено, содержат лайки, комментарии, подпись, кнопку “Поделиться” и сохранить в закладки + можно скопировать ссылку на пост, но посмотреть в браузере ее будет нельзя - у Now пока нет браузерной версии.&lt;/p&gt;
+&lt;p&gt;
+
+&lt;img src=&#34;https://asarapulov.ru/p/now-ili-nikogda-obzor-neinstagramschika/0009_comments.jpg&#34;
+	width=&#34;591&#34;
+	height=&#34;1280&#34;
+	
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;46&#34;
+		data-flex-basis=&#34;110px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Пост может содержать несколько фотографий, но не более 10.&lt;/p&gt;
+&lt;div class=&#34;video-wrapper&#34;&gt;
+    &lt;video
+    controls
+    src=&#34;0009_post_photos.mp4&#34;
+    
+    
+    &gt;
+        &lt;p&gt;
+            Your browser doesn&#39;t support HTML5 video. Here is a
+            &lt;a href=&#34;0009_post_photos.mp4&#34;&gt;link to the video&lt;/a&gt; instead.
+        &lt;/p&gt;
+    &lt;/video&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Пост может содержать видео. Помню, когда добавили эту фукнцию весь Now был завален видеопостами, причем авторскими.&lt;/p&gt;
+&lt;p&gt;Система комментариев тоже вполне себе комфортна: можно отвечать и лайкать и редактировать свои комментарии. Если вышли, не отправив комментарий, то приложение сохранит текст на всякий случай.&lt;/p&gt;
+&lt;h3 id=&#34;действия&#34;&gt;Действия&lt;/h3&gt;
+&lt;p&gt;На этом экране собраны комментарии к вашим постам, упоминания вашего аккаунта и сообщения о новых подписчиках.
+
+
+&lt;img src=&#34;https://asarapulov.ru/p/now-ili-nikogda-obzor-neinstagramschika/0010_deistvia_2.jpg&#34;
+	width=&#34;591&#34;
+	height=&#34;1280&#34;
+	
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;46&#34;
+		data-flex-basis=&#34;110px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;
+
+&lt;img src=&#34;https://asarapulov.ru/p/now-ili-nikogda-obzor-neinstagramschika/0010_deistvia.jpg&#34;
+	width=&#34;591&#34;
+	height=&#34;1280&#34;
+	
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;46&#34;
+		data-flex-basis=&#34;110px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Так иконка Действий сигнализирует о новых действиях:
+
+
+&lt;img src=&#34;https://asarapulov.ru/p/now-ili-nikogda-obzor-neinstagramschika/0010_deistvia_3.jpg&#34;
+	width=&#34;591&#34;
+	height=&#34;1280&#34;
+	
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;46&#34;
+		data-flex-basis=&#34;110px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;поиск&#34;&gt;Поиск&lt;/h3&gt;
+&lt;p&gt;При переходе в раздел Поиска Now показывает сетку постов из рекомендаций. Кстати, раз в сутки любому доступно одно “продвижение”, скорее всего, ваш пост попадет именно сюда.&lt;/p&gt;
+&lt;p&gt;Доступен поиск по именам пользователей, подписям к профилям и хэштегам.&lt;/p&gt;
+&lt;p&gt;
+
+&lt;img src=&#34;https://asarapulov.ru/p/now-ili-nikogda-obzor-neinstagramschika/0011_poisk.jpg&#34;
+	width=&#34;591&#34;
+	height=&#34;1280&#34;
+	
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;46&#34;
+		data-flex-basis=&#34;110px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;профиль&#34;&gt;Профиль&lt;/h3&gt;
+&lt;p&gt;В профиль можно вставить ссылку и вообще встретить привычное описание, состоящее из рекламы и emoji.&lt;/p&gt;
+&lt;p&gt;
+
+&lt;img src=&#34;https://asarapulov.ru/p/now-ili-nikogda-obzor-neinstagramschika/0012_profile.jpg&#34;
+	width=&#34;591&#34;
+	height=&#34;1280&#34;
+	
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;46&#34;
+		data-flex-basis=&#34;110px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Как я уже говорил, у меня есть несколько аккаунтов, с недавних пор, таким, как я, стало легче - теперь можно легко переключаться между аккаунтами при помощи длительного нажатия на иконку экрана Профиля.&lt;/p&gt;
+&lt;div class=&#34;video-wrapper&#34;&gt;
+    &lt;video
+    controls
+    src=&#34;00011_multiaccount.mp4&#34;
+    
+    
+    &gt;
+        &lt;p&gt;
+            Your browser doesn&#39;t support HTML5 video. Here is a
+            &lt;a href=&#34;00011_multiaccount.mp4&#34;&gt;link to the video&lt;/a&gt; instead.
+        &lt;/p&gt;
+    &lt;/video&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&#34;хотелки&#34;&gt;Хотелки&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Большой раздел с рекомендациями&lt;/li&gt;
+&lt;li&gt;Desktop-приложение или веб-версия&lt;/li&gt;
+&lt;li&gt;Доступное и бесконечное “Избранное”, чтобы я скриншоты эти себе не через Telegram пересылал, а чтобы внутри&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;⋆Instagram запрещен в России, и это нормально.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Как войти в сервисное меню на телевизоре Asano 32LF8130S с Яндекс.ТВ?</title>
+        <link>https://asarapulov.ru/p/kak-voyti-v-servisnoe-menyu-na-televizore-asano-32lf8130s-s-yandeks-tv/</link>
+        <pubDate>Tue, 21 Feb 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://asarapulov.ru/p/kak-voyti-v-servisnoe-menyu-na-televizore-asano-32lf8130s-s-yandeks-tv/</guid>
+        <description>&lt;img src="https://asarapulov.ru/p/kak-voyti-v-servisnoe-menyu-na-televizore-asano-32lf8130s-s-yandeks-tv/index.jpg" alt="Featured image of post Как войти в сервисное меню на телевизоре Asano 32LF8130S с Яндекс.ТВ?" /&gt;&lt;h1 id=&#34;как-войти-в-сервисное-меню-на-телевизоре-asano-32lf8130s-с-яндекств&#34;&gt;Как войти в сервисное меню на телевизоре Asano 32LF8130S с Яндекс.ТВ?&lt;/h1&gt;
+&lt;p&gt;Покупатели не рекомендуют покупать этот ТВ Asano 32LF8130S, но если кого-то не остановили гневные отзывы, то вот вам способ, который позволит войти в зависшее меню. Да, телевизор адово глючит и лечится это только сбросом на заводские настройки.&lt;/p&gt;
+&lt;p&gt;Так вот, чтобы сбросить телевизор Asano 32LF8130S с Яндекс.ТВ, нужно взять в руки пульт и нажать следующие кнопки:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Меню (1 сек)&lt;/li&gt;
+&lt;li&gt;Влево&lt;/li&gt;
+&lt;li&gt;Вверх&lt;/li&gt;
+&lt;li&gt;Влево&lt;/li&gt;
+&lt;li&gt;Вверх&lt;/li&gt;
+&lt;li&gt;Назад&lt;/li&gt;
+&lt;li&gt;В Factory menu найти пункт SHIPPING INIT.&lt;/li&gt;
+&lt;li&gt;Подтвердить, телевизор перезагрузится с заводскими настройками.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Или попробуйте такое сочетание магических нажатий:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Меню&lt;/li&gt;
+&lt;li&gt;Вверх&lt;/li&gt;
+&lt;li&gt;Влево&lt;/li&gt;
+&lt;li&gt;Вверх&lt;/li&gt;
+&lt;li&gt;Влево&lt;/li&gt;
+&lt;li&gt;Кнопка Назад&lt;/li&gt;
+&lt;li&gt;Вниз&lt;/li&gt;
+&lt;li&gt;Далее выбираем первый пункт, ОК, ВПРАВО, ОК.&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+        </item>
+        <item>
+        <title>Наушники CaseGuru CGpods 5.0 не синхронизируются, что делать?</title>
+        <link>https://asarapulov.ru/p/naushniki-caseguru-cgpods-5-0-ne-sinhroniziruyutsya-chto-delat/</link>
+        <pubDate>Tue, 14 Feb 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://asarapulov.ru/p/naushniki-caseguru-cgpods-5-0-ne-sinhroniziruyutsya-chto-delat/</guid>
+        <description>&lt;img src="https://asarapulov.ru/p/naushniki-caseguru-cgpods-5-0-ne-sinhroniziruyutsya-chto-delat/case-guru-not-sync.jpg" alt="Featured image of post Наушники CaseGuru CGpods 5.0 не синхронизируются, что делать?" /&gt;&lt;p&gt;Иногда один из наушников CaseGuru CGpods 5.0 теряет синхронизацию со вторым. Чтобы это исправить, нужно выполнить ряд следующих действий:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Достать из кейса оба наушника&lt;/li&gt;
+&lt;li&gt;Выключить оба наушника длительным зажатием&lt;/li&gt;
+&lt;li&gt;Зажать сенсоры на обоих наушниках, дождаться, пока не замигает красно-синий диод на обоих наушниках&lt;/li&gt;
+&lt;li&gt;Нажать одновременно на оба наушника 5 раз и если все сделано верно, то они загорятся фиолетовым и выключатся&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Кладем оба наушника в кейс, закрываем его, а потом достаем их, чтобы они включились&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Как обычно подключаем наушники к телефону и проверяем работу.&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+        </item>
+        <item>
+        <title>Диапазон дат в MODX с помощью MIGX</title>
+        <link>https://asarapulov.ru/p/diapazon-dat-v-modx-s-pomoschyu-migx/</link>
+        <pubDate>Fri, 10 Feb 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://asarapulov.ru/p/diapazon-dat-v-modx-s-pomoschyu-migx/</guid>
+        <description>&lt;img src="https://asarapulov.ru/p/diapazon-dat-v-modx-s-pomoschyu-migx/index.jpg" alt="Featured image of post Диапазон дат в MODX с помощью MIGX" /&gt;&lt;h1 id=&#34;диапазон-дат-в-modx-с-помощью-migx&#34;&gt;Диапазон дат в MODX с помощью MIGX&lt;/h1&gt;
+&lt;p&gt;Потребовалось мне как-то добавить к ресурсу MODX неограниченное количество диапазонов дат. Так бывает нужно, например, если ресурс - это учебный курс, который проводится несколько раз в год с такой-то дату по такую-то, и надо это как-то выводить.&lt;/p&gt;
+&lt;p&gt;Что надо делать:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Установить MIGX&lt;/li&gt;
+&lt;li&gt;Переходим в Управление → MIGX → Добавить элемент&lt;/li&gt;
+&lt;li&gt;В поле Name вводем имя “datePicker”&lt;/li&gt;
+&lt;li&gt;Открываем вкладку Formtabs → Добавить элемент&lt;/li&gt;
+&lt;li&gt;В поле “Caption” вводим “Диапазон дат”&lt;/li&gt;
+&lt;li&gt;Тамже рядом с “Fields” находим Добавить элемент и жамкаем&lt;/li&gt;
+&lt;li&gt;В появившемся окне вводим:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Fieldname - “start_date”&lt;/li&gt;
+&lt;li&gt;Caption - “Начальная дата“&lt;/li&gt;
+&lt;li&gt;Input TV - “dateStart”&lt;/li&gt;
+&lt;li&gt;Input TV type - “date”&lt;/li&gt;
+&lt;li&gt;Жмем “Сохранить и закрыть”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;8&#34;&gt;
+&lt;li&gt;Снова жмем на “Добавить элемент” и добавляем такие параметры:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Fieldname - “end_date”&lt;/li&gt;
+&lt;li&gt;Caption - “Конечная дата“&lt;/li&gt;
+&lt;li&gt;Input TV - “dateEnd”&lt;/li&gt;
+&lt;li&gt;Input TV type - “date”&lt;/li&gt;
+&lt;li&gt;Жмем “Сохранить и закрыть”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;9&#34;&gt;
+&lt;li&gt;Множество раз жмем “Сохранить и закрыть” пока не закроется всё&lt;/li&gt;
+&lt;li&gt;Создаем TV-поле dateStart, где в параметрах ввода выбираем:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Тип ввода: Дата&lt;/li&gt;
+&lt;li&gt;Выбираем другие параметры, которые по-душе)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;11&#34;&gt;
+&lt;li&gt;Создаем другое поле dateEnd с такими же параметрами.&lt;/li&gt;
+&lt;li&gt;Создаем третье ТВ-поле datePickTv и в нем в Параметрах ввода делаем следующее:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Тип ввода: migx&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Конфигурации: datePicker&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Вкладки формы:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &amp;#34;caption&amp;#34;:&amp;#34;Date Ranges&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &amp;#34;fields&amp;#34;: [
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          &amp;#34;field&amp;#34;:&amp;#34;start_date&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          &amp;#34;caption&amp;#34;:&amp;#34;Start Date&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          &amp;#34;inputTVtype&amp;#34;:&amp;#34;date&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      },
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          &amp;#34;field&amp;#34;:&amp;#34;end_date&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          &amp;#34;caption&amp;#34;:&amp;#34;End Date&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          &amp;#34;inputTVtype&amp;#34;:&amp;#34;date&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      }
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;]
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Разметка колонок:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{&amp;#34;header&amp;#34;: &amp;#34;Начало&amp;#34;, &amp;#34;width&amp;#34;: &amp;#34;160&amp;#34;, &amp;#34;sortable&amp;#34;: &amp;#34;true&amp;#34;, &amp;#34;dataIndex&amp;#34;: &amp;#34;start_date&amp;#34;},
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{&amp;#34;header&amp;#34;: &amp;#34;Конец&amp;#34;, &amp;#34;width&amp;#34;: &amp;#34;160&amp;#34;, &amp;#34;sortable&amp;#34;: &amp;#34;true&amp;#34;, &amp;#34;dataIndex&amp;#34;: &amp;#34;end_date&amp;#34;}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;]
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ol start=&#34;13&#34;&gt;
+&lt;li&gt;Не забываем добавить это поле к шаблону в “Доступно для шаблонов”, сохраняем, &lt;em&gt;крестимся&lt;/em&gt; и проверяем…&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;
+
+&lt;img src=&#34;https://asarapulov.ru/p/diapazon-dat-v-modx-s-pomoschyu-migx/2023-02-10_19-21-44.png&#34;
+	width=&#34;725&#34;
+	height=&#34;251&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;такой результат&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;288&#34;
+		data-flex-basis=&#34;693px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;В шаблоне пишем типа такого:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-mysql&#34; data-lang=&#34;mysql&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[[&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;!&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;getImageList&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;?&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;tvname&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=`&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;datePickTv&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;`&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;tpl&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=`&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;date_range_tpl&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;`&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]]&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;В чанке:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;p&amp;gt;[[+start_date:date=`%d-%m-%Y`]] — [[+end_date:date=`%d-%m-%Y`]]&amp;lt;/p&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
+        </item>
+        <item>
+        <title>5 советов по продвинутому использованию ChatGPT</title>
+        <link>https://asarapulov.ru/p/5-sovetov-po-prodvinutomu-ispolzovaniyu-chatgpt/</link>
+        <pubDate>Thu, 05 Jan 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://asarapulov.ru/p/5-sovetov-po-prodvinutomu-ispolzovaniyu-chatgpt/</guid>
+        <description>&lt;img src="https://asarapulov.ru/p/5-sovetov-po-prodvinutomu-ispolzovaniyu-chatgpt/index.jpg" alt="Featured image of post 5 советов по продвинутому использованию ChatGPT" /&gt;&lt;p&gt;Важное замечание: если вы не можете добиться подходящего ответа от ChatGPT на русском, попробуйте написать вопрос на английском языке (в другом чате).&lt;/p&gt;
+&lt;h2 id=&#34;попросите-сымитировать-эксперта&#34;&gt;Попросите сымитировать эксперта&lt;/h2&gt;
+&lt;p&gt;Попросите ChatGPT сыграть роль клиента, соведущего или талантливого эксперта. Поговорите с ним или попросите его создать контент, как если бы он был конкретной персоной.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Пример:&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;Ты - талантливый аналитик в ведущей фирме по исследованию рынка, выпускник Гарвардской школы бизнеса.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Сделай мне наставление, как создать контент для руководителей в B2B SaaS компаниях. Отдавай предпочтение неординарным, экспертным советам.&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;оспаривайте-общепринятое-повествование&#34;&gt;Оспаривайте общепринятое повествование&lt;/h2&gt;
+&lt;p&gt;Попросите привести примеры того, что противоречит доминирующему повествованию. Создавайте контент, который бросает вызов предположениям читателей. Ищите провокационные ракурсы, которые опровергают ожидания и разрушают привычную картину.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Пример:&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;Тема: Развитие электронной рассылки компании&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Для вышеуказанной темы приведи примеры, которые противоречат общепринятому мнению. Разработайте набросок содержания, заставляющего задуматься и бросающего вызов предположениям.&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;используйте-необычные-ходы&#34;&gt;Используйте необычные ходы&lt;/h2&gt;
+&lt;p&gt;Чтобы раскрыть творческий потенциал ChatGPT используйте яркие формулировки и неожиданные темы.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Примеры:&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;Напиши стихотворение о копирайтинге.&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;Опиши ощущение себя предпринимателем с помощью 10 прилагательных.&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;ультра-мозговой-штурм&#34;&gt;Ультра-мозговой штурм&lt;/h2&gt;
+&lt;p&gt;Можно попросить ChatGPT сгенерировать список потенциальных идей тем для вашего следующего проекта. Но чаще всего они оказываются общими и ожидаемыми.&lt;/p&gt;
+&lt;p&gt;Вместо этого попросите ChatGPT придумать новые углы или подходы к освещению знакомой темы.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Пример:&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;*Тема: Как удвоить свой творческий потенциал. *&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Для вышеупомянутой темы проведите мозговой штурм новых ракурсов или подходов. Отдайте предпочтение необычным или новым идеям.&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;tone-of-voice-от-chatgpt&#34;&gt;Tone of voice от ChatGPT&lt;/h2&gt;
+&lt;p&gt;ChatGPT может проанализировать ваш стиль письма и даже tone of voice ваших текстов. Попросите его помочь вам создать руководство по стилю для будущих публикаций.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Пример:&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;Проанализируй приведенный ниже текст на предмет стилистики, tone of voice. Используя НЛП, создайте руководство для написания новой статьи в том же стиле, tone of voice:&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;(Вставьте сюда свой текст)&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Источник: &lt;a class=&#34;link&#34; href=&#34;https://twitter.com/thatroblennon/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://twitter.com/thatroblennon/&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Как придумать название компании в 2023? Бесплатный онлайн-генератор</title>
+        <link>https://asarapulov.ru/p/kak-pridumat-nazvanie-kompanii-v-2023-besplatnyy-onlayn-generator/</link>
+        <pubDate>Sun, 25 Dec 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://asarapulov.ru/p/kak-pridumat-nazvanie-kompanii-v-2023-besplatnyy-onlayn-generator/</guid>
+        <description>&lt;img src="https://asarapulov.ru/p/kak-pridumat-nazvanie-kompanii-v-2023-besplatnyy-onlayn-generator/neiroset-nazvanie-companii.jpg" alt="Featured image of post Как придумать название компании в 2023? Бесплатный онлайн-генератор" /&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://namelix.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Namelix.com&lt;/a&gt; — это сервис, который использует нейросеть для генерации названий компании и логотипов. Пользователь может ввести ключевые слова, которые будут учтены при генерации названия, а также выбрать желаемый стиль логотипа. Сервис предлагает несколько вариантов названий и логотипов, которые можно просмотреть и выбрать наиболее подходящий.&lt;/p&gt;
+&lt;p&gt;Namelix.com может быть полезен для тех, кто хочет быстро придумать уникальное название для своего бизнеса или бренда.&lt;/p&gt;
+&lt;h2 id=&#34;squadhelp&#34;&gt;SquadHelp&lt;/h2&gt;
+&lt;p&gt;Эти парни писали мне несколько раз, поэтому я решил добавить к своей статье еще немного информации. Генератор от &lt;a class=&#34;link&#34; href=&#34;https://www.squadhelp.com/business-name-generator/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;SquadHelp&lt;/a&gt; может за считанные секунды создать название и логотип для вашего бизнеса просто по вашему описанию (на английском языке).&lt;/p&gt;
+&lt;p&gt;Сервис также предлагает несколько вариантов доменных имен для вашего бизнеса и проверяет их на доступность.&lt;/p&gt;
+&lt;p&gt;Этот и другие ИИ-генераторы для бизнеса можно найти в &lt;a class=&#34;link&#34; href=&#34;https://ailibri.com/startup-tools/bn-squadhelp&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;нашем каталоге нейросетей AIlibri.com&lt;/a&gt;.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Поменять дату создания у файлов изображений</title>
+        <link>https://asarapulov.ru/p/pomenyat-datu-sozdaniya-u-izobrazheniya/</link>
+        <pubDate>Wed, 12 Oct 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://asarapulov.ru/p/pomenyat-datu-sozdaniya-u-izobrazheniya/</guid>
+        <description>&lt;img src="https://asarapulov.ru/p/pomenyat-datu-sozdaniya-u-izobrazheniya/change-date-image-creation-from-exif.jpg" alt="Featured image of post Поменять дату создания у файлов изображений" /&gt;&lt;h1 id=&#34;поменять-дату-создания-у-файлов-изображений&#34;&gt;Поменять дату создания у файлов изображений&lt;/h1&gt;
+&lt;p&gt;Проблема: есть фотки, в которых правильная “дата съемки” в EXIF, но неправильная дата создания (и изменения) файла. Нужно их “синхронизировать”.&lt;/p&gt;
+&lt;p&gt;
+
+&lt;img src=&#34;https://asarapulov.ru/p/pomenyat-datu-sozdaniya-u-izobrazheniya/change-date-image-creation-from-exif.jpg&#34;
+	width=&#34;1006&#34;
+	height=&#34;421&#34;
+	
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;238&#34;
+		data-flex-basis=&#34;573px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Заходим на &lt;a class=&#34;link&#34; href=&#34;https://www.sentex.ca/~mwandel/jhead/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;сайт утилиты jhead&lt;/a&gt; и скачиваем jhead.exe. Этот файл закидываем в папку windows.&lt;/li&gt;
+&lt;li&gt;Открываем командную строку, пишем &lt;code&gt;cd&lt;/code&gt; и вставляем адрес папки с фотографиями. Получается типа &lt;code&gt;cd c:\photos&lt;/code&gt; и жмем Enter&lt;/li&gt;
+&lt;li&gt;Затем пишем &lt;code&gt;jhead -ft *.jpg&lt;/code&gt; и всё, все фотографии в папке получат дату создания и изменения из даты съемки EXIF.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Может быть актуально, например, при переносе фотографий из одного облака в другое.&lt;/p&gt;
+&lt;p&gt;Чтобы удостовериться в корректности выполненной операции, в проводнике выберите “Вид - Таблица”, затем ПКМ по столбцам - Подробнее и выбрать “Дата съемки”.&lt;/p&gt;
+&lt;p&gt;Еще команда для изменения jpg-файлов в сетевом диске:
+&lt;code&gt;jhead -ft &amp;quot;O:\Photo\Google Photo\2020\5\*.jpg&amp;quot;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;А вот команда для видео mp4 и mov, которые имеют правильную &amp;ldquo;Дату создания мультимедия&amp;rdquo; и неправильную &amp;ldquo;Дату создания&amp;rdquo;:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;exiftool &amp;quot;-FileCreateDate&amp;lt;AllDates&amp;quot; -if &amp;quot;not $datetimeoriginal&amp;quot; *.mp4 *.mov&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Exiftool нужно предварительно установить, конечно же.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Шильонский замок и актеры русского музыкального театра</title>
+        <link>https://asarapulov.ru/p/shilonskiy-zamok-i-aktery-russkogo-muzykalnogo-teatra/</link>
+        <pubDate>Wed, 12 Oct 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://asarapulov.ru/p/shilonskiy-zamok-i-aktery-russkogo-muzykalnogo-teatra/</guid>
+        <description>&lt;img src="https://asarapulov.ru/p/shilonskiy-zamok-i-aktery-russkogo-muzykalnogo-teatra/stereopara_zhenevskoe_ozero_shilonskij_zamok_fotografiya.png" alt="Featured image of post Шильонский замок и актеры русского музыкального театра" /&gt;&lt;h1 id=&#34;шильонский-замок-и-актеры-русского-музыкального-театра&#34;&gt;Шильонский замок и актеры русского музыкального театра&lt;/h1&gt;
+&lt;p&gt;Несколько лет назад купил на Озоне два старинных снимка. Этот поступок вообще не нес какого-то особого смысла — я просто приобрел то, что радовало глаз. Решил, наконец, опубликовать их «с потрохами», — вдруг кому-нибудь понадобится.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Стереопара «Женевское озеро, Шильонский замок»&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;
+
+&lt;img src=&#34;https://asarapulov.ru/p/shilonskiy-zamok-i-aktery-russkogo-muzykalnogo-teatra/stereopara_zhenevskoe_ozero_shilonskij_zamok_fotografiya.png&#34;
+	width=&#34;1280&#34;
+	height=&#34;616&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Стереопара «Женевское озеро, Шильонский замок» Chateau de Chillon&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;207&#34;
+		data-flex-basis=&#34;498px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Стереопара. Швейцария (начало XX века). Размер одного изображения 7,7×7,8 см. Размер стереокарты 17,7×8,7 см. Сохранность хорошая. Временные пятна. Незначительные царапины. Владельческие пометы.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Актеры русского музыкального театра XIX — начала XX веков.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;
+
+&lt;img src=&#34;https://asarapulov.ru/p/shilonskiy-zamok-i-aktery-russkogo-muzykalnogo-teatra/aktery_russkogo_muzykalnogo_teatra_xix_nachala_xx_vekov_fotografiya.png&#34;
+	width=&#34;1280&#34;
+	height=&#34;1971&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Николай Николаевич Фигнер&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;64&#34;
+		data-flex-basis=&#34;155px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Фотография Везенберга, Санкт-Петербург, конец XIX века. Размер 6,5×10,5 см. Сохранность хорошая. Легкие временные пятна. В левом нижнем углу незначительный потек. На обороте владельческие пометы.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Кстати, описания процитированы с того же Озона (&lt;a class=&#34;link&#34; href=&#34;https://www.ozon.ru/context/detail/id/5133802/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt; и &lt;a class=&#34;link&#34; href=&#34;https://www.ozon.ru/context/detail/id/4488611/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;), который уже много лет заботливо хранит изображения и подробное описание этих карточек.&lt;/p&gt;
+&lt;p&gt;Добавлю: владельческая помета сообщает нам, что на второй фотографии «справа актер Фигнер». По всей видимости — оперный певец &lt;a class=&#34;link&#34; href=&#34;https://ru.wikipedia.org/wiki/%D0%A4%D0%B8%D0%B3%D0%BD%D0%B5%D1%80,_%D0%9D%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0%D0%B9_%D0%9D%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0%D0%B5%D0%B2%D0%B8%D1%87&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Николай Николаевич Фигнер&lt;/a&gt;, брат знаменитой &lt;a class=&#34;link&#34; href=&#34;https://ru.wikipedia.org/wiki/%D0%A4%D0%B8%D0%B3%D0%BD%D0%B5%D1%80,_%D0%92%D0%B5%D1%80%D0%B0_%D0%9D%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0%D0%B5%D0%B2%D0%BD%D0%B0&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Веры Фигнер&lt;/a&gt;, революционерки из Народной воли.&lt;/p&gt;
+&lt;p&gt;Цитата из Википедии:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Артистическим талантом Фигнера восхищался П. И. Чайковский, посвятивший ему шесть романсов &amp;lt;&amp;hellip;&amp;gt;. Фигнер первый из русских оперных певцов соединил драматическое, сценическое и вокальное в единую систему оперного действия.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;А &lt;a class=&#34;link&#34; href=&#34;https://ru.wikipedia.org/wiki/%D0%A8%D0%B8%D0%BB%D1%8C%D0%BE%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D0%B7%D0%B0%D0%BC%D0%BE%D0%BA&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Шильонский замок&lt;/a&gt; все также хорош:&lt;/p&gt;
+&lt;p&gt;
+
+&lt;img src=&#34;https://asarapulov.ru/p/shilonskiy-zamok-i-aktery-russkogo-muzykalnogo-teatra/The_Sun_Sets_on_Ch%C3%A2teau_de_Chillon.jpg&#34;
+	width=&#34;2400&#34;
+	height=&#34;1601&#34;
+	
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;149&#34;
+		data-flex-basis=&#34;359px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Хайрезы &lt;a class=&#34;link&#34; href=&#34;https://cloud.mail.ru/public/K5y9/q5USkDSQo&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;тут&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Весы Xiaomi неправильно показывают мой вес!</title>
+        <link>https://asarapulov.ru/p/vesy-xiaomi-nepravilno-pokazyvayut-moy-ves/</link>
+        <pubDate>Tue, 06 Sep 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://asarapulov.ru/p/vesy-xiaomi-nepravilno-pokazyvayut-moy-ves/</guid>
+        <description>&lt;img src="https://asarapulov.ru/p/vesy-xiaomi-nepravilno-pokazyvayut-moy-ves/nepravilnyi-ves-na-vesah-xiaomi-1100x500.jpg" alt="Featured image of post Весы Xiaomi неправильно показывают мой вес!" /&gt;&lt;p&gt;Иногда весы от Сяоми начинают глючить и показывать неправильный вес — на 0,5 - 1 кг больше, чем нужно.&lt;/p&gt;
+&lt;p&gt;Чтобы решить этот вопрос, нужно выполнить простейшие действия:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Вытащить и вставить батарейки (весы перезагрузятся).&lt;/li&gt;
+&lt;li&gt;Поставить весы на ровную поверхность. Весы заново откалибруются.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Если не поможет, то по инструкции к весам Xiaomi предлагается заменить батарейки на новые.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>MODx: если не войти в админ-панель</title>
+        <link>https://asarapulov.ru/p/modx-admin-panel/</link>
+        <pubDate>Fri, 19 Aug 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://asarapulov.ru/p/modx-admin-panel/</guid>
+        <description>&lt;img src="https://asarapulov.ru/p/modx-admin-panel/modx.jpg" alt="Featured image of post MODx: если не войти в админ-панель" /&gt;&lt;h1 id=&#34;modx-если-не-войти-в-админ-панель&#34;&gt;MODx: если не войти в админ-панель&lt;/h1&gt;
+&lt;p&gt;Если заходишь в админ-панель, но при вводе логина-пароля страница просто обновляется, то:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Пробуем зайти из режима инкогнито и чистим папку core/cache, если не получается, то:&lt;/li&gt;
+&lt;li&gt;Заходим в БД и удаляем все записи в таблице modx_sessions&lt;/li&gt;
+&lt;li&gt;Заходим на хостинг и создаем нового пользователя для нужной базы&lt;/li&gt;
+&lt;li&gt;Находим файл core/config/config.inc.php, бекапим его и заменяем пользователя&lt;/li&gt;
+&lt;li&gt;Чистим папку core/cache&lt;/li&gt;
+&lt;li&gt;Пробуем зайти&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+        </item>
+        <item>
+        <title>Почему не работает интернет на Iphone?</title>
+        <link>https://asarapulov.ru/p/pochemu-ne-rabotaet-internet-na-iphone/</link>
+        <pubDate>Wed, 03 Aug 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://asarapulov.ru/p/pochemu-ne-rabotaet-internet-na-iphone/</guid>
+        <description>&lt;img src="https://asarapulov.ru/p/pochemu-ne-rabotaet-internet-na-iphone/image.jpg" alt="Featured image of post Почему не работает интернет на Iphone?" /&gt;&lt;h1 id=&#34;почему-не-работает-интернет-на-iphone&#34;&gt;Почему не работает интернет на Iphone?&lt;/h1&gt;
+&lt;p&gt;Однажды после перелёта, уже будучи в здании аэропорта, я чуть не сел в лужу с новеньким айфоном: оказалось, что мобильный интернет не работает - а он нужен, как минимум, чтобы вызвать такси. Позже я с ужасом обнаружил, что также не работают звонки.&lt;/p&gt;
+&lt;p&gt;Переключение к другим сетям, включение-выключение режима полета и роуминга, перезагрузка телефона ничего не дали.&lt;/p&gt;
+&lt;p&gt;Никогда раньше с таким не сталкивался. Но помогло следующее: нужно перейти в Настройки -&amp;gt; Основные -&amp;gt; Перенос или сброс IPhone -&amp;gt; Сброс -&amp;gt; Сбросить настройки сети.&lt;/p&gt;
+&lt;p&gt;После этого завелась связь и прилетели настройки интернета от мобильного оператора Тинькофф Мобайл. Кстати, делюсь ссылкой на симку с неделей бесплатной связи &lt;a class=&#34;link&#34; href=&#34;https://www.tinkoff.ru/sl/AQoGfQuBxSZ&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.tinkoff.ru/sl/AQoGfQuBxSZ&lt;/a&gt;, можно перейти с любого оператора.&lt;/p&gt;
+&lt;p&gt;И еще, Тинькофф Мобайл как нельзя актуален для пользователей IPhone: он позволяет на уровне оператора записывать звонки (хотя, бывает теряет записи) и другой альтернативы я не встречал.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Велотренажер и TikTok</title>
+        <link>https://asarapulov.ru/p/velotrenazher-i-tiktok/</link>
+        <pubDate>Sun, 01 May 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://asarapulov.ru/p/velotrenazher-i-tiktok/</guid>
+        <description>&lt;img src="https://asarapulov.ru/p/velotrenazher-i-tiktok/tiktok-velo-1100x500.jpg" alt="Featured image of post Велотренажер и TikTok" /&gt;&lt;p&gt;Лучшее средство скоротать время на велотренажёре - просмотр TikTok-роликов. Воистину - пожиратель времени, относительно полезная добавка, если на чтение или просмотр более серьезных вещей не хватает ресурсов, которые отъедают спортивные нагрузки.&lt;/p&gt;
+&lt;p&gt;Или Тикток уже не актуален и все куда-то перешли?&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Подсветка Яндекс Станцией</title>
+        <link>https://asarapulov.ru/p/podsvetka-yandeks-stanciej/</link>
+        <pubDate>Fri, 11 Mar 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://asarapulov.ru/p/podsvetka-yandeks-stanciej/</guid>
+        <description>&lt;img src="https://asarapulov.ru/p/podsvetka-yandeks-stanciej/alisa-posveti-1100x500.jpg" alt="Featured image of post Подсветка Яндекс Станцией" /&gt;&lt;p&gt;Яндекс Станция может подсветить своей фиолетовой подсветкой, иногда это может сильно пригодиться, когда нет ночника или фонарика под рукой.&lt;/p&gt;
+&lt;p&gt;Для этого есть навык &lt;a class=&#34;link&#34; href=&#34;https://dialogs.yandex.ru/store/skills/611575d4-kolonka-posveti&#34;  title=&#34;Колонка посвети&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Колонка посвети&lt;/a&gt;:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Открываем приложение Яндекс&lt;/li&gt;
+&lt;li&gt;Сервисы - Устройства&lt;/li&gt;
+&lt;li&gt;Сценарии - Плюс в правом верхнем углу - Сценарий&lt;/li&gt;
+&lt;li&gt;Любое имя сценария, Если - фраза &amp;ldquo;Посвети&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;Тогда &amp;ldquo;Любая умная колонка&amp;rdquo; и фраза &amp;ldquo;попроси Колонку посветить 30 секунд &lt;strong&gt;молча&lt;/strong&gt;&amp;rdquo;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://dialogs.yandex.ru/store/skills/611575d4-kolonka-posveti&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Здесь&lt;/a&gt; говорят, что навык подойдёт для колонок: Яндекс.Станция Яндекс.Станция мини Irbis A Elari Smartbeat Dexp Smartbox Prestigio Smart Mate, но я проверял только на большой Станции.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Алиса, Яндекс-станция и скорость ветра</title>
+        <link>https://asarapulov.ru/p/alisa-yandeks-stanciya-i-skorost-vetra/</link>
+        <pubDate>Wed, 09 Feb 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://asarapulov.ru/p/alisa-yandeks-stanciya-i-skorost-vetra/</guid>
+        <description>&lt;img src="https://asarapulov.ru/p/alisa-yandeks-stanciya-i-skorost-vetra/Snimok-ekrana-2022-02-04-165046-1019x500.jpg" alt="Featured image of post Алиса, Яндекс-станция и скорость ветра" /&gt;&lt;p&gt;Алиса наконец-то научилась называть скорость и направление ветра. Как никогда актуально для жителей Петербурга (да и Кудрова). Смотрим видео: &lt;a class=&#34;link&#34; href=&#34;https://dzen.ru/embed/vEtKFO6xjfVs?yredirect=true&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://dzen.ru/embed/vEtKFO6xjfVs?yredirect=true&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Зелёный экран ТВ и Яндекс Модуль</title>
+        <link>https://asarapulov.ru/p/zeljonyj-ekran-tv-i-yandeks-modul/</link>
+        <pubDate>Mon, 31 Jan 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://asarapulov.ru/p/zeljonyj-ekran-tv-i-yandeks-modul/</guid>
+        <description>&lt;img src="https://asarapulov.ru/p/zeljonyj-ekran-tv-i-yandeks-modul/yandex-modul-zelenyi-ekran-1100x500.jpg" alt="Featured image of post Зелёный экран ТВ и Яндекс Модуль" /&gt;&lt;p&gt;Короткая заметка для тех, кто купил Яндекс Модуль, выполнил подключение и &amp;ldquo;словил&amp;rdquo; зелёный экран, когда картинку более менее видно, но весь интерфейс в зелёных или каких-то еще тонах. Чтобы этого не было, нужно просто перезагрузить модуль, но не с кнопки пульта, а лучше отключить его из розетки и включить по-новой.&lt;/p&gt;
+&lt;p&gt;На скриншоте - то, как &lt;strong&gt;примерно&lt;/strong&gt; выглядел экран.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Как накачать грудь в домашних условиях отжиманиями</title>
+        <link>https://asarapulov.ru/p/kak-nakachat-grud-v-domashnih-usloviyah-otzhimaniyami/</link>
+        <pubDate>Fri, 28 Jan 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://asarapulov.ru/p/kak-nakachat-grud-v-domashnih-usloviyah-otzhimaniyami/</guid>
+        <description>&lt;img src="https://asarapulov.ru/p/kak-nakachat-grud-v-domashnih-usloviyah-otzhimaniyami/pexels-cottonbro-5320023.jpg" alt="Featured image of post Как накачать грудь в домашних условиях отжиманиями" /&gt;&lt;h1 id=&#34;как-накачать-грудь-в-домашних-условиях-отжиманиями&#34;&gt;Как накачать грудь в домашних условиях отжиманиями&lt;/h1&gt;
+&lt;p&gt;Чтобы раскачать грудные мыщцы дома при помощи отжиамний делай следующие упражнения 4 повторения по 5 кругов:&lt;/p&gt;
+&lt;h2 id=&#34;отжимания-лучник&#34;&gt;Отжимания Лучник&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Принимаем позицию как при начале обычных отжиманиях&lt;/li&gt;
+&lt;li&gt;Затем ставим руки значительно шире плеч&lt;/li&gt;
+&lt;li&gt;Ладони смотрят наружу&lt;/li&gt;
+&lt;li&gt;Сгибаем одну из рук в локте&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Техника выполнения отжиманий Лучник:
+&lt;div class=&#34;video-wrapper&#34;&gt;
+    &lt;iframe loading=&#34;lazy&#34; 
+            src=&#34;https://www.youtube.com/embed/Ycbbf7_k7Rc&#34; 
+            allowfullscreen 
+            title=&#34;YouTube Video&#34;
+    &gt;
+    &lt;/iframe&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;печатная-машинка&#34;&gt;Печатная машинка&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Принимаем позицию как при начале обычных отжиманиях&lt;/li&gt;
+&lt;li&gt;Затем ставим руки значительно шире плеч&lt;/li&gt;
+&lt;li&gt;Сгибаем обе руки в логтях - стартовая позиция&lt;/li&gt;
+&lt;li&gt;Делаем &amp;ldquo;перекаты&amp;rdquo; как при отжиманиях Лучник&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Техника выполнения отжиманий Печатная машинка:&lt;/p&gt;
+&lt;div class=&#34;video-wrapper&#34;&gt;
+    &lt;iframe loading=&#34;lazy&#34; 
+            src=&#34;https://www.youtube.com/embed/LMlxLCVKFUs&#34; 
+            allowfullscreen 
+            title=&#34;YouTube Video&#34;
+    &gt;
+    &lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&#34;классические-отжимания&#34;&gt;Классические отжимания&lt;/h2&gt;
+&lt;p&gt;Полные отжимания из Таблицы тренировок заключенных Пола Уэйда: &lt;a class=&#34;link&#34; href=&#34;https://asarapulov.ru/convict-conditioning-table/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://asarapulov.ru/convict-conditioning-table/&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;плотные-отжимания&#34;&gt;Плотные отжимания&lt;/h2&gt;
+&lt;p&gt;Плотные отжимания (или алмазные) из Таблицы тренировок заключенных Пола Уэйда: &lt;a class=&#34;link&#34; href=&#34;https://asarapulov.ru/convict-conditioning-table/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://asarapulov.ru/convict-conditioning-table/&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;отжимания-с-хлопком&#34;&gt;Отжимания с хлопком&lt;/h2&gt;
+&lt;p&gt;Полные классические отжимания с хлопком после подъема.&lt;/p&gt;
+&lt;p&gt;Отсюда: &lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.tiktok.com/@leuxinvadim/video/6999648162772208897?is_from_webapp=1&amp;amp;sender_device=pc&amp;amp;web_id7025212728399496709&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.tiktok.com/@leuxinvadim/video/6999648162772208897?is_from_webapp=1&amp;sender_device=pc&amp;web_id7025212728399496709&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Как сменить почту на Яндексе</title>
+        <link>https://asarapulov.ru/p/kak-smenit-pochtu-na-yandekse/</link>
+        <pubDate>Fri, 28 Jan 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://asarapulov.ru/p/kak-smenit-pochtu-na-yandekse/</guid>
+        <description>&lt;h1 id=&#34;как-сменить-почту-на-яндексе&#34;&gt;Как сменить почту на Яндексе&lt;/h1&gt;
+&lt;p&gt;Если ваша почта на Яндексе выглядит как-то не солидно, например, &lt;a class=&#34;link&#34; href=&#34;mailto:nagibator777@yandex.ru&#34; &gt;nagibator777@yandex.ru&lt;/a&gt; или &lt;a class=&#34;link&#34; href=&#34;mailto:lehaNax07@yandex.ru&#34; &gt;lehaNax07@yandex.ru&lt;/a&gt;, а менять ее затруднительно, проблематично или лень, то есть выход.&lt;/p&gt;
+&lt;p&gt;Переходим на страницу &lt;a class=&#34;link&#34; href=&#34;https://passport.yandex.ru/profile/phones&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Телефонные номера&lt;/a&gt;, затем включаем опцию Использовать номер телефона как логин на Яндексе и тут получаем почту типа &lt;a class=&#34;link&#34; href=&#34;mailto:79xxxxxxxxx@yandex.ru&#34; &gt;79xxxxxxxxx@yandex.ru&lt;/a&gt; и +79xxxxxxxxx@yandex.ru. Вся почта, приходящая на эти ящики, будет доступна на вашей основной, но несолидной почте.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Способ быстро заснуть 2022</title>
+        <link>https://asarapulov.ru/p/sposob-bystro-zasnut-2022/</link>
+        <pubDate>Sat, 08 Jan 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://asarapulov.ru/p/sposob-bystro-zasnut-2022/</guid>
+        <description>&lt;img src="https://asarapulov.ru/p/sposob-bystro-zasnut-2022/sleep-2022.jpg" alt="Featured image of post Способ быстро заснуть 2022" /&gt;&lt;p&gt;
+
+&lt;img src=&#34;https://asarapulov.ru/p/sposob-bystro-zasnut-2022/sleep-2022.jpg&#34;
+	width=&#34;1280&#34;
+	height=&#34;600&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;sleep-2022.jpg&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;213&#34;
+		data-flex-basis=&#34;512px&#34;
+	
+&gt;
+Чтобы быстро заснуть, например, днем, достаточно максимально комфортно лечь и начать произносить (про себя) слова и целые мысли любого содержания. Связаны они друг с другом или нет - не важно. Важна скорость, которая должна опережать обычную скорость вашего внутренного диалога. В этом потоке бреда (а иначе не назовешь) не должно быть пауз.&lt;/p&gt;
+&lt;p&gt;Если в процессе вы о задумаетесь о чем-то конкретном, то нужно остановиться и нисколько не переживая об этом, спокойно вернуться в «поток бреда», через несколько таких возвращений я обычно засыпаю. А у вас получилось? Напишите в комментариях.
+
+
+&lt;img src=&#34;https://asarapulov.ru/p/sposob-bystro-zasnut-2022/sleep-2022-2.png&#34;
+	width=&#34;1556&#34;
+	height=&#34;636&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;sleep-2022-2.png&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;244&#34;
+		data-flex-basis=&#34;587px&#34;
+	
+&gt;
+Посмотрите на скриншот с сайта &lt;a class=&#34;link&#34; href=&#34;https://fishtext.ru/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;fishtext.ru&lt;/a&gt;, который отлично умеет генерировать &amp;ldquo;текст-рыбу&amp;rdquo; для дизайнеров. Вот примерно такой же поток бреда нужно генерировать в уме, чтобы быстро заснуть.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Добавить новый пункт в шапку админ-панели MODx Revo</title>
+        <link>https://asarapulov.ru/p/dobavit-novyy-punkt-v-shapku-admin-paneli-modx-revo/</link>
+        <pubDate>Fri, 17 Dec 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://asarapulov.ru/p/dobavit-novyy-punkt-v-shapku-admin-paneli-modx-revo/</guid>
+        <description>&lt;img src="https://asarapulov.ru/p/dobavit-novyy-punkt-v-shapku-admin-paneli-modx-revo/menu-action.png" alt="Featured image of post Добавить новый пункт в шапку админ-панели MODx Revo" /&gt;&lt;h1 id=&#34;добавить-новый-пункт-в-шапку-админ-панели-modx-revo&#34;&gt;Добавить новый пункт в шапку админ-панели MODx Revo&lt;/h1&gt;
+&lt;p&gt;В этой заметке я постараюсь объяснить то, как добавить новые пункты меню в шапку админ-панели MODx Revolution. В моем случае эти пункты будут вести в раздел создания новой записи в блоге, а также в сам блог: его административную часть.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1.&lt;/strong&gt; Для начала соберем необходимые данные. Перейдем в админ-панели в свой блог и скопируем url-адрес из адресной строки:&lt;/p&gt;
+&lt;p&gt;
+
+&lt;img src=&#34;https://asarapulov.ru/p/dobavit-novyy-punkt-v-shapku-admin-paneli-modx-revo/url-1.png&#34;
+	width=&#34;365&#34;
+	height=&#34;33&#34;
+	
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;1106&#34;
+		data-flex-basis=&#34;2654px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Я получил адрес вот такого вида:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;//manager/?a=resource/update&amp;amp;id=2&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Нажмем кнопку «Новая статья» и проделаем аналогичную операцию. Удалим из полученных адресов блок &lt;code&gt;http://вашсайт/manager/?a=&lt;/code&gt;. После чего получим в итоге два выражения:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Адрес административной части блога: &lt;code&gt;resource/update&amp;amp;id=**x**&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Адрес создания новой статьи: &lt;code&gt;resource/create&amp;amp;class_key=Article&amp;amp;parent=**x**&amp;amp;context_key=web&amp;amp;template=**y**&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Очевидно, что там, где указаны &lt;strong&gt;x&lt;/strong&gt; и &lt;strong&gt;y&lt;/strong&gt; — должны быть ваши данные.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2.&lt;/strong&gt; Создадим пункт, в котором будет два подпункта. Нажатие на главный пункт обрабатываться не будет.&lt;/p&gt;
+&lt;p&gt;Переходим в раздел «Система» -&amp;gt; «Действия». Нажимаем кнопку «Добавить пункт» и вводим следующее:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;«Родитель» — topnav&lt;/li&gt;
+&lt;li&gt;«Ключ словаря» — название главного пункта&lt;/li&gt;
+&lt;li&gt;«Привелегии» — &lt;code&gt;new_document&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;И нажимаем «Сохранить».&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;3.&lt;/strong&gt; Затем &lt;strong&gt;обязательно&lt;/strong&gt; кликаем правой кнопкой мыши на новом пункте, выбираем «Редактировать» и снова нажимаем «Сохранить». В противном случае данный пункт не попадет в меню «Родитель» (такое вот странное поведение системы).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;4.&lt;/strong&gt; Сразу после этого создаем подпункт, по нажатию на который мы отправлялись бы в список всех записей в этом разделе. Снова нажимаем «Добавить пункт» и вводим следующее:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;«Родитель» — название главного пункта, созданного ранее&lt;/li&gt;
+&lt;li&gt;«Ключ словаря» — название подпункта&lt;/li&gt;
+&lt;li&gt;«Действие» — &lt;code&gt;resource/update&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;«Описание» — ваше описание подпункта (необязательно)&lt;/li&gt;
+&lt;li&gt;«Параметры» — &lt;code&gt;&amp;amp;id=x&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;«Привелегии» — &lt;code&gt;new_document&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+
+&lt;img src=&#34;https://asarapulov.ru/p/dobavit-novyy-punkt-v-shapku-admin-paneli-modx-revo/secondary-item-menu-01.png&#34;
+	width=&#34;613&#34;
+	height=&#34;739&#34;
+	
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;82&#34;
+		data-flex-basis=&#34;199px&#34;
+	
+&gt;
+И сохраняем.&lt;/p&gt;
+&lt;p&gt;Если обновить страницу, то можно увидеть, что создались два пункта один в другом.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;5.&lt;/strong&gt; Создадим второй подпункт, который отправлял бы нас в окно создания новой записи в блоге. Нажимаем «Добавить пункт». Повторюсь, если ваш главный пункт вдруг исчез из списка «Родитель», то просто пересохраняем его! Вводим следующее:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;«Родитель» — название главного пункта, созданного ранее&lt;/li&gt;
+&lt;li&gt;«Ключ словаря» — название подпункта&lt;/li&gt;
+&lt;li&gt;«Действие» — &lt;code&gt;resource/create&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;«Описание» — ваше описание подпункта (необязательно)&lt;/li&gt;
+&lt;li&gt;«Параметры» — &lt;code&gt;&amp;amp;class_key=Article&amp;amp;parent=x&amp;amp;context_key=web&amp;amp;template=y&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;«Привелегии» — &lt;code&gt;new_document&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+
+&lt;img src=&#34;https://asarapulov.ru/p/dobavit-novyy-punkt-v-shapku-admin-paneli-modx-revo/secondary-item-menu-02.png&#34;
+	width=&#34;609&#34;
+	height=&#34;738&#34;
+	
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;82&#34;
+		data-flex-basis=&#34;198px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;И сохраняем.&lt;/p&gt;
+&lt;p&gt;
+
+&lt;img src=&#34;https://asarapulov.ru/p/dobavit-novyy-punkt-v-shapku-admin-paneli-modx-revo/menu-result.png&#34;
+	width=&#34;987&#34;
+	height=&#34;169&#34;
+	
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;584&#34;
+		data-flex-basis=&#34;1401px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;В итоге мы создали три пункта меню в верхнем меню бэкенда админ панели MODx: главный и два подпункта.&lt;/p&gt;
+&lt;p&gt;Замечу один нюанс: при редактировании меню можно случайно «напороться» на то, что вновь созданный пункт вообще не поддается редактированию. Лучше всего удалить этот пункт прямо в phpmyadmin в таблице modx_menus.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Домашняя очень острая горчица от дяди Яши</title>
+        <link>https://asarapulov.ru/p/domashnyaya-ochen-ostraya-gorchica-ot-dyadi/</link>
+        <pubDate>Fri, 17 Dec 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://asarapulov.ru/p/domashnyaya-ochen-ostraya-gorchica-ot-dyadi/</guid>
+        <description>&lt;img src="https://asarapulov.ru/p/domashnyaya-ochen-ostraya-gorchica-ot-dyadi/domashnya-ochen-ostraya-gorchica-ot-dydi-yashi.jpg" alt="Featured image of post Домашняя очень острая горчица от дяди Яши" /&gt;&lt;h2 id=&#34;домашняя-очень-острая-горчица-от-дяди-яши&#34;&gt;Домашняя очень острая горчица от дяди Яши&lt;/h2&gt;
+&lt;p&gt;Публикую рецепт очень острой горчицы, который был обнаружен мною в ходе долгих поисков, ошибок и проб. На выходе получаем продукт, который обязательно вышибет слезу. Даже любители острого краснеют и покрываются потом. А это уже показатель!&lt;/p&gt;
+&lt;p&gt;Найти стабильно острую горчицу на прилавках магазинов практически невозможно. Среди огромного разнообразия есть толковые производители, но их товары часто исчезают, а иногда встречаются и обычные мошенники: на банке или тюбике изображается картина крайне острого на вкус продукта, а в составе горчицы указан красный перец. На вкус как обычная горчица, заглушенная совершенно другой остротой красного перца.&lt;/p&gt;
+&lt;iframe width=&#34;100%&#34; height=&#34;515&#34; src=&#34;https://www.youtube.com/embed/1BSLr-lMn7Q&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen=&#34;&#34;&gt;&lt;/iframe&gt;
+&lt;p&gt;Рецепт домашней очень острой горчицы был найден на Youtube-канале &lt;a class=&#34;link&#34; href=&#34;https://youtu.be/1BSLr-lMn7Q&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Готовим с Дядей Яшей&lt;/a&gt;, был несколько раз опробован и получил отличные отзывы всех дегустаторов-едоков.&lt;/p&gt;
+&lt;p&gt;
+
+&lt;img src=&#34;https://asarapulov.ru/p/domashnyaya-ochen-ostraya-gorchica-ot-dyadi/ostraya-gorchica-ot-dyadi-yashi.jpg&#34;
+	width=&#34;480&#34;
+	height=&#34;360&#34;
+	
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;133&#34;
+		data-flex-basis=&#34;320px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Рецепт простой и без изысков, но с одной хитростью:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Взять банку, в нее высыпать горчичный порошок. До половины или больше.&lt;/li&gt;
+&lt;li&gt;Залить теплой водой &lt;nobr&gt;(50-60°)&lt;/nobr&gt; до достижения той консистенции, которая вам по нраву. Тщательно перемешать. Воду можно доливать в процессе перемешивания.&lt;/li&gt;
+&lt;li&gt;Не перемешивая, влить поверх горчицы холодную воду (примерно на два пальца), убрать в холодильник на &lt;nobr&gt;10-12 часов.&lt;/nobr&gt;&lt;/li&gt;
+&lt;li&gt;Сливаем воду из банки.&lt;/li&gt;
+&lt;li&gt;Добавляем чайную ложку виноградного уксуса (или обычного уксуса), ч.л. растительного масла, щепотку сахара, большую щепотку соли. Перемешать.&lt;/li&gt;
+&lt;li&gt;Домашняя очень острая горчица готова!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;К сожалению, Якова Яковлевича теперь с нами нет, о чем сообщается на &lt;a class=&#34;link&#34; href=&#34;http://www.d-yasha.com/o-nas.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;официальном сайте&lt;/a&gt;. Светлая ему память. Его рецепты живут. Я так и называю эту горчицу — горчицей «от Дяди Яши».&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Как скрыть лишние значки в верхней строке Mac?</title>
+        <link>https://asarapulov.ru/p/kak-skryt-lishnie-znachki-v-verhney-stroke-mac/</link>
+        <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://asarapulov.ru/p/kak-skryt-lishnie-znachki-v-verhney-stroke-mac/</guid>
+        <description>&lt;img src="https://asarapulov.ru/p/kak-skryt-lishnie-znachki-v-verhney-stroke-mac/vanilla_mac.gif" alt="Featured image of post Как скрыть лишние значки в верхней строке Mac?" /&gt;&lt;h1 id=&#34;как-скрыть-лишние-значки-в-верхней-строке-mac&#34;&gt;Как скрыть лишние значки в верхней строке Mac?&lt;/h1&gt;
+&lt;p&gt;
+
+&lt;img src=&#34;https://asarapulov.ru/p/kak-skryt-lishnie-znachki-v-verhney-stroke-mac/vanilla_mac.gif&#34;
+	width=&#34;828&#34;
+	height=&#34;480&#34;
+	
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;172&#34;
+		data-flex-basis=&#34;414px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://matthewpalmer.net/vanilla/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Vanilla&lt;/a&gt; — маленькая программка, которая скроет кучу ненужных иконок в верхнем меню-баре твоего макбука. Вот и всё, можно больше не мучаться.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Архивы</title>
+        <link>https://asarapulov.ru/archives/</link>
+        <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
+        
+        <guid>https://asarapulov.ru/archives/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Поиск</title>
+        <link>https://asarapulov.ru/search/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://asarapulov.ru/search/</guid>
+        <description></description>
+        </item>
+        
+    </channel>
+</rss>
