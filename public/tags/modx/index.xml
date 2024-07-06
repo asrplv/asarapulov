@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>MODx on //asarapulov.ru</title>
+        <link>https://asarapulov.ru/tags/modx/</link>
+        <description>Recent content in MODx on //asarapulov.ru</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>ru-ru</language>
+        <lastBuildDate>Fri, 10 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://asarapulov.ru/tags/modx/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Диапазон дат в MODX с помощью MIGX</title>
+        <link>https://asarapulov.ru/p/diapazon-dat-v-modx-s-pomoschyu-migx/</link>
+        <pubDate>Fri, 10 Feb 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://asarapulov.ru/p/diapazon-dat-v-modx-s-pomoschyu-migx/</guid>
+        <description>&lt;img src="https://asarapulov.ru/p/diapazon-dat-v-modx-s-pomoschyu-migx/index.jpg" alt="Featured image of post Диапазон дат в MODX с помощью MIGX" /&gt;&lt;h1 id=&#34;диапазон-дат-в-modx-с-помощью-migx&#34;&gt;Диапазон дат в MODX с помощью MIGX&lt;/h1&gt;
+&lt;p&gt;Потребовалось мне как-то добавить к ресурсу MODX неограниченное количество диапазонов дат. Так бывает нужно, например, если ресурс - это учебный курс, который проводится несколько раз в год с такой-то дату по такую-то, и надо это как-то выводить.&lt;/p&gt;
+&lt;p&gt;Что надо делать:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Установить MIGX&lt;/li&gt;
+&lt;li&gt;Переходим в Управление → MIGX → Добавить элемент&lt;/li&gt;
+&lt;li&gt;В поле Name вводем имя “datePicker”&lt;/li&gt;
+&lt;li&gt;Открываем вкладку Formtabs → Добавить элемент&lt;/li&gt;
+&lt;li&gt;В поле “Caption” вводим “Диапазон дат”&lt;/li&gt;
+&lt;li&gt;Тамже рядом с “Fields” находим Добавить элемент и жамкаем&lt;/li&gt;
+&lt;li&gt;В появившемся окне вводим:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Fieldname - “start_date”&lt;/li&gt;
+&lt;li&gt;Caption - “Начальная дата“&lt;/li&gt;
+&lt;li&gt;Input TV - “dateStart”&lt;/li&gt;
+&lt;li&gt;Input TV type - “date”&lt;/li&gt;
+&lt;li&gt;Жмем “Сохранить и закрыть”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;8&#34;&gt;
+&lt;li&gt;Снова жмем на “Добавить элемент” и добавляем такие параметры:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Fieldname - “end_date”&lt;/li&gt;
+&lt;li&gt;Caption - “Конечная дата“&lt;/li&gt;
+&lt;li&gt;Input TV - “dateEnd”&lt;/li&gt;
+&lt;li&gt;Input TV type - “date”&lt;/li&gt;
+&lt;li&gt;Жмем “Сохранить и закрыть”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;9&#34;&gt;
+&lt;li&gt;Множество раз жмем “Сохранить и закрыть” пока не закроется всё&lt;/li&gt;
+&lt;li&gt;Создаем TV-поле dateStart, где в параметрах ввода выбираем:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Тип ввода: Дата&lt;/li&gt;
+&lt;li&gt;Выбираем другие параметры, которые по-душе)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;11&#34;&gt;
+&lt;li&gt;Создаем другое поле dateEnd с такими же параметрами.&lt;/li&gt;
+&lt;li&gt;Создаем третье ТВ-поле datePickTv и в нем в Параметрах ввода делаем следующее:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Тип ввода: migx&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Конфигурации: datePicker&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Вкладки формы:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &amp;#34;caption&amp;#34;:&amp;#34;Date Ranges&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &amp;#34;fields&amp;#34;: [
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          &amp;#34;field&amp;#34;:&amp;#34;start_date&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          &amp;#34;caption&amp;#34;:&amp;#34;Start Date&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          &amp;#34;inputTVtype&amp;#34;:&amp;#34;date&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      },
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          &amp;#34;field&amp;#34;:&amp;#34;end_date&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          &amp;#34;caption&amp;#34;:&amp;#34;End Date&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          &amp;#34;inputTVtype&amp;#34;:&amp;#34;date&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      }
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;]
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Разметка колонок:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{&amp;#34;header&amp;#34;: &amp;#34;Начало&amp;#34;, &amp;#34;width&amp;#34;: &amp;#34;160&amp;#34;, &amp;#34;sortable&amp;#34;: &amp;#34;true&amp;#34;, &amp;#34;dataIndex&amp;#34;: &amp;#34;start_date&amp;#34;},
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{&amp;#34;header&amp;#34;: &amp;#34;Конец&amp;#34;, &amp;#34;width&amp;#34;: &amp;#34;160&amp;#34;, &amp;#34;sortable&amp;#34;: &amp;#34;true&amp;#34;, &amp;#34;dataIndex&amp;#34;: &amp;#34;end_date&amp;#34;}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;]
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ol start=&#34;13&#34;&gt;
+&lt;li&gt;Не забываем добавить это поле к шаблону в “Доступно для шаблонов”, сохраняем, &lt;em&gt;крестимся&lt;/em&gt; и проверяем…&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;
+
+&lt;img src=&#34;https://asarapulov.ru/p/diapazon-dat-v-modx-s-pomoschyu-migx/2023-02-10_19-21-44.png&#34;
+	width=&#34;725&#34;
+	height=&#34;251&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;такой результат&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;288&#34;
+		data-flex-basis=&#34;693px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;В шаблоне пишем типа такого:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-mysql&#34; data-lang=&#34;mysql&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[[&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;!&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;getImageList&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;?&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;tvname&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=`&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;datePickTv&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;`&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;tpl&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=`&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;date_range_tpl&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;`&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]]&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;В чанке:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;p&amp;gt;[[+start_date:date=`%d-%m-%Y`]] — [[+end_date:date=`%d-%m-%Y`]]&amp;lt;/p&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
+        </item>
+        <item>
+        <title>MODx: если не войти в админ-панель</title>
+        <link>https://asarapulov.ru/p/modx-admin-panel/</link>
+        <pubDate>Fri, 19 Aug 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://asarapulov.ru/p/modx-admin-panel/</guid>
+        <description>&lt;img src="https://asarapulov.ru/p/modx-admin-panel/modx.jpg" alt="Featured image of post MODx: если не войти в админ-панель" /&gt;&lt;h1 id=&#34;modx-если-не-войти-в-админ-панель&#34;&gt;MODx: если не войти в админ-панель&lt;/h1&gt;
+&lt;p&gt;Если заходишь в админ-панель, но при вводе логина-пароля страница просто обновляется, то:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Пробуем зайти из режима инкогнито и чистим папку core/cache, если не получается, то:&lt;/li&gt;
+&lt;li&gt;Заходим в БД и удаляем все записи в таблице modx_sessions&lt;/li&gt;
+&lt;li&gt;Заходим на хостинг и создаем нового пользователя для нужной базы&lt;/li&gt;
+&lt;li&gt;Находим файл core/config/config.inc.php, бекапим его и заменяем пользователя&lt;/li&gt;
+&lt;li&gt;Чистим папку core/cache&lt;/li&gt;
+&lt;li&gt;Пробуем зайти&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+        </item>
+        <item>
+        <title>Добавить новый пункт в шапку админ-панели MODx Revo</title>
+        <link>https://asarapulov.ru/p/dobavit-novyy-punkt-v-shapku-admin-paneli-modx-revo/</link>
+        <pubDate>Fri, 17 Dec 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://asarapulov.ru/p/dobavit-novyy-punkt-v-shapku-admin-paneli-modx-revo/</guid>
+        <description>&lt;img src="https://asarapulov.ru/p/dobavit-novyy-punkt-v-shapku-admin-paneli-modx-revo/menu-action.png" alt="Featured image of post Добавить новый пункт в шапку админ-панели MODx Revo" /&gt;&lt;h1 id=&#34;добавить-новый-пункт-в-шапку-админ-панели-modx-revo&#34;&gt;Добавить новый пункт в шапку админ-панели MODx Revo&lt;/h1&gt;
+&lt;p&gt;В этой заметке я постараюсь объяснить то, как добавить новые пункты меню в шапку админ-панели MODx Revolution. В моем случае эти пункты будут вести в раздел создания новой записи в блоге, а также в сам блог: его административную часть.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1.&lt;/strong&gt; Для начала соберем необходимые данные. Перейдем в админ-панели в свой блог и скопируем url-адрес из адресной строки:&lt;/p&gt;
+&lt;p&gt;
+
+&lt;img src=&#34;https://asarapulov.ru/p/dobavit-novyy-punkt-v-shapku-admin-paneli-modx-revo/url-1.png&#34;
+	width=&#34;365&#34;
+	height=&#34;33&#34;
+	
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;1106&#34;
+		data-flex-basis=&#34;2654px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Я получил адрес вот такого вида:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;//manager/?a=resource/update&amp;amp;id=2&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Нажмем кнопку «Новая статья» и проделаем аналогичную операцию. Удалим из полученных адресов блок &lt;code&gt;http://вашсайт/manager/?a=&lt;/code&gt;. После чего получим в итоге два выражения:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Адрес административной части блога: &lt;code&gt;resource/update&amp;amp;id=**x**&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Адрес создания новой статьи: &lt;code&gt;resource/create&amp;amp;class_key=Article&amp;amp;parent=**x**&amp;amp;context_key=web&amp;amp;template=**y**&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Очевидно, что там, где указаны &lt;strong&gt;x&lt;/strong&gt; и &lt;strong&gt;y&lt;/strong&gt; — должны быть ваши данные.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2.&lt;/strong&gt; Создадим пункт, в котором будет два подпункта. Нажатие на главный пункт обрабатываться не будет.&lt;/p&gt;
+&lt;p&gt;Переходим в раздел «Система» -&amp;gt; «Действия». Нажимаем кнопку «Добавить пункт» и вводим следующее:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;«Родитель» — topnav&lt;/li&gt;
+&lt;li&gt;«Ключ словаря» — название главного пункта&lt;/li&gt;
+&lt;li&gt;«Привелегии» — &lt;code&gt;new_document&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;И нажимаем «Сохранить».&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;3.&lt;/strong&gt; Затем &lt;strong&gt;обязательно&lt;/strong&gt; кликаем правой кнопкой мыши на новом пункте, выбираем «Редактировать» и снова нажимаем «Сохранить». В противном случае данный пункт не попадет в меню «Родитель» (такое вот странное поведение системы).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;4.&lt;/strong&gt; Сразу после этого создаем подпункт, по нажатию на который мы отправлялись бы в список всех записей в этом разделе. Снова нажимаем «Добавить пункт» и вводим следующее:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;«Родитель» — название главного пункта, созданного ранее&lt;/li&gt;
+&lt;li&gt;«Ключ словаря» — название подпункта&lt;/li&gt;
+&lt;li&gt;«Действие» — &lt;code&gt;resource/update&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;«Описание» — ваше описание подпункта (необязательно)&lt;/li&gt;
+&lt;li&gt;«Параметры» — &lt;code&gt;&amp;amp;id=x&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;«Привелегии» — &lt;code&gt;new_document&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+
+&lt;img src=&#34;https://asarapulov.ru/p/dobavit-novyy-punkt-v-shapku-admin-paneli-modx-revo/secondary-item-menu-01.png&#34;
+	width=&#34;613&#34;
+	height=&#34;739&#34;
+	
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;82&#34;
+		data-flex-basis=&#34;199px&#34;
+	
+&gt;
+И сохраняем.&lt;/p&gt;
+&lt;p&gt;Если обновить страницу, то можно увидеть, что создались два пункта один в другом.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;5.&lt;/strong&gt; Создадим второй подпункт, который отправлял бы нас в окно создания новой записи в блоге. Нажимаем «Добавить пункт». Повторюсь, если ваш главный пункт вдруг исчез из списка «Родитель», то просто пересохраняем его! Вводим следующее:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;«Родитель» — название главного пункта, созданного ранее&lt;/li&gt;
+&lt;li&gt;«Ключ словаря» — название подпункта&lt;/li&gt;
+&lt;li&gt;«Действие» — &lt;code&gt;resource/create&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;«Описание» — ваше описание подпункта (необязательно)&lt;/li&gt;
+&lt;li&gt;«Параметры» — &lt;code&gt;&amp;amp;class_key=Article&amp;amp;parent=x&amp;amp;context_key=web&amp;amp;template=y&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;«Привелегии» — &lt;code&gt;new_document&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+
+&lt;img src=&#34;https://asarapulov.ru/p/dobavit-novyy-punkt-v-shapku-admin-paneli-modx-revo/secondary-item-menu-02.png&#34;
+	width=&#34;609&#34;
+	height=&#34;738&#34;
+	
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;82&#34;
+		data-flex-basis=&#34;198px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;И сохраняем.&lt;/p&gt;
+&lt;p&gt;
+
+&lt;img src=&#34;https://asarapulov.ru/p/dobavit-novyy-punkt-v-shapku-admin-paneli-modx-revo/menu-result.png&#34;
+	width=&#34;987&#34;
+	height=&#34;169&#34;
+	
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;584&#34;
+		data-flex-basis=&#34;1401px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;В итоге мы создали три пункта меню в верхнем меню бэкенда админ панели MODx: главный и два подпункта.&lt;/p&gt;
+&lt;p&gt;Замечу один нюанс: при редактировании меню можно случайно «напороться» на то, что вновь созданный пункт вообще не поддается редактированию. Лучше всего удалить этот пункт прямо в phpmyadmin в таблице modx_menus.&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

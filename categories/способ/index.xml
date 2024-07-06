@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>способ on Сайт srplv.ru</title>
+        <link>/categories/%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1/</link>
+        <description>Recent content in способ on Сайт srplv.ru</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>ru-ru</language>
+        <lastBuildDate>Fri, 19 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="/categories/%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>MODx: если не войти в админ-панель</title>
+        <link>/p/modx-admin-panel/</link>
+        <pubDate>Fri, 19 Aug 2022 00:00:00 +0000</pubDate>
+        
+        <guid>/p/modx-admin-panel/</guid>
+        <description>&lt;img src="/p/modx-admin-panel/modx.jpg" alt="Featured image of post MODx: если не войти в админ-панель" /&gt;&lt;h1 id=&#34;modx-если-не-войти-в-админ-панель&#34;&gt;MODx: если не войти в админ-панель&lt;/h1&gt;
+&lt;p&gt;Если заходишь в админ-панель, но при вводе логина-пароля страница просто обновляется, то:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Пробуем зайти из режима инкогнито и чистим папку core/cache, если не получается, то:&lt;/li&gt;
+&lt;li&gt;Заходим в БД и удаляем все записи в таблице modx_sessions&lt;/li&gt;
+&lt;li&gt;Заходим на хостинг и создаем нового пользователя для нужной базы&lt;/li&gt;
+&lt;li&gt;Находим файл core/config/config.inc.php, бекапим его и заменяем пользователя&lt;/li&gt;
+&lt;li&gt;Чистим папку core/cache&lt;/li&gt;
+&lt;li&gt;Пробуем зайти&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;#админка&lt;/p&gt;
+&lt;h2 id=&#34;связи&#34;&gt;Связи&lt;/h2&gt;
+&lt;p&gt;[[0000_MODx]]&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

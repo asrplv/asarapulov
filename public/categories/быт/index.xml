@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Быт on //asarapulov.ru</title>
+        <link>https://asarapulov.ru/categories/%D0%B1%D1%8B%D1%82/</link>
+        <description>Recent content in Быт on //asarapulov.ru</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>ru-ru</language>
+        <lastBuildDate>Mon, 19 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://asarapulov.ru/categories/%D0%B1%D1%8B%D1%82/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Монитор Xiaomi Mi Curved Gaming: как поменять источник сигнала?</title>
+        <link>https://asarapulov.ru/p/monitor-xiaomi-mi-curved-gaming-kak-pomenyat-istochnik-signala/</link>
+        <pubDate>Mon, 19 Jun 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://asarapulov.ru/p/monitor-xiaomi-mi-curved-gaming-kak-pomenyat-istochnik-signala/</guid>
+        <description>&lt;img src="https://asarapulov.ru/p/monitor-xiaomi-mi-curved-gaming-kak-pomenyat-istochnik-signala/index.jpg" alt="Featured image of post Монитор Xiaomi Mi Curved Gaming: как поменять источник сигнала?" /&gt;&lt;p&gt;Возник вопрос: как поменять источник сигнала на мониторе Xiaomi Mi Curved Gaming Monitor 34, не отсоединяя кабели?&lt;/p&gt;
+&lt;p&gt;Достаточно просто. &lt;strong&gt;В Windows&lt;/strong&gt; в поиске пишем &amp;ldquo;PowerShell&amp;rdquo; и запускаем Windows PowerShell (возможно понадобится запуск от администратора), в ней пишем команду, которая программно отключит текущий монитор, после чего система переключится на другой:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;(Add-Type -MemberDefinition &amp;#34;[DllImport(&amp;#34;&amp;#34;user32.dll&amp;#34;&amp;#34;)]`npublic static extern int SendMessage(int hWnd, int hMsg, int wParam, int lParam);&amp;#34; -Name &amp;#34;Win32SendMessage&amp;#34; -Namespace Win32Functions -PassThru)::SendMessage(0xffff, 0x0112, 0xF170, 2)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Для Linux тоже есть аналогичная команда:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;xset dpms force off&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Для Mac:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;pmset displaysleepnow&lt;/code&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Как войти в сервисное меню на телевизоре Asano 32LF8130S с Яндекс.ТВ?</title>
+        <link>https://asarapulov.ru/p/kak-voyti-v-servisnoe-menyu-na-televizore-asano-32lf8130s-s-yandeks-tv/</link>
+        <pubDate>Tue, 21 Feb 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://asarapulov.ru/p/kak-voyti-v-servisnoe-menyu-na-televizore-asano-32lf8130s-s-yandeks-tv/</guid>
+        <description>&lt;img src="https://asarapulov.ru/p/kak-voyti-v-servisnoe-menyu-na-televizore-asano-32lf8130s-s-yandeks-tv/index.jpg" alt="Featured image of post Как войти в сервисное меню на телевизоре Asano 32LF8130S с Яндекс.ТВ?" /&gt;&lt;h1 id=&#34;как-войти-в-сервисное-меню-на-телевизоре-asano-32lf8130s-с-яндекств&#34;&gt;Как войти в сервисное меню на телевизоре Asano 32LF8130S с Яндекс.ТВ?&lt;/h1&gt;
+&lt;p&gt;Покупатели не рекомендуют покупать этот ТВ Asano 32LF8130S, но если кого-то не остановили гневные отзывы, то вот вам способ, который позволит войти в зависшее меню. Да, телевизор адово глючит и лечится это только сбросом на заводские настройки.&lt;/p&gt;
+&lt;p&gt;Так вот, чтобы сбросить телевизор Asano 32LF8130S с Яндекс.ТВ, нужно взять в руки пульт и нажать следующие кнопки:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Меню (1 сек)&lt;/li&gt;
+&lt;li&gt;Влево&lt;/li&gt;
+&lt;li&gt;Вверх&lt;/li&gt;
+&lt;li&gt;Влево&lt;/li&gt;
+&lt;li&gt;Вверх&lt;/li&gt;
+&lt;li&gt;Назад&lt;/li&gt;
+&lt;li&gt;В Factory menu найти пункт SHIPPING INIT.&lt;/li&gt;
+&lt;li&gt;Подтвердить, телевизор перезагрузится с заводскими настройками.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Или попробуйте такое сочетание магических нажатий:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Меню&lt;/li&gt;
+&lt;li&gt;Вверх&lt;/li&gt;
+&lt;li&gt;Влево&lt;/li&gt;
+&lt;li&gt;Вверх&lt;/li&gt;
+&lt;li&gt;Влево&lt;/li&gt;
+&lt;li&gt;Кнопка Назад&lt;/li&gt;
+&lt;li&gt;Вниз&lt;/li&gt;
+&lt;li&gt;Далее выбираем первый пункт, ОК, ВПРАВО, ОК.&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+        </item>
+        <item>
+        <title>Наушники CaseGuru CGpods 5.0 не синхронизируются, что делать?</title>
+        <link>https://asarapulov.ru/p/naushniki-caseguru-cgpods-5-0-ne-sinhroniziruyutsya-chto-delat/</link>
+        <pubDate>Tue, 14 Feb 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://asarapulov.ru/p/naushniki-caseguru-cgpods-5-0-ne-sinhroniziruyutsya-chto-delat/</guid>
+        <description>&lt;img src="https://asarapulov.ru/p/naushniki-caseguru-cgpods-5-0-ne-sinhroniziruyutsya-chto-delat/case-guru-not-sync.jpg" alt="Featured image of post Наушники CaseGuru CGpods 5.0 не синхронизируются, что делать?" /&gt;&lt;p&gt;Иногда один из наушников CaseGuru CGpods 5.0 теряет синхронизацию со вторым. Чтобы это исправить, нужно выполнить ряд следующих действий:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Достать из кейса оба наушника&lt;/li&gt;
+&lt;li&gt;Выключить оба наушника длительным зажатием&lt;/li&gt;
+&lt;li&gt;Зажать сенсоры на обоих наушниках, дождаться, пока не замигает красно-синий диод на обоих наушниках&lt;/li&gt;
+&lt;li&gt;Нажать одновременно на оба наушника 5 раз и если все сделано верно, то они загорятся фиолетовым и выключатся&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Кладем оба наушника в кейс, закрываем его, а потом достаем их, чтобы они включились&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Как обычно подключаем наушники к телефону и проверяем работу.&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+        </item>
+        <item>
+        <title>Весы Xiaomi неправильно показывают мой вес!</title>
+        <link>https://asarapulov.ru/p/vesy-xiaomi-nepravilno-pokazyvayut-moy-ves/</link>
+        <pubDate>Tue, 06 Sep 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://asarapulov.ru/p/vesy-xiaomi-nepravilno-pokazyvayut-moy-ves/</guid>
+        <description>&lt;img src="https://asarapulov.ru/p/vesy-xiaomi-nepravilno-pokazyvayut-moy-ves/nepravilnyi-ves-na-vesah-xiaomi-1100x500.jpg" alt="Featured image of post Весы Xiaomi неправильно показывают мой вес!" /&gt;&lt;p&gt;Иногда весы от Сяоми начинают глючить и показывать неправильный вес — на 0,5 - 1 кг больше, чем нужно.&lt;/p&gt;
+&lt;p&gt;Чтобы решить этот вопрос, нужно выполнить простейшие действия:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Вытащить и вставить батарейки (весы перезагрузятся).&lt;/li&gt;
+&lt;li&gt;Поставить весы на ровную поверхность. Весы заново откалибруются.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Если не поможет, то по инструкции к весам Xiaomi предлагается заменить батарейки на новые.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Подсветка Яндекс Станцией</title>
+        <link>https://asarapulov.ru/p/podsvetka-yandeks-stanciej/</link>
+        <pubDate>Fri, 11 Mar 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://asarapulov.ru/p/podsvetka-yandeks-stanciej/</guid>
+        <description>&lt;img src="https://asarapulov.ru/p/podsvetka-yandeks-stanciej/alisa-posveti-1100x500.jpg" alt="Featured image of post Подсветка Яндекс Станцией" /&gt;&lt;p&gt;Яндекс Станция может подсветить своей фиолетовой подсветкой, иногда это может сильно пригодиться, когда нет ночника или фонарика под рукой.&lt;/p&gt;
+&lt;p&gt;Для этого есть навык &lt;a class=&#34;link&#34; href=&#34;https://dialogs.yandex.ru/store/skills/611575d4-kolonka-posveti&#34;  title=&#34;Колонка посвети&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Колонка посвети&lt;/a&gt;:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Открываем приложение Яндекс&lt;/li&gt;
+&lt;li&gt;Сервисы - Устройства&lt;/li&gt;
+&lt;li&gt;Сценарии - Плюс в правом верхнем углу - Сценарий&lt;/li&gt;
+&lt;li&gt;Любое имя сценария, Если - фраза &amp;ldquo;Посвети&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;Тогда &amp;ldquo;Любая умная колонка&amp;rdquo; и фраза &amp;ldquo;попроси Колонку посветить 30 секунд &lt;strong&gt;молча&lt;/strong&gt;&amp;rdquo;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://dialogs.yandex.ru/store/skills/611575d4-kolonka-posveti&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Здесь&lt;/a&gt; говорят, что навык подойдёт для колонок: Яндекс.Станция Яндекс.Станция мини Irbis A Elari Smartbeat Dexp Smartbox Prestigio Smart Mate, но я проверял только на большой Станции.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Алиса, Яндекс-станция и скорость ветра</title>
+        <link>https://asarapulov.ru/p/alisa-yandeks-stanciya-i-skorost-vetra/</link>
+        <pubDate>Wed, 09 Feb 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://asarapulov.ru/p/alisa-yandeks-stanciya-i-skorost-vetra/</guid>
+        <description>&lt;img src="https://asarapulov.ru/p/alisa-yandeks-stanciya-i-skorost-vetra/Snimok-ekrana-2022-02-04-165046-1019x500.jpg" alt="Featured image of post Алиса, Яндекс-станция и скорость ветра" /&gt;&lt;p&gt;Алиса наконец-то научилась называть скорость и направление ветра. Как никогда актуально для жителей Петербурга (да и Кудрова). Смотрим видео: &lt;a class=&#34;link&#34; href=&#34;https://dzen.ru/embed/vEtKFO6xjfVs?yredirect=true&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://dzen.ru/embed/vEtKFO6xjfVs?yredirect=true&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Зелёный экран ТВ и Яндекс Модуль</title>
+        <link>https://asarapulov.ru/p/zeljonyj-ekran-tv-i-yandeks-modul/</link>
+        <pubDate>Mon, 31 Jan 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://asarapulov.ru/p/zeljonyj-ekran-tv-i-yandeks-modul/</guid>
+        <description>&lt;img src="https://asarapulov.ru/p/zeljonyj-ekran-tv-i-yandeks-modul/yandex-modul-zelenyi-ekran-1100x500.jpg" alt="Featured image of post Зелёный экран ТВ и Яндекс Модуль" /&gt;&lt;p&gt;Короткая заметка для тех, кто купил Яндекс Модуль, выполнил подключение и &amp;ldquo;словил&amp;rdquo; зелёный экран, когда картинку более менее видно, но весь интерфейс в зелёных или каких-то еще тонах. Чтобы этого не было, нужно просто перезагрузить модуль, но не с кнопки пульта, а лучше отключить его из розетки и включить по-новой.&lt;/p&gt;
+&lt;p&gt;На скриншоте - то, как &lt;strong&gt;примерно&lt;/strong&gt; выглядел экран.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Домашняя очень острая горчица от дяди Яши</title>
+        <link>https://asarapulov.ru/p/domashnyaya-ochen-ostraya-gorchica-ot-dyadi/</link>
+        <pubDate>Fri, 17 Dec 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://asarapulov.ru/p/domashnyaya-ochen-ostraya-gorchica-ot-dyadi/</guid>
+        <description>&lt;img src="https://asarapulov.ru/p/domashnyaya-ochen-ostraya-gorchica-ot-dyadi/domashnya-ochen-ostraya-gorchica-ot-dydi-yashi.jpg" alt="Featured image of post Домашняя очень острая горчица от дяди Яши" /&gt;&lt;h2 id=&#34;домашняя-очень-острая-горчица-от-дяди-яши&#34;&gt;Домашняя очень острая горчица от дяди Яши&lt;/h2&gt;
+&lt;p&gt;Публикую рецепт очень острой горчицы, который был обнаружен мною в ходе долгих поисков, ошибок и проб. На выходе получаем продукт, который обязательно вышибет слезу. Даже любители острого краснеют и покрываются потом. А это уже показатель!&lt;/p&gt;
+&lt;p&gt;Найти стабильно острую горчицу на прилавках магазинов практически невозможно. Среди огромного разнообразия есть толковые производители, но их товары часто исчезают, а иногда встречаются и обычные мошенники: на банке или тюбике изображается картина крайне острого на вкус продукта, а в составе горчицы указан красный перец. На вкус как обычная горчица, заглушенная совершенно другой остротой красного перца.&lt;/p&gt;
+&lt;iframe width=&#34;100%&#34; height=&#34;515&#34; src=&#34;https://www.youtube.com/embed/1BSLr-lMn7Q&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen=&#34;&#34;&gt;&lt;/iframe&gt;
+&lt;p&gt;Рецепт домашней очень острой горчицы был найден на Youtube-канале &lt;a class=&#34;link&#34; href=&#34;https://youtu.be/1BSLr-lMn7Q&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Готовим с Дядей Яшей&lt;/a&gt;, был несколько раз опробован и получил отличные отзывы всех дегустаторов-едоков.&lt;/p&gt;
+&lt;p&gt;
+
+&lt;img src=&#34;https://asarapulov.ru/p/domashnyaya-ochen-ostraya-gorchica-ot-dyadi/ostraya-gorchica-ot-dyadi-yashi.jpg&#34;
+	width=&#34;480&#34;
+	height=&#34;360&#34;
+	
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;133&#34;
+		data-flex-basis=&#34;320px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Рецепт простой и без изысков, но с одной хитростью:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Взять банку, в нее высыпать горчичный порошок. До половины или больше.&lt;/li&gt;
+&lt;li&gt;Залить теплой водой &lt;nobr&gt;(50-60°)&lt;/nobr&gt; до достижения той консистенции, которая вам по нраву. Тщательно перемешать. Воду можно доливать в процессе перемешивания.&lt;/li&gt;
+&lt;li&gt;Не перемешивая, влить поверх горчицы холодную воду (примерно на два пальца), убрать в холодильник на &lt;nobr&gt;10-12 часов.&lt;/nobr&gt;&lt;/li&gt;
+&lt;li&gt;Сливаем воду из банки.&lt;/li&gt;
+&lt;li&gt;Добавляем чайную ложку виноградного уксуса (или обычного уксуса), ч.л. растительного масла, щепотку сахара, большую щепотку соли. Перемешать.&lt;/li&gt;
+&lt;li&gt;Домашняя очень острая горчица готова!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;К сожалению, Якова Яковлевича теперь с нами нет, о чем сообщается на &lt;a class=&#34;link&#34; href=&#34;http://www.d-yasha.com/o-nas.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;официальном сайте&lt;/a&gt;. Светлая ему память. Его рецепты живут. Я так и называю эту горчицу — горчицей «от Дяди Яши».&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

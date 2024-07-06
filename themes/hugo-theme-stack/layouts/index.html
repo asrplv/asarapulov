@@ -1,0 +1,27 @@
+{{ define "main" }}
+    {{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
+    {{ $notHidden := where .Site.RegularPages "Params.hidden" "!=" true }}
+    {{ $filtered := ($pages | intersect $notHidden) }}
+    {{ $pag := .Paginate ($filtered) }}
+	<!-- Yandex.RTB R-A-2447835-3 -->
+	<div id="yandex_rtb_R-A-2447835-3"></div>
+	<script>window.yaContextCb.push(()=>{
+		Ya.Context.AdvManager.render({
+			"blockId": "R-A-2447835-3",
+			"renderTo": "yandex_rtb_R-A-2447835-3"
+		})
+	})
+	</script>
+    <section class="article-list">
+        {{ range $index, $element := $pag.Pages }}
+            {{ partial "article-list/default" . }}
+        {{ end }}
+    </section>
+
+    {{- partial "pagination.html" . -}}
+    {{- partial "footer/footer" . -}}
+{{ end }}
+
+{{ define "right-sidebar" }}
+    {{ partial "sidebar/right.html" (dict "Context" . "Scope" "homepage") }}
+{{ end }}

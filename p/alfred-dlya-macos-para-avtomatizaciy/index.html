@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="ru-ru" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Две небольших автоматизации для Alfred, которые позволяют получать favicon из url, а также копировать id видео из адреса видео в Youtube'>
+<title>
+
+  Alfred для macOS: пара автоматизаций
+
+</title>
+
+<link rel='canonical' href='https://asarapulov.ru/p/alfred-dlya-macos-para-avtomatizaciy/'>
+
+<link rel="stylesheet" href="/scss/style.min.8191399262444ab68b72a18c97392f5349be20a1615d77445be51e974c144cff.css"><meta property='og:title' content='Alfred для macOS: пара автоматизаций'>
+<meta property='og:description' content='Две небольших автоматизации для Alfred, которые позволяют получать favicon из url, а также копировать id видео из адреса видео в Youtube'>
+<meta property='og:url' content='https://asarapulov.ru/p/alfred-dlya-macos-para-avtomatizaciy/'>
+<meta property='og:site_name' content='//asarapulov.ru'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='mac' /><meta property='article:tag' content='автоматизация' /><meta property='article:published_time' content='2023-12-14T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2023-12-14T00:00:00&#43;00:00'/><meta property='og:image' content='https://asarapulov.ru/p/alfred-dlya-macos-para-avtomatizaciy/index.jpg' />
+<meta name="twitter:title" content="Alfred для macOS: пара автоматизаций">
+<meta name="twitter:description" content="Две небольших автоматизации для Alfred, которые позволяют получать favicon из url, а также копировать id видео из адреса видео в Youtube"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://asarapulov.ru/p/alfred-dlya-macos-para-avtomatizaciy/index.jpg' />
+    <link rel="shortcut icon" type="image/svg+xml" href="/favicon.svg" />
+<style>
+
+	* {
+		font-family: 'Noto Sans', sans-serif !important;
+	}
+	
+	.article-subtitle {
+		font-size: 1.7rem;
+		font-weight: 200;
+	}
+	
+    :root {
+		--article-line-height: 1.5;
+    }
+	
+	.article-content a {
+		color: #50c7ff !important;
+	}
+	
+
+	
+	.article-page .main-article .article-content {
+		color: hsl(0deg 0% 91% / 90%) !important;
+	}
+	
+	.article-content h3 {
+		font-weight: 900;
+	}
+	
+	ol#main-menu li:nth-child(3) {
+		border-bottom: 1px solid gray;
+		padding-bottom: 2em;
+	}	
+</style>
+
+
+<script>window.yaContextCb=window.yaContextCb||[]</script>
+<script src="https://yandex.ru/ads/system/context.js" async></script>
+
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;0,900;1,300&display=swap";
+    
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+    
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();
+   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(91744733, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/91744733" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200,300;400;800&display=swap" rel="stylesheet">
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            localStorage.setItem(colorSchemeKey, "dark");
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+			document.documentElement.dataset.bsTheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+			document.documentElement.dataset.bsTheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Показать/скрыть меню">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu1f25aeb38650ae9c3423781fe769851d_507788_300x0_resize_box_3.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🥝</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">//asarapulov.ru</a></h1>
+            <h2 class="site-description">SEO, контент и создание сайтов</h2>
+        </div>
+    </header><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='mailto:srplvv@mail.ru'
+                        target="_blank"
+                        title="Email"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mail" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <rect x="3" y="5" width="18" height="14" rx="2" />
+  <polyline points="3 7 12 13 21 7" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://t.me/a_sarapulov'
+                        target="_blank"
+                        title="Telegram"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-telegram" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M15 10l-4 4l6 6l4 -16l-18 7l4 2l2 6l3 -4" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://vk.com/asarapulov'
+                        target="_blank"
+                        title="VK"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-vk" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M14 19h-4a8 8 0 0 1 -8 -8v-5h4v5a4 4 0 0 0 4 4h0v-9h4v4.5l.03 -.004a4.531 4.531 0 0 0 3.97 -4.496h4l-.342 1.711a6.858 6.858 0 0 1 -3.658 4.789h0a5.34 5.34 0 0 1 3.566 4.111l.434 2.389h0h-4a4.531 4.531 0 0 0 -3.97 -4.496v4.5z" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Блог</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Поиск</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/wh/' target="_blank">
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-wind" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M5 8h8.5a2.5 2.5 0 1 0 -2.34 -3.24" />
+  <path d="M3 12h15.5a2.5 2.5 0 1 1 -2.34 3.24" />
+  <path d="M4 16h5.5a2.5 2.5 0 1 1 -2.34 3.24" />
+</svg>
+
+
+
+                
+                <span>Дыхательная гимнастика Вима Хофа</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/convict-conditioning-table/' target="_blank">
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+                
+                <span>Таблица тренировок Пола Уэйда</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='https://n-ber.ru' target="_blank">
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-anchor" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M12 9v12m-8 -8a8 8 0 0 0 16 0m1 0h-2m-14 0h-2" />
+  <path d="M12 6m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+</svg>
+
+
+
+                
+                <span>Николо-Берёзовка</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='https://ailibri.com' target="_blank">
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-affiliate" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M5.931 6.936l1.275 4.249m5.607 5.609l4.251 1.275" />
+  <path d="M11.683 12.317l5.759 -5.759" />
+  <path d="M5.5 5.5m-1.5 0a1.5 1.5 0 1 0 3 0a1.5 1.5 0 1 0 -3 0" />
+  <path d="M18.5 5.5m-1.5 0a1.5 1.5 0 1 0 3 0a1.5 1.5 0 1 0 -3 0" />
+  <path d="M18.5 18.5m-1.5 0a1.5 1.5 0 1 0 3 0a1.5 1.5 0 1 0 -3 0" />
+  <path d="M8.5 15.5m-4.5 0a4.5 4.5 0 1 0 9 0a4.5 4.5 0 1 0 -9 0" />
+</svg>
+
+
+
+                
+                <span>Сайт-список нейросетей</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+            
+            
+        </div>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Содержание</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#отделение-id-от-адреса-видео-youtube">Отделение id от адреса видео Youtube</a></li>
+    <li><a href="#получение-favicon-по-url-сайта">Получение favicon по URL-сайта</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+	
+	<div id="yandex_rtb_R-A-2447835-5"></div>
+	<script>window.yaContextCb.push(()=>{
+		Ya.Context.AdvManager.render({
+			"blockId": "R-A-2447835-5",
+			"renderTo": "yandex_rtb_R-A-2447835-5"
+		})
+	})
+	</script>
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/alfred-dlya-macos-para-avtomatizaciy/">
+                <img src="/p/alfred-dlya-macos-para-avtomatizaciy/index_hud10f50425468f502a2547006941225dd_448753_800x0_resize_q75_box.jpg"
+                        srcset="/p/alfred-dlya-macos-para-avtomatizaciy/index_hud10f50425468f502a2547006941225dd_448753_800x0_resize_q75_box.jpg 800w, /p/alfred-dlya-macos-para-avtomatizaciy/index_hud10f50425468f502a2547006941225dd_448753_1600x0_resize_q75_box.jpg 1600w"
+                        width="800" 
+                        height="349" 
+                        loading="lazy"
+                        alt="Featured image of post Alfred для macOS: пара автоматизаций" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/%D1%82%D0%B5%D1%85%D0%BD%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D0%B8/" >
+                Технологии
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/alfred-dlya-macos-para-avtomatizaciy/">Alfred для macOS: пара автоматизаций</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            Две небольших автоматизации для Alfred, которые позволяют получать favicon из url, а также копировать id видео из адреса видео в Youtube
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">14.12.2023</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    Время чтения: 3 мин.
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <p>Иногда нам страсть как нужна автоматизация простых действий: для этого на mac как никто другой подойдет Alfred:  мощный инструмент для автоматизации задач и управления файлами на macOS. Кстати, для Windows рекомендую <a class="link" href="https://www.listary.com/"  target="_blank" rel="noopener"
+    >Listary</a>.</p>
+<h2 id="отделение-id-от-адреса-видео-youtube">Отделение id от адреса видео Youtube</h2>
+<p>Иными словами, нам нужно превратить <a class="link" href="https://www.youtube.com/watch?v=h9DuoJ6Tcrk"  target="_blank" rel="noopener"
+    >https://www.youtube.com/watch?v=h9DuoJ6Tcrk</a> в <em>h9DuoJ6Tcrk</em>.</p>
+<p>Работать это будет так: пользователь вызывает Alfred (option + пробел), пишет команду <code>cu https://www.youtube.com/watch?v=h9DuoJ6Tcrk</code>, нажимает Ввод и в буфере получает id.</p>
+<p>
+
+<img src="/p/alfred-dlya-macos-para-avtomatizaciy/2023-12-14_22-10-39.jpg"
+	width="1562"
+	height="416"
+	
+	loading="lazy"
+	
+		alt="Примерно так выглядит процесс в Alfred"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="375"
+		data-flex-basis="901px"
+	
+></p>
+<p>Создайте новый рабочий поток:</p>
+<ol>
+<li>Откройте настройки Alfred и перейдите в раздел &ldquo;Workflows&rdquo;.</li>
+</ol>
+<ul>
+<li>Нажмите на &ldquo;+&rdquo; в нижнем левом углу, чтобы добавить новый рабочий поток.</li>
+</ul>
+<ol start="2">
+<li>Добавьте &ldquo;Input&rdquo; (Ввод):</li>
+</ol>
+<ul>
+<li>Выберите &ldquo;Inputs&rdquo; (Ввод) в левом боковом меню и добавьте &ldquo;Keyword&rdquo; (Ключевое слово).</li>
+<li>Назовите ключевое слово, например, &ldquo;cu&rdquo; (что означает &ldquo;YouTube Code&rdquo;).</li>
+</ul>
+<ol start="3">
+<li>Добавьте &ldquo;Run Script&rdquo; (Запустить сценарий):</li>
+</ol>
+<ul>
+<li>Выберите &ldquo;Actions&rdquo; (Действия) в левом боковом меню и добавьте &ldquo;Run Script&rdquo; (Запустить сценарий).</li>
+<li>В разделе &ldquo;Script&rdquo; выберите &ldquo;Bash Script&rdquo; (Сценарий на Bash).</li>
+<li>Введите следующий скрипт на Bash:</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">url=$1
+</span></span><span class="line"><span class="cl">videoID=$(echo $url | awk -F &#39;[=&amp;]&#39; &#39;/watch\?/{print $2}&#39;)
+</span></span><span class="line"><span class="cl">echo $videoID | tr -d &#39;\n&#39; | pbcopy
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Этот скрипт извлекает идентификатор видео из URL YouTube и копирует его в буфер обмена.</p>
+<p>
+
+<img src="/p/alfred-dlya-macos-para-avtomatizaciy/2023-12-14_21-43-36.jpg"
+	width="1178"
+	height="1026"
+	
+	loading="lazy"
+	
+		alt="А вот так в Alfred можно добавить две команды на вызов в обеих раскладках"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="114"
+		data-flex-basis="275px"
+	
+></p>
+<h2 id="получение-favicon-по-url-сайта">Получение favicon по URL-сайта</h2>
+<p>Более сложная задача, которая потребует установки Python, но, насколько я помню, в macOS он устанавлен по умолчанию.</p>
+<p>В чем заключается задача: пользователь вызывает Alfred и в поисковой строке пишет команду: <code>fav https://n-ber.ru</code>, в ответ скрипт открывает в новой вкладке браузера фавиконку сайта.</p>
+<p>Поиск фавиконок - та еще задача, поэтому я решил подключить библиотеку favicon: <code>pip install favicon</code>. В процессе неизбежны ошибки, поэтому скрипт должен о них сообщать &ndash; там же, в браузере.</p>
+<ol>
+<li>Создайте новый рабочий поток:</li>
+</ol>
+<ul>
+<li>Откройте настройки Alfred и перейдите в раздел &ldquo;Workflows&rdquo;.</li>
+<li>Нажмите на &ldquo;+&rdquo; в нижнем левом углу, чтобы добавить новый рабочий поток.</li>
+</ul>
+<ol start="2">
+<li>Добавьте &ldquo;Input&rdquo; (Ввод):</li>
+</ol>
+<ul>
+<li>Выберите &ldquo;Inputs&rdquo; (Ввод) в левом боковом меню и добавьте &ldquo;Keyword&rdquo; (Ключевое слово).</li>
+<li>Назовите ключевое слово, например, &ldquo;fav&rdquo; (от &ldquo;favicon&rdquo;).</li>
+</ul>
+<ol start="3">
+<li>Добавьте &ldquo;Run Script&rdquo; (Запустить сценарий):</li>
+</ol>
+<ul>
+<li>Выберите &ldquo;Actions&rdquo; (Действия) в левом боковом меню и добавьте &ldquo;Run Script&rdquo; (Запустить сценарий).</li>
+<li>В разделе &ldquo;Script&rdquo; выберите &ldquo;Language: /usr/bin/python3&rdquo; и вставьте код на Python.</li>
+</ul>
+<ol start="4">
+<li>Сохраните и настройте триггер:</li>
+</ol>
+<ul>
+<li>Нажмите &ldquo;Save&rdquo; (Сохранить) в верхнем правом углу.</li>
+<li>Присвойте триггер (комбинацию клавиш или ключевое слово) для активации этого рабочего потока.</li>
+</ul>
+<p>А вот и скрипт:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">import sys
+</span></span><span class="line"><span class="cl">from favicon import get
+</span></span><span class="line"><span class="cl">import webbrowser
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">url = sys.argv[1]
+</span></span><span class="line"><span class="cl">user_agent = &#39;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.47 Safari/537.36&#39;
+</span></span><span class="line"><span class="cl">headers = {&#39;User-Agent&#39;: user_agent}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">try:
+</span></span><span class="line"><span class="cl">    icons = get(url, headers=headers, timeout=2)
+</span></span><span class="line"><span class="cl">    if icons:
+</span></span><span class="line"><span class="cl">        icon_url = icons[0].url
+</span></span><span class="line"><span class="cl">        print(f&#34;Открываю фавикон: {icon_url}&#34;)
+</span></span><span class="line"><span class="cl">        sys.stdout.flush()
+</span></span><span class="line"><span class="cl">        webbrowser.open(icon_url)
+</span></span><span class="line"><span class="cl">    else:
+</span></span><span class="line"><span class="cl">        error_message = f&#34;Favicon not found for the site: {url}. &#34; \
+</span></span><span class="line"><span class="cl">                        f&#34;Open &lt;a target=&#39;_blank&#39; href=&#39;view-source:{url}&#39;&gt;site&#39;s source code&lt;/a&gt; manually.&#34;
+</span></span><span class="line"><span class="cl">        webbrowser.open(f&#34;data:text/html,{error_message}&#34;)
+</span></span><span class="line"><span class="cl">except Exception as e:
+</span></span><span class="line"><span class="cl">    error_message = f&#34;An error occurred: {e}. &#34; \
+</span></span><span class="line"><span class="cl">                    f&#34;Open &lt;a target=&#39;_blank&#39; href=&#39;view-source:{url}&#39;&gt;site&#39;s source code&lt;/a&gt; manually.&#34;
+</span></span><span class="line"><span class="cl">    webbrowser.open(f&#34;data:text/html,{error_message}&#34;)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Вот такие очень узкоспециализированные скрипта для Alfred, но на то он и Alfred, чтобы помогать в прикладных задачах :-)</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/mac/">mac</a>
+        
+            <a href="/tags/%D0%B0%D0%B2%D1%82%D0%BE%D0%BC%D0%B0%D1%82%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F/">автоматизация</a>
+        
+    </section>
+
+
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Также рекомендуем</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/kazhdyy-raz-kogda-ya-perezagruzhayu-macos-moi-oboi-rabochego-stola-udalyayutsya/">
+        
+        
+            <div class="article-image">
+                <img src="/p/kazhdyy-raz-kogda-ya-perezagruzhayu-macos-moi-oboi-rabochego-stola-udalyayutsya/title.5c3b2ed608fdc9405ac3b8475e4c0f8d_huc06c13e14ae084e995911c977c802ba5_193038_250x150_fill_box_smart1_3.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Каждый раз, когда я перезагружаю macOS, мои обои рабочего стола удаляются"
+                        data-key="kazhdyy-raz-kogda-ya-perezagruzhayu-macos-moi-oboi-rabochego-stola-udalyayutsya" 
+                        data-hash="md5-XDsu1gj9yUBaw7hHXkwPjQ==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Каждый раз, когда я перезагружаю macOS, мои обои рабочего стола удаляются</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/kak-skryt-lishnie-znachki-v-verhney-stroke-mac/">
+        
+        
+            <div class="article-image">
+                <img src="/p/kak-skryt-lishnie-znachki-v-verhney-stroke-mac/vanilla_mac.8edac6c4f6abe567407b70bda78ee0cc_hue17d8f79107115cb7b169f95cd721fa2_754778_250x150_fill_box_smart1_1.gif" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Как скрыть лишние значки в верхней строке Mac?"
+                        data-key="kak-skryt-lishnie-znachki-v-verhney-stroke-mac" 
+                        data-hash="md5-jtrGxPar5WdAe3C9p47gzA==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Как скрыть лишние значки в верхней строке Mac?</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/yandeks-brauzer-ne-perevodit-reddit-chto-delat/">
+        
+        
+            <div class="article-image">
+                <img src="/p/yandeks-brauzer-ne-perevodit-reddit-chto-delat/index.6c0b035a2c4c35863d5f61829f505ad2_hu2de2d3be3ac24272f350243897bfb438_267001_250x150_fill_q75_box_smart1.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Яндекс Браузер не переводит Reddit, что делать?"
+                        data-key="yandeks-brauzer-ne-perevodit-reddit-chto-delat" 
+                        data-hash="md5-bAsDWixMNYY9X2GCn1Ba0g==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Яндекс Браузер не переводит Reddit, что делать?</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/udalennyi-med/">
+        
+        
+            <div class="article-image">
+                <img src="/p/udalennyi-med/index.19e423dc4284dc6c44261e04997fd7aa_huaf5758b75e03dac10ed4838ba69c9406_7090570_250x150_fill_q75_box_smart1.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Удалённый мёд"
+                        data-key="udalennyi-med" 
+                        data-hash="md5-GeQj3EKE3GxEJh4EmX/Xqg==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Удалённый мёд</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/kak-v-yandeks-brauzere-skryt-znachki-rasshireniy/">
+        
+        
+            <div class="article-image">
+                <img src="/p/kak-v-yandeks-brauzere-skryt-znachki-rasshireniy/index.24672786c86198889fa26ab81a86745f_huf948cad484407c83d314c5dcc95ee153_533340_250x150_fill_q75_box_smart1.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Как в Яндекс Браузере скрыть значки расширений?"
+                        data-key="kak-v-yandeks-brauzere-skryt-znachki-rasshireniy" 
+                        data-hash="md5-JGcnhshhmIifomq4GoZ0Xw==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Как в Яндекс Браузере скрыть значки расширений?</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2024 //asarapulov.ru
+    </section>
+    
+    <section class="powerby">
+        Создано при помощи <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Тема <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.16.0">Stack</a></b>, дизайн <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

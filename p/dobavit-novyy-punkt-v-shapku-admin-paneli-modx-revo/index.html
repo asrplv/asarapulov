@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="ru-ru" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='В этой заметке я постараюсь объяснить то, как добавить новые пункты меню в шапку админ-панели MODx Revolution.'>
+<title>
+
+  Добавить новый пункт в шапку админ-панели MODx Revo
+
+</title>
+
+<link rel='canonical' href='https://asarapulov.ru/p/dobavit-novyy-punkt-v-shapku-admin-paneli-modx-revo/'>
+
+<link rel="stylesheet" href="/scss/style.min.8191399262444ab68b72a18c97392f5349be20a1615d77445be51e974c144cff.css"><meta property='og:title' content='Добавить новый пункт в шапку админ-панели MODx Revo'>
+<meta property='og:description' content='В этой заметке я постараюсь объяснить то, как добавить новые пункты меню в шапку админ-панели MODx Revolution.'>
+<meta property='og:url' content='https://asarapulov.ru/p/dobavit-novyy-punkt-v-shapku-admin-paneli-modx-revo/'>
+<meta property='og:site_name' content='//asarapulov.ru'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='MODx' /><meta property='article:tag' content='способ' /><meta property='article:published_time' content='2021-12-17T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2021-12-17T00:00:00&#43;00:00'/><meta property='og:image' content='https://asarapulov.ru/p/dobavit-novyy-punkt-v-shapku-admin-paneli-modx-revo/menu-action.png' />
+<meta name="twitter:title" content="Добавить новый пункт в шапку админ-панели MODx Revo">
+<meta name="twitter:description" content="В этой заметке я постараюсь объяснить то, как добавить новые пункты меню в шапку админ-панели MODx Revolution."><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://asarapulov.ru/p/dobavit-novyy-punkt-v-shapku-admin-paneli-modx-revo/menu-action.png' />
+    <link rel="shortcut icon" type="image/svg+xml" href="/favicon.svg" />
+<style>
+
+	* {
+		font-family: 'Noto Sans', sans-serif !important;
+	}
+	
+	.article-subtitle {
+		font-size: 1.7rem;
+		font-weight: 200;
+	}
+	
+    :root {
+		--article-line-height: 1.5;
+    }
+	
+	.article-content a {
+		color: #50c7ff !important;
+	}
+	
+
+	
+	.article-page .main-article .article-content {
+		color: hsl(0deg 0% 91% / 90%) !important;
+	}
+	
+	.article-content h3 {
+		font-weight: 900;
+	}
+	
+	ol#main-menu li:nth-child(3) {
+		border-bottom: 1px solid gray;
+		padding-bottom: 2em;
+	}	
+</style>
+
+
+<script>window.yaContextCb=window.yaContextCb||[]</script>
+<script src="https://yandex.ru/ads/system/context.js" async></script>
+
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;0,900;1,300&display=swap";
+    
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+    
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();
+   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(91744733, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/91744733" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200,300;400;800&display=swap" rel="stylesheet">
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            localStorage.setItem(colorSchemeKey, "dark");
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+			document.documentElement.dataset.bsTheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+			document.documentElement.dataset.bsTheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Показать/скрыть меню">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu1f25aeb38650ae9c3423781fe769851d_507788_300x0_resize_box_3.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🥝</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">//asarapulov.ru</a></h1>
+            <h2 class="site-description">SEO, контент и создание сайтов</h2>
+        </div>
+    </header><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='mailto:srplvv@mail.ru'
+                        target="_blank"
+                        title="Email"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mail" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <rect x="3" y="5" width="18" height="14" rx="2" />
+  <polyline points="3 7 12 13 21 7" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://t.me/a_sarapulov'
+                        target="_blank"
+                        title="Telegram"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-telegram" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M15 10l-4 4l6 6l4 -16l-18 7l4 2l2 6l3 -4" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://vk.com/asarapulov'
+                        target="_blank"
+                        title="VK"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-vk" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M14 19h-4a8 8 0 0 1 -8 -8v-5h4v5a4 4 0 0 0 4 4h0v-9h4v4.5l.03 -.004a4.531 4.531 0 0 0 3.97 -4.496h4l-.342 1.711a6.858 6.858 0 0 1 -3.658 4.789h0a5.34 5.34 0 0 1 3.566 4.111l.434 2.389h0h-4a4.531 4.531 0 0 0 -3.97 -4.496v4.5z" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Блог</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Поиск</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/wh/' target="_blank">
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-wind" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M5 8h8.5a2.5 2.5 0 1 0 -2.34 -3.24" />
+  <path d="M3 12h15.5a2.5 2.5 0 1 1 -2.34 3.24" />
+  <path d="M4 16h5.5a2.5 2.5 0 1 1 -2.34 3.24" />
+</svg>
+
+
+
+                
+                <span>Дыхательная гимнастика Вима Хофа</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/convict-conditioning-table/' target="_blank">
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+                
+                <span>Таблица тренировок Пола Уэйда</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='https://n-ber.ru' target="_blank">
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-anchor" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M12 9v12m-8 -8a8 8 0 0 0 16 0m1 0h-2m-14 0h-2" />
+  <path d="M12 6m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+</svg>
+
+
+
+                
+                <span>Николо-Берёзовка</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='https://ailibri.com' target="_blank">
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-affiliate" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M5.931 6.936l1.275 4.249m5.607 5.609l4.251 1.275" />
+  <path d="M11.683 12.317l5.759 -5.759" />
+  <path d="M5.5 5.5m-1.5 0a1.5 1.5 0 1 0 3 0a1.5 1.5 0 1 0 -3 0" />
+  <path d="M18.5 5.5m-1.5 0a1.5 1.5 0 1 0 3 0a1.5 1.5 0 1 0 -3 0" />
+  <path d="M18.5 18.5m-1.5 0a1.5 1.5 0 1 0 3 0a1.5 1.5 0 1 0 -3 0" />
+  <path d="M8.5 15.5m-4.5 0a4.5 4.5 0 1 0 9 0a4.5 4.5 0 1 0 -9 0" />
+</svg>
+
+
+
+                
+                <span>Сайт-список нейросетей</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+            
+            
+        </div>
+    </ol>
+</aside>
+
+    
+
+            <main class="main full-width">
+	
+	<div id="yandex_rtb_R-A-2447835-5"></div>
+	<script>window.yaContextCb.push(()=>{
+		Ya.Context.AdvManager.render({
+			"blockId": "R-A-2447835-5",
+			"renderTo": "yandex_rtb_R-A-2447835-5"
+		})
+	})
+	</script>
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/dobavit-novyy-punkt-v-shapku-admin-paneli-modx-revo/">
+                <img src="/p/dobavit-novyy-punkt-v-shapku-admin-paneli-modx-revo/menu-action_hu5136655684f54585ede15f7b789ef8ca_14640_800x0_resize_box_3.png"
+                        srcset="/p/dobavit-novyy-punkt-v-shapku-admin-paneli-modx-revo/menu-action_hu5136655684f54585ede15f7b789ef8ca_14640_800x0_resize_box_3.png 800w, /p/dobavit-novyy-punkt-v-shapku-admin-paneli-modx-revo/menu-action_hu5136655684f54585ede15f7b789ef8ca_14640_1600x0_resize_box_3.png 1600w"
+                        width="800" 
+                        height="692" 
+                        loading="lazy"
+                        alt="Featured image of post Добавить новый пункт в шапку админ-панели MODx Revo" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/%D1%82%D0%B5%D1%85%D0%BD%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D0%B8/" >
+                Технологии
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/dobavit-novyy-punkt-v-shapku-admin-paneli-modx-revo/">Добавить новый пункт в шапку админ-панели MODx Revo</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            В этой заметке я постараюсь объяснить то, как добавить новые пункты меню в шапку админ-панели MODx Revolution.
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">17.12.2021</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    Время чтения: 2 мин.
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h1 id="добавить-новый-пункт-в-шапку-админ-панели-modx-revo">Добавить новый пункт в шапку админ-панели MODx Revo</h1>
+<p>В этой заметке я постараюсь объяснить то, как добавить новые пункты меню в шапку админ-панели MODx Revolution. В моем случае эти пункты будут вести в раздел создания новой записи в блоге, а также в сам блог: его административную часть.</p>
+<p><strong>1.</strong> Для начала соберем необходимые данные. Перейдем в админ-панели в свой блог и скопируем url-адрес из адресной строки:</p>
+<p>
+
+<img src="/p/dobavit-novyy-punkt-v-shapku-admin-paneli-modx-revo/url-1.png"
+	width="365"
+	height="33"
+	
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="1106"
+		data-flex-basis="2654px"
+	
+></p>
+<p>Я получил адрес вот такого вида:</p>
+<p><code>//manager/?a=resource/update&amp;id=2</code></p>
+<p>Нажмем кнопку «Новая статья» и проделаем аналогичную операцию. Удалим из полученных адресов блок <code>http://вашсайт/manager/?a=</code>. После чего получим в итоге два выражения:</p>
+<ul>
+<li>Адрес административной части блога: <code>resource/update&amp;id=**x**</code></li>
+<li>Адрес создания новой статьи: <code>resource/create&amp;class_key=Article&amp;parent=**x**&amp;context_key=web&amp;template=**y**</code></li>
+</ul>
+<p>Очевидно, что там, где указаны <strong>x</strong> и <strong>y</strong> — должны быть ваши данные.</p>
+<p><strong>2.</strong> Создадим пункт, в котором будет два подпункта. Нажатие на главный пункт обрабатываться не будет.</p>
+<p>Переходим в раздел «Система» -&gt; «Действия». Нажимаем кнопку «Добавить пункт» и вводим следующее:</p>
+<ul>
+<li>«Родитель» — topnav</li>
+<li>«Ключ словаря» — название главного пункта</li>
+<li>«Привелегии» — <code>new_document</code></li>
+</ul>
+<p>И нажимаем «Сохранить».</p>
+<p><strong>3.</strong> Затем <strong>обязательно</strong> кликаем правой кнопкой мыши на новом пункте, выбираем «Редактировать» и снова нажимаем «Сохранить». В противном случае данный пункт не попадет в меню «Родитель» (такое вот странное поведение системы).</p>
+<p><strong>4.</strong> Сразу после этого создаем подпункт, по нажатию на который мы отправлялись бы в список всех записей в этом разделе. Снова нажимаем «Добавить пункт» и вводим следующее:</p>
+<ul>
+<li>«Родитель» — название главного пункта, созданного ранее</li>
+<li>«Ключ словаря» — название подпункта</li>
+<li>«Действие» — <code>resource/update</code></li>
+<li>«Описание» — ваше описание подпункта (необязательно)</li>
+<li>«Параметры» — <code>&amp;id=x</code></li>
+<li>«Привелегии» — <code>new_document</code></li>
+</ul>
+<p>
+
+<img src="/p/dobavit-novyy-punkt-v-shapku-admin-paneli-modx-revo/secondary-item-menu-01.png"
+	width="613"
+	height="739"
+	
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="82"
+		data-flex-basis="199px"
+	
+>
+И сохраняем.</p>
+<p>Если обновить страницу, то можно увидеть, что создались два пункта один в другом.</p>
+<p><strong>5.</strong> Создадим второй подпункт, который отправлял бы нас в окно создания новой записи в блоге. Нажимаем «Добавить пункт». Повторюсь, если ваш главный пункт вдруг исчез из списка «Родитель», то просто пересохраняем его! Вводим следующее:</p>
+<ul>
+<li>«Родитель» — название главного пункта, созданного ранее</li>
+<li>«Ключ словаря» — название подпункта</li>
+<li>«Действие» — <code>resource/create</code></li>
+<li>«Описание» — ваше описание подпункта (необязательно)</li>
+<li>«Параметры» — <code>&amp;class_key=Article&amp;parent=x&amp;context_key=web&amp;template=y</code></li>
+<li>«Привелегии» — <code>new_document</code></li>
+</ul>
+<p>
+
+<img src="/p/dobavit-novyy-punkt-v-shapku-admin-paneli-modx-revo/secondary-item-menu-02.png"
+	width="609"
+	height="738"
+	
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="82"
+		data-flex-basis="198px"
+	
+></p>
+<p>И сохраняем.</p>
+<p>
+
+<img src="/p/dobavit-novyy-punkt-v-shapku-admin-paneli-modx-revo/menu-result.png"
+	width="987"
+	height="169"
+	
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="584"
+		data-flex-basis="1401px"
+	
+></p>
+<p>В итоге мы создали три пункта меню в верхнем меню бэкенда админ панели MODx: главный и два подпункта.</p>
+<p>Замечу один нюанс: при редактировании меню можно случайно «напороться» на то, что вновь созданный пункт вообще не поддается редактированию. Лучше всего удалить этот пункт прямо в phpmyadmin в таблице modx_menus.</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/modx/">MODx</a>
+        
+            <a href="/tags/%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1/">способ</a>
+        
+    </section>
+
+
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Также рекомендуем</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/diapazon-dat-v-modx-s-pomoschyu-migx/">
+        
+        
+            <div class="article-image">
+                <img src="/p/diapazon-dat-v-modx-s-pomoschyu-migx/index.8d12e25a2dd60eac30139ddecde1e983_hu49f79e85ab58d9cfef042b10cbbb06fa_302852_250x150_fill_q75_box_smart1.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Диапазон дат в MODX с помощью MIGX"
+                        data-key="diapazon-dat-v-modx-s-pomoschyu-migx" 
+                        data-hash="md5-jRLiWi3WDqwwE53ezeHpgw==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Диапазон дат в MODX с помощью MIGX</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/kak-v-yandeks-brauzere-skryt-znachki-rasshireniy/">
+        
+        
+            <div class="article-image">
+                <img src="/p/kak-v-yandeks-brauzere-skryt-znachki-rasshireniy/index.24672786c86198889fa26ab81a86745f_huf948cad484407c83d314c5dcc95ee153_533340_250x150_fill_q75_box_smart1.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Как в Яндекс Браузере скрыть значки расширений?"
+                        data-key="kak-v-yandeks-brauzere-skryt-znachki-rasshireniy" 
+                        data-hash="md5-JGcnhshhmIifomq4GoZ0Xw==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Как в Яндекс Браузере скрыть значки расширений?</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/kazhdyy-raz-kogda-ya-perezagruzhayu-macos-moi-oboi-rabochego-stola-udalyayutsya/">
+        
+        
+            <div class="article-image">
+                <img src="/p/kazhdyy-raz-kogda-ya-perezagruzhayu-macos-moi-oboi-rabochego-stola-udalyayutsya/title.5c3b2ed608fdc9405ac3b8475e4c0f8d_huc06c13e14ae084e995911c977c802ba5_193038_250x150_fill_box_smart1_3.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Каждый раз, когда я перезагружаю macOS, мои обои рабочего стола удаляются"
+                        data-key="kazhdyy-raz-kogda-ya-perezagruzhayu-macos-moi-oboi-rabochego-stola-udalyayutsya" 
+                        data-hash="md5-XDsu1gj9yUBaw7hHXkwPjQ==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Каждый раз, когда я перезагружаю macOS, мои обои рабочего стола удаляются</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/monitor-xiaomi-mi-curved-gaming-kak-pomenyat-istochnik-signala/">
+        
+        
+            <div class="article-image">
+                <img src="/p/monitor-xiaomi-mi-curved-gaming-kak-pomenyat-istochnik-signala/index.1fdd1ae4561ad5113c6a5f51671dff46_hu69f75e720590446482887bc2733379e9_534609_250x150_fill_q75_box_smart1.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Монитор Xiaomi Mi Curved Gaming: как поменять источник сигнала?"
+                        data-key="monitor-xiaomi-mi-curved-gaming-kak-pomenyat-istochnik-signala" 
+                        data-hash="md5-H90a5FYa1RE8al9RZx3/Rg==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Монитор Xiaomi Mi Curved Gaming: как поменять источник сигнала?</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/fast-reg-chatgpt/">
+        
+        
+            <div class="article-image">
+                <img src="/p/fast-reg-chatgpt/chatgpt.4f8d5f559cd5dbd5aa67d3c62bc9785e_hu9da373f69bc9fe16d112748f9c0525cd_409630_250x150_fill_q75_box_smart1.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Быстрая регистрация и использование ChatGPT (МАЙ 2023)"
+                        data-key="fast-reg-chatgpt" 
+                        data-hash="md5-T41fVZzV29WqZ9PGK8l4Xg==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Быстрая регистрация и использование ChatGPT (МАЙ 2023)</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2024 //asarapulov.ru
+    </section>
+    
+    <section class="powerby">
+        Создано при помощи <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Тема <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.16.0">Stack</a></b>, дизайн <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

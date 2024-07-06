@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>mac on //asarapulov.ru</title>
+        <link>https://asarapulov.ru/tags/mac/</link>
+        <description>Recent content in mac on //asarapulov.ru</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>ru-ru</language>
+        <lastBuildDate>Thu, 14 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://asarapulov.ru/tags/mac/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Alfred для macOS: пара автоматизаций</title>
+        <link>https://asarapulov.ru/p/alfred-dlya-macos-para-avtomatizaciy/</link>
+        <pubDate>Thu, 14 Dec 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://asarapulov.ru/p/alfred-dlya-macos-para-avtomatizaciy/</guid>
+        <description>&lt;img src="https://asarapulov.ru/p/alfred-dlya-macos-para-avtomatizaciy/index.jpg" alt="Featured image of post Alfred для macOS: пара автоматизаций" /&gt;&lt;p&gt;Иногда нам страсть как нужна автоматизация простых действий: для этого на mac как никто другой подойдет Alfred:  мощный инструмент для автоматизации задач и управления файлами на macOS. Кстати, для Windows рекомендую &lt;a class=&#34;link&#34; href=&#34;https://www.listary.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Listary&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;отделение-id-от-адреса-видео-youtube&#34;&gt;Отделение id от адреса видео Youtube&lt;/h2&gt;
+&lt;p&gt;Иными словами, нам нужно превратить &lt;a class=&#34;link&#34; href=&#34;https://www.youtube.com/watch?v=h9DuoJ6Tcrk&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.youtube.com/watch?v=h9DuoJ6Tcrk&lt;/a&gt; в &lt;em&gt;h9DuoJ6Tcrk&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Работать это будет так: пользователь вызывает Alfred (option + пробел), пишет команду &lt;code&gt;cu https://www.youtube.com/watch?v=h9DuoJ6Tcrk&lt;/code&gt;, нажимает Ввод и в буфере получает id.&lt;/p&gt;
+&lt;p&gt;
+
+&lt;img src=&#34;https://asarapulov.ru/p/alfred-dlya-macos-para-avtomatizaciy/2023-12-14_22-10-39.jpg&#34;
+	width=&#34;1562&#34;
+	height=&#34;416&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Примерно так выглядит процесс в Alfred&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;375&#34;
+		data-flex-basis=&#34;901px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Создайте новый рабочий поток:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Откройте настройки Alfred и перейдите в раздел &amp;ldquo;Workflows&amp;rdquo;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Нажмите на &amp;ldquo;+&amp;rdquo; в нижнем левом углу, чтобы добавить новый рабочий поток.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;Добавьте &amp;ldquo;Input&amp;rdquo; (Ввод):&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Выберите &amp;ldquo;Inputs&amp;rdquo; (Ввод) в левом боковом меню и добавьте &amp;ldquo;Keyword&amp;rdquo; (Ключевое слово).&lt;/li&gt;
+&lt;li&gt;Назовите ключевое слово, например, &amp;ldquo;cu&amp;rdquo; (что означает &amp;ldquo;YouTube Code&amp;rdquo;).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;Добавьте &amp;ldquo;Run Script&amp;rdquo; (Запустить сценарий):&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Выберите &amp;ldquo;Actions&amp;rdquo; (Действия) в левом боковом меню и добавьте &amp;ldquo;Run Script&amp;rdquo; (Запустить сценарий).&lt;/li&gt;
+&lt;li&gt;В разделе &amp;ldquo;Script&amp;rdquo; выберите &amp;ldquo;Bash Script&amp;rdquo; (Сценарий на Bash).&lt;/li&gt;
+&lt;li&gt;Введите следующий скрипт на Bash:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;url=$1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;videoID=$(echo $url | awk -F &amp;#39;[=&amp;amp;]&amp;#39; &amp;#39;/watch\?/{print $2}&amp;#39;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;echo $videoID | tr -d &amp;#39;\n&amp;#39; | pbcopy
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Этот скрипт извлекает идентификатор видео из URL YouTube и копирует его в буфер обмена.&lt;/p&gt;
+&lt;p&gt;
+
+&lt;img src=&#34;https://asarapulov.ru/p/alfred-dlya-macos-para-avtomatizaciy/2023-12-14_21-43-36.jpg&#34;
+	width=&#34;1178&#34;
+	height=&#34;1026&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;А вот так в Alfred можно добавить две команды на вызов в обеих раскладках&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;114&#34;
+		data-flex-basis=&#34;275px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;получение-favicon-по-url-сайта&#34;&gt;Получение favicon по URL-сайта&lt;/h2&gt;
+&lt;p&gt;Более сложная задача, которая потребует установки Python, но, насколько я помню, в macOS он устанавлен по умолчанию.&lt;/p&gt;
+&lt;p&gt;В чем заключается задача: пользователь вызывает Alfred и в поисковой строке пишет команду: &lt;code&gt;fav https://n-ber.ru&lt;/code&gt;, в ответ скрипт открывает в новой вкладке браузера фавиконку сайта.&lt;/p&gt;
+&lt;p&gt;Поиск фавиконок - та еще задача, поэтому я решил подключить библиотеку favicon: &lt;code&gt;pip install favicon&lt;/code&gt;. В процессе неизбежны ошибки, поэтому скрипт должен о них сообщать &amp;ndash; там же, в браузере.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Создайте новый рабочий поток:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Откройте настройки Alfred и перейдите в раздел &amp;ldquo;Workflows&amp;rdquo;.&lt;/li&gt;
+&lt;li&gt;Нажмите на &amp;ldquo;+&amp;rdquo; в нижнем левом углу, чтобы добавить новый рабочий поток.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;Добавьте &amp;ldquo;Input&amp;rdquo; (Ввод):&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Выберите &amp;ldquo;Inputs&amp;rdquo; (Ввод) в левом боковом меню и добавьте &amp;ldquo;Keyword&amp;rdquo; (Ключевое слово).&lt;/li&gt;
+&lt;li&gt;Назовите ключевое слово, например, &amp;ldquo;fav&amp;rdquo; (от &amp;ldquo;favicon&amp;rdquo;).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;Добавьте &amp;ldquo;Run Script&amp;rdquo; (Запустить сценарий):&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Выберите &amp;ldquo;Actions&amp;rdquo; (Действия) в левом боковом меню и добавьте &amp;ldquo;Run Script&amp;rdquo; (Запустить сценарий).&lt;/li&gt;
+&lt;li&gt;В разделе &amp;ldquo;Script&amp;rdquo; выберите &amp;ldquo;Language: /usr/bin/python3&amp;rdquo; и вставьте код на Python.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;Сохраните и настройте триггер:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Нажмите &amp;ldquo;Save&amp;rdquo; (Сохранить) в верхнем правом углу.&lt;/li&gt;
+&lt;li&gt;Присвойте триггер (комбинацию клавиш или ключевое слово) для активации этого рабочего потока.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;А вот и скрипт:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;import sys
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;from favicon import get
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;import webbrowser
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;url = sys.argv[1]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;user_agent = &amp;#39;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.47 Safari/537.36&amp;#39;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;headers = {&amp;#39;User-Agent&amp;#39;: user_agent}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;try:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    icons = get(url, headers=headers, timeout=2)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    if icons:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        icon_url = icons[0].url
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        print(f&amp;#34;Открываю фавикон: {icon_url}&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        sys.stdout.flush()
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        webbrowser.open(icon_url)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    else:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        error_message = f&amp;#34;Favicon not found for the site: {url}. &amp;#34; \
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                        f&amp;#34;Open &amp;lt;a target=&amp;#39;_blank&amp;#39; href=&amp;#39;view-source:{url}&amp;#39;&amp;gt;site&amp;#39;s source code&amp;lt;/a&amp;gt; manually.&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        webbrowser.open(f&amp;#34;data:text/html,{error_message}&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;except Exception as e:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    error_message = f&amp;#34;An error occurred: {e}. &amp;#34; \
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                    f&amp;#34;Open &amp;lt;a target=&amp;#39;_blank&amp;#39; href=&amp;#39;view-source:{url}&amp;#39;&amp;gt;site&amp;#39;s source code&amp;lt;/a&amp;gt; manually.&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    webbrowser.open(f&amp;#34;data:text/html,{error_message}&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Вот такие очень узкоспециализированные скрипта для Alfred, но на то он и Alfred, чтобы помогать в прикладных задачах :-)&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Каждый раз, когда я перезагружаю macOS, мои обои рабочего стола удаляются</title>
+        <link>https://asarapulov.ru/p/kazhdyy-raz-kogda-ya-perezagruzhayu-macos-moi-oboi-rabochego-stola-udalyayutsya/</link>
+        <pubDate>Fri, 01 Sep 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://asarapulov.ru/p/kazhdyy-raz-kogda-ya-perezagruzhayu-macos-moi-oboi-rabochego-stola-udalyayutsya/</guid>
+        <description>&lt;img src="https://asarapulov.ru/p/kazhdyy-raz-kogda-ya-perezagruzhayu-macos-moi-oboi-rabochego-stola-udalyayutsya/title.png" alt="Featured image of post Каждый раз, когда я перезагружаю macOS, мои обои рабочего стола удаляются" /&gt;&lt;p&gt;MacOS не имеет приличного менеджера для работы с обоями рабочего стола. В отличие от Windows, здесь нельзя установить обои из меню правой кнопки мыши, нельзя установить обои из экрана просмотра изображения, как впрочем, нельзя и просто так установить любую скачанную картинку на рабочий стол. Для этого нужно открыть Системные настройки -&amp;gt; Обои и внизу добавить папку, в которой лежит файл.&lt;/p&gt;
+&lt;p&gt;В принципе, эту не сложную, но нудную операцию я проделал и в этот раз на своем Macbook Air с Ventura на борту: я скачал картинку на рабочий стол, добавил папку Desktop в &amp;ldquo;Обоях&amp;rdquo; и выбрал нужный файл. Но проблема оказалась в следующем: после перезагрузки изображение на рабочем столе попросту удалялось, иными словами обои возвращались на те, что были установлены по умолчанию.&lt;/p&gt;
+&lt;p&gt;
+
+&lt;img src=&#34;https://asarapulov.ru/p/kazhdyy-raz-kogda-ya-perezagruzhayu-macos-moi-oboi-rabochego-stola-udalyayutsya/title.png&#34;
+	width=&#34;947&#34;
+	height=&#34;737&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Экран настроек macOS, раздел Обои&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;128&#34;
+		data-flex-basis=&#34;308px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Решение простое:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Копируем файл с обоей в буфер обмена&lt;/li&gt;
+&lt;li&gt;В Finder нажимаем Command + Shift + H - откроется домашняя директория&lt;/li&gt;
+&lt;li&gt;Открываем папку Изображения и вставляем в нее файл&lt;/li&gt;
+&lt;li&gt;В настройках Системные настройки -&amp;gt; Обои появится ваше изображение, его нужно выбрать.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Собственно, вот после таких манипуляций обои на маке не должны удаляться после перезагрузки системы.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Как скрыть лишние значки в верхней строке Mac?</title>
+        <link>https://asarapulov.ru/p/kak-skryt-lishnie-znachki-v-verhney-stroke-mac/</link>
+        <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://asarapulov.ru/p/kak-skryt-lishnie-znachki-v-verhney-stroke-mac/</guid>
+        <description>&lt;img src="https://asarapulov.ru/p/kak-skryt-lishnie-znachki-v-verhney-stroke-mac/vanilla_mac.gif" alt="Featured image of post Как скрыть лишние значки в верхней строке Mac?" /&gt;&lt;h1 id=&#34;как-скрыть-лишние-значки-в-верхней-строке-mac&#34;&gt;Как скрыть лишние значки в верхней строке Mac?&lt;/h1&gt;
+&lt;p&gt;
+
+&lt;img src=&#34;https://asarapulov.ru/p/kak-skryt-lishnie-znachki-v-verhney-stroke-mac/vanilla_mac.gif&#34;
+	width=&#34;828&#34;
+	height=&#34;480&#34;
+	
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;172&#34;
+		data-flex-basis=&#34;414px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://matthewpalmer.net/vanilla/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Vanilla&lt;/a&gt; — маленькая программка, которая скроет кучу ненужных иконок в верхнем меню-баре твоего макбука. Вот и всё, можно больше не мучаться.&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

@@ -1,0 +1,650 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>способ on //asarapulov.ru</title>
+        <link>https://asarapulov.ru/tags/%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1/</link>
+        <description>Recent content in способ on //asarapulov.ru</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>ru-ru</language>
+        <lastBuildDate>Thu, 14 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://asarapulov.ru/tags/%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Как в Яндекс Браузере скрыть значки расширений?</title>
+        <link>https://asarapulov.ru/p/kak-v-yandeks-brauzere-skryt-znachki-rasshireniy/</link>
+        <pubDate>Thu, 14 Sep 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://asarapulov.ru/p/kak-v-yandeks-brauzere-skryt-znachki-rasshireniy/</guid>
+        <description>&lt;img src="https://asarapulov.ru/p/kak-v-yandeks-brauzere-skryt-znachki-rasshireniy/index.jpg" alt="Featured image of post Как в Яндекс Браузере скрыть значки расширений?" /&gt;&lt;p&gt;Пару лет пользуюсь Яндекс Браузером, но всегда удручал вид верхней панели, в которой беспрепятственно &amp;ldquo;селились&amp;rdquo; разноцветные значки расширений.&lt;/p&gt;
+&lt;p&gt;Да, их можно скрыть по ПКМ → Скрыть расширение, но вернуть обратно будет уже не так просто: Настройки → Дополнения → прокрутить вниз, чтобы пропустить рекламный мусор и передвинуть ползунок напротив того дополнения, которое нужно вернуть на панель.&lt;/p&gt;
+&lt;p&gt;
+
+&lt;img src=&#34;https://asarapulov.ru/p/kak-v-yandeks-brauzere-skryt-znachki-rasshireniy/extensions-menu-chrome-image.jpg&#34;
+	width=&#34;1374&#34;
+	height=&#34;557&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Работа с расширениями в браузере Chrome&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;246&#34;
+		data-flex-basis=&#34;592px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;В Chrome выглядит все гораздо проще: нажатие на кнопку с иконкой пазла и можно открыть или закрепить любое дополнение.&lt;/p&gt;
+&lt;p&gt;
+
+&lt;img src=&#34;https://asarapulov.ru/p/kak-v-yandeks-brauzere-skryt-znachki-rasshireniy/extensions-menu-yabrowser-image.jpg&#34;
+	width=&#34;1374&#34;
+	height=&#34;557&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Так это выглядит в Яндекс Браузере&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;246&#34;
+		data-flex-basis=&#34;592px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Короче, в Яндекс Браузере такой кнопки нет. Как нет ни одной настройки, посвященной этому. Поэтому, чтобы убрать этот зоопарк с панели, нужно потянуть за разделитель, который начинается сразу за правым краем адресной строки. И тогда значки расширений скроется в кнопку с тремя точками. Вот такой UI в Яндекс Браузере.&lt;/p&gt;
+&lt;p&gt;
+
+&lt;img src=&#34;https://asarapulov.ru/p/kak-v-yandeks-brauzere-skryt-znachki-rasshireniy/ya-browser-extensions-hide.gif&#34;
+	width=&#34;1176&#34;
+	height=&#34;629&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;GIF: что нужно сделать, чтобы скрыть (свернуть) значки расширений в Яндекс Браузере&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;186&#34;
+		data-flex-basis=&#34;448px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;P.S. Еще бы добавили пару пикселей пэддинга снизу к панели быстрого доступа, уж больно выглядит &amp;ldquo;поджатой&amp;rdquo;.
+P.P.S. Devtools, открывающийся по F12, в Яндекс Браузере зачем-то подгружает панель быстрого доступа и имеет ограничения по минимальной ширине окна - очень неудобно.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Каждый раз, когда я перезагружаю macOS, мои обои рабочего стола удаляются</title>
+        <link>https://asarapulov.ru/p/kazhdyy-raz-kogda-ya-perezagruzhayu-macos-moi-oboi-rabochego-stola-udalyayutsya/</link>
+        <pubDate>Fri, 01 Sep 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://asarapulov.ru/p/kazhdyy-raz-kogda-ya-perezagruzhayu-macos-moi-oboi-rabochego-stola-udalyayutsya/</guid>
+        <description>&lt;img src="https://asarapulov.ru/p/kazhdyy-raz-kogda-ya-perezagruzhayu-macos-moi-oboi-rabochego-stola-udalyayutsya/title.png" alt="Featured image of post Каждый раз, когда я перезагружаю macOS, мои обои рабочего стола удаляются" /&gt;&lt;p&gt;MacOS не имеет приличного менеджера для работы с обоями рабочего стола. В отличие от Windows, здесь нельзя установить обои из меню правой кнопки мыши, нельзя установить обои из экрана просмотра изображения, как впрочем, нельзя и просто так установить любую скачанную картинку на рабочий стол. Для этого нужно открыть Системные настройки -&amp;gt; Обои и внизу добавить папку, в которой лежит файл.&lt;/p&gt;
+&lt;p&gt;В принципе, эту не сложную, но нудную операцию я проделал и в этот раз на своем Macbook Air с Ventura на борту: я скачал картинку на рабочий стол, добавил папку Desktop в &amp;ldquo;Обоях&amp;rdquo; и выбрал нужный файл. Но проблема оказалась в следующем: после перезагрузки изображение на рабочем столе попросту удалялось, иными словами обои возвращались на те, что были установлены по умолчанию.&lt;/p&gt;
+&lt;p&gt;
+
+&lt;img src=&#34;https://asarapulov.ru/p/kazhdyy-raz-kogda-ya-perezagruzhayu-macos-moi-oboi-rabochego-stola-udalyayutsya/title.png&#34;
+	width=&#34;947&#34;
+	height=&#34;737&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Экран настроек macOS, раздел Обои&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;128&#34;
+		data-flex-basis=&#34;308px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Решение простое:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Копируем файл с обоей в буфер обмена&lt;/li&gt;
+&lt;li&gt;В Finder нажимаем Command + Shift + H - откроется домашняя директория&lt;/li&gt;
+&lt;li&gt;Открываем папку Изображения и вставляем в нее файл&lt;/li&gt;
+&lt;li&gt;В настройках Системные настройки -&amp;gt; Обои появится ваше изображение, его нужно выбрать.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Собственно, вот после таких манипуляций обои на маке не должны удаляться после перезагрузки системы.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Монитор Xiaomi Mi Curved Gaming: как поменять источник сигнала?</title>
+        <link>https://asarapulov.ru/p/monitor-xiaomi-mi-curved-gaming-kak-pomenyat-istochnik-signala/</link>
+        <pubDate>Mon, 19 Jun 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://asarapulov.ru/p/monitor-xiaomi-mi-curved-gaming-kak-pomenyat-istochnik-signala/</guid>
+        <description>&lt;img src="https://asarapulov.ru/p/monitor-xiaomi-mi-curved-gaming-kak-pomenyat-istochnik-signala/index.jpg" alt="Featured image of post Монитор Xiaomi Mi Curved Gaming: как поменять источник сигнала?" /&gt;&lt;p&gt;Возник вопрос: как поменять источник сигнала на мониторе Xiaomi Mi Curved Gaming Monitor 34, не отсоединяя кабели?&lt;/p&gt;
+&lt;p&gt;Достаточно просто. &lt;strong&gt;В Windows&lt;/strong&gt; в поиске пишем &amp;ldquo;PowerShell&amp;rdquo; и запускаем Windows PowerShell (возможно понадобится запуск от администратора), в ней пишем команду, которая программно отключит текущий монитор, после чего система переключится на другой:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;(Add-Type -MemberDefinition &amp;#34;[DllImport(&amp;#34;&amp;#34;user32.dll&amp;#34;&amp;#34;)]`npublic static extern int SendMessage(int hWnd, int hMsg, int wParam, int lParam);&amp;#34; -Name &amp;#34;Win32SendMessage&amp;#34; -Namespace Win32Functions -PassThru)::SendMessage(0xffff, 0x0112, 0xF170, 2)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Для Linux тоже есть аналогичная команда:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;xset dpms force off&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Для Mac:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;pmset displaysleepnow&lt;/code&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Быстрая регистрация и использование ChatGPT (МАЙ 2023)</title>
+        <link>https://asarapulov.ru/p/fast-reg-chatgpt/</link>
+        <pubDate>Mon, 22 May 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://asarapulov.ru/p/fast-reg-chatgpt/</guid>
+        <description>&lt;img src="https://asarapulov.ru/p/fast-reg-chatgpt/chatgpt.jpg" alt="Featured image of post Быстрая регистрация и использование ChatGPT (МАЙ 2023)" /&gt;&lt;p&gt;Этап №1. Подготовка&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Скачиваем и устанавливаем &lt;a class=&#34;link&#34; href=&#34;https://freevpnplanet.com/ru/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Planet VPN&lt;/a&gt;. VPN понадобится только на первом шаге следующего этапа.&lt;/li&gt;
+&lt;li&gt;Переходим на &lt;a class=&#34;link&#34; href=&#34;https://onlinesim.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://onlinesim.io/&lt;/a&gt; и регистрируемся (легче всего через аккаунт Google)&lt;/li&gt;
+&lt;li&gt;Нажимаем Пополнить и пополняем любым удобным способом на 40-50 рублей&lt;/li&gt;
+&lt;li&gt;Нажимаем Прием смс, выбираем страну Нидерланды, в правой части таблицы выбираем Chat GPT, у меня была стоимость номера 34 рубля.&lt;/li&gt;
+&lt;li&gt;Нажатие на эту сумму активирует номер &lt;strong&gt;на 15 минут&lt;/strong&gt;. Он появится справа в таблице Мои номера.  &lt;strong&gt;Страницу не закрываем.&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Этап №2. Регистрация&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Включаем Planet VPN, выбираем Netherlands&lt;/li&gt;
+&lt;li&gt;Переходим на &lt;a class=&#34;link&#34; href=&#34;https://chat.openai.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://chat.openai.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Нажмите на кнопку «Sing up». Укажите Email и нажмите «Continue». Придумайте пароль и кликните «Continue».&lt;/li&gt;
+&lt;li&gt;Подтвердите email: Откройте почту, Найдите письмо с темой «OpenAI — Verify your email», Кликните по кнопке «Verify email address». Введите ваше имя, фамилию и нажмите «Continue».&lt;/li&gt;
+&lt;li&gt;Укажите номер телефона, который вы получили от onlinesim.io и нажмите «Send code».
+Код прилетит под ваш номер на сайте onlinesim.io (раздел Мои номера). Полученный код укажите в соответствующем поле.&lt;/li&gt;
+&lt;li&gt;После ввода должен открыться интерфейс чат-бота. Готово!&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Еще немного информации:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Не забывайте включать VPN при любом заходе на сайт!&lt;/li&gt;
+&lt;li&gt;Если вы видите сообщение типа Access denied, то очищайте кэш браузера вручную или с помощью &lt;a class=&#34;link&#34; href=&#34;https://chrome.google.com/webstore/detail/clear-site-data/aihgofjefdlhpnmeakpnjjeajofpcbhj?hl=ru&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;расширений&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Может случиться так, что ваш аккаунт забанят и очистка кэша + использование VPN не поможет. В этом случае придется регистрироваться заново.&lt;/li&gt;
+&lt;li&gt;В Telegram нет ChatGPT от OpenAI, не смотря на то, что об этом пишут в рекламных постах. 90% ботов из телеги не раскрывают потенциала оригинального бота.&lt;/li&gt;
+&lt;li&gt;Аккаунт для ChatGPT можно купить на Плати.ру, но придется повозиться с оплатой и еще возникает вопрос о конфиденциальности, если о ней вообще можно говорить, т.к. вы общаетесь с коммерческим ботом.&lt;/li&gt;
+&lt;li&gt;Не нравится ChatGPT - используйте Bing, он тоже требует регистрации и VPN, но зато не нужно создавать виртуальный номер.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Другие текстовые чат-боты смотри на сайте &lt;a class=&#34;link&#34; href=&#34;https://ailibri.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;AIlibri.com&lt;/a&gt;.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Как войти в сервисное меню на телевизоре Asano 32LF8130S с Яндекс.ТВ?</title>
+        <link>https://asarapulov.ru/p/kak-voyti-v-servisnoe-menyu-na-televizore-asano-32lf8130s-s-yandeks-tv/</link>
+        <pubDate>Tue, 21 Feb 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://asarapulov.ru/p/kak-voyti-v-servisnoe-menyu-na-televizore-asano-32lf8130s-s-yandeks-tv/</guid>
+        <description>&lt;img src="https://asarapulov.ru/p/kak-voyti-v-servisnoe-menyu-na-televizore-asano-32lf8130s-s-yandeks-tv/index.jpg" alt="Featured image of post Как войти в сервисное меню на телевизоре Asano 32LF8130S с Яндекс.ТВ?" /&gt;&lt;h1 id=&#34;как-войти-в-сервисное-меню-на-телевизоре-asano-32lf8130s-с-яндекств&#34;&gt;Как войти в сервисное меню на телевизоре Asano 32LF8130S с Яндекс.ТВ?&lt;/h1&gt;
+&lt;p&gt;Покупатели не рекомендуют покупать этот ТВ Asano 32LF8130S, но если кого-то не остановили гневные отзывы, то вот вам способ, который позволит войти в зависшее меню. Да, телевизор адово глючит и лечится это только сбросом на заводские настройки.&lt;/p&gt;
+&lt;p&gt;Так вот, чтобы сбросить телевизор Asano 32LF8130S с Яндекс.ТВ, нужно взять в руки пульт и нажать следующие кнопки:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Меню (1 сек)&lt;/li&gt;
+&lt;li&gt;Влево&lt;/li&gt;
+&lt;li&gt;Вверх&lt;/li&gt;
+&lt;li&gt;Влево&lt;/li&gt;
+&lt;li&gt;Вверх&lt;/li&gt;
+&lt;li&gt;Назад&lt;/li&gt;
+&lt;li&gt;В Factory menu найти пункт SHIPPING INIT.&lt;/li&gt;
+&lt;li&gt;Подтвердить, телевизор перезагрузится с заводскими настройками.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Или попробуйте такое сочетание магических нажатий:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Меню&lt;/li&gt;
+&lt;li&gt;Вверх&lt;/li&gt;
+&lt;li&gt;Влево&lt;/li&gt;
+&lt;li&gt;Вверх&lt;/li&gt;
+&lt;li&gt;Влево&lt;/li&gt;
+&lt;li&gt;Кнопка Назад&lt;/li&gt;
+&lt;li&gt;Вниз&lt;/li&gt;
+&lt;li&gt;Далее выбираем первый пункт, ОК, ВПРАВО, ОК.&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+        </item>
+        <item>
+        <title>Наушники CaseGuru CGpods 5.0 не синхронизируются, что делать?</title>
+        <link>https://asarapulov.ru/p/naushniki-caseguru-cgpods-5-0-ne-sinhroniziruyutsya-chto-delat/</link>
+        <pubDate>Tue, 14 Feb 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://asarapulov.ru/p/naushniki-caseguru-cgpods-5-0-ne-sinhroniziruyutsya-chto-delat/</guid>
+        <description>&lt;img src="https://asarapulov.ru/p/naushniki-caseguru-cgpods-5-0-ne-sinhroniziruyutsya-chto-delat/case-guru-not-sync.jpg" alt="Featured image of post Наушники CaseGuru CGpods 5.0 не синхронизируются, что делать?" /&gt;&lt;p&gt;Иногда один из наушников CaseGuru CGpods 5.0 теряет синхронизацию со вторым. Чтобы это исправить, нужно выполнить ряд следующих действий:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Достать из кейса оба наушника&lt;/li&gt;
+&lt;li&gt;Выключить оба наушника длительным зажатием&lt;/li&gt;
+&lt;li&gt;Зажать сенсоры на обоих наушниках, дождаться, пока не замигает красно-синий диод на обоих наушниках&lt;/li&gt;
+&lt;li&gt;Нажать одновременно на оба наушника 5 раз и если все сделано верно, то они загорятся фиолетовым и выключатся&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Кладем оба наушника в кейс, закрываем его, а потом достаем их, чтобы они включились&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Как обычно подключаем наушники к телефону и проверяем работу.&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+        </item>
+        <item>
+        <title>Диапазон дат в MODX с помощью MIGX</title>
+        <link>https://asarapulov.ru/p/diapazon-dat-v-modx-s-pomoschyu-migx/</link>
+        <pubDate>Fri, 10 Feb 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://asarapulov.ru/p/diapazon-dat-v-modx-s-pomoschyu-migx/</guid>
+        <description>&lt;img src="https://asarapulov.ru/p/diapazon-dat-v-modx-s-pomoschyu-migx/index.jpg" alt="Featured image of post Диапазон дат в MODX с помощью MIGX" /&gt;&lt;h1 id=&#34;диапазон-дат-в-modx-с-помощью-migx&#34;&gt;Диапазон дат в MODX с помощью MIGX&lt;/h1&gt;
+&lt;p&gt;Потребовалось мне как-то добавить к ресурсу MODX неограниченное количество диапазонов дат. Так бывает нужно, например, если ресурс - это учебный курс, который проводится несколько раз в год с такой-то дату по такую-то, и надо это как-то выводить.&lt;/p&gt;
+&lt;p&gt;Что надо делать:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Установить MIGX&lt;/li&gt;
+&lt;li&gt;Переходим в Управление → MIGX → Добавить элемент&lt;/li&gt;
+&lt;li&gt;В поле Name вводем имя “datePicker”&lt;/li&gt;
+&lt;li&gt;Открываем вкладку Formtabs → Добавить элемент&lt;/li&gt;
+&lt;li&gt;В поле “Caption” вводим “Диапазон дат”&lt;/li&gt;
+&lt;li&gt;Тамже рядом с “Fields” находим Добавить элемент и жамкаем&lt;/li&gt;
+&lt;li&gt;В появившемся окне вводим:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Fieldname - “start_date”&lt;/li&gt;
+&lt;li&gt;Caption - “Начальная дата“&lt;/li&gt;
+&lt;li&gt;Input TV - “dateStart”&lt;/li&gt;
+&lt;li&gt;Input TV type - “date”&lt;/li&gt;
+&lt;li&gt;Жмем “Сохранить и закрыть”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;8&#34;&gt;
+&lt;li&gt;Снова жмем на “Добавить элемент” и добавляем такие параметры:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Fieldname - “end_date”&lt;/li&gt;
+&lt;li&gt;Caption - “Конечная дата“&lt;/li&gt;
+&lt;li&gt;Input TV - “dateEnd”&lt;/li&gt;
+&lt;li&gt;Input TV type - “date”&lt;/li&gt;
+&lt;li&gt;Жмем “Сохранить и закрыть”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;9&#34;&gt;
+&lt;li&gt;Множество раз жмем “Сохранить и закрыть” пока не закроется всё&lt;/li&gt;
+&lt;li&gt;Создаем TV-поле dateStart, где в параметрах ввода выбираем:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Тип ввода: Дата&lt;/li&gt;
+&lt;li&gt;Выбираем другие параметры, которые по-душе)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;11&#34;&gt;
+&lt;li&gt;Создаем другое поле dateEnd с такими же параметрами.&lt;/li&gt;
+&lt;li&gt;Создаем третье ТВ-поле datePickTv и в нем в Параметрах ввода делаем следующее:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Тип ввода: migx&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Конфигурации: datePicker&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Вкладки формы:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &amp;#34;caption&amp;#34;:&amp;#34;Date Ranges&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &amp;#34;fields&amp;#34;: [
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          &amp;#34;field&amp;#34;:&amp;#34;start_date&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          &amp;#34;caption&amp;#34;:&amp;#34;Start Date&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          &amp;#34;inputTVtype&amp;#34;:&amp;#34;date&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      },
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          &amp;#34;field&amp;#34;:&amp;#34;end_date&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          &amp;#34;caption&amp;#34;:&amp;#34;End Date&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          &amp;#34;inputTVtype&amp;#34;:&amp;#34;date&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      }
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;]
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Разметка колонок:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{&amp;#34;header&amp;#34;: &amp;#34;Начало&amp;#34;, &amp;#34;width&amp;#34;: &amp;#34;160&amp;#34;, &amp;#34;sortable&amp;#34;: &amp;#34;true&amp;#34;, &amp;#34;dataIndex&amp;#34;: &amp;#34;start_date&amp;#34;},
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{&amp;#34;header&amp;#34;: &amp;#34;Конец&amp;#34;, &amp;#34;width&amp;#34;: &amp;#34;160&amp;#34;, &amp;#34;sortable&amp;#34;: &amp;#34;true&amp;#34;, &amp;#34;dataIndex&amp;#34;: &amp;#34;end_date&amp;#34;}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;]
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ol start=&#34;13&#34;&gt;
+&lt;li&gt;Не забываем добавить это поле к шаблону в “Доступно для шаблонов”, сохраняем, &lt;em&gt;крестимся&lt;/em&gt; и проверяем…&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;
+
+&lt;img src=&#34;https://asarapulov.ru/p/diapazon-dat-v-modx-s-pomoschyu-migx/2023-02-10_19-21-44.png&#34;
+	width=&#34;725&#34;
+	height=&#34;251&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;такой результат&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;288&#34;
+		data-flex-basis=&#34;693px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;В шаблоне пишем типа такого:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-mysql&#34; data-lang=&#34;mysql&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[[&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;!&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;getImageList&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;?&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;tvname&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=`&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;datePickTv&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;`&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;tpl&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=`&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;date_range_tpl&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;`&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]]&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;В чанке:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;p&amp;gt;[[+start_date:date=`%d-%m-%Y`]] — [[+end_date:date=`%d-%m-%Y`]]&amp;lt;/p&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
+        </item>
+        <item>
+        <title>Поменять дату создания у файлов изображений</title>
+        <link>https://asarapulov.ru/p/pomenyat-datu-sozdaniya-u-izobrazheniya/</link>
+        <pubDate>Wed, 12 Oct 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://asarapulov.ru/p/pomenyat-datu-sozdaniya-u-izobrazheniya/</guid>
+        <description>&lt;img src="https://asarapulov.ru/p/pomenyat-datu-sozdaniya-u-izobrazheniya/change-date-image-creation-from-exif.jpg" alt="Featured image of post Поменять дату создания у файлов изображений" /&gt;&lt;h1 id=&#34;поменять-дату-создания-у-файлов-изображений&#34;&gt;Поменять дату создания у файлов изображений&lt;/h1&gt;
+&lt;p&gt;Проблема: есть фотки, в которых правильная “дата съемки” в EXIF, но неправильная дата создания (и изменения) файла. Нужно их “синхронизировать”.&lt;/p&gt;
+&lt;p&gt;
+
+&lt;img src=&#34;https://asarapulov.ru/p/pomenyat-datu-sozdaniya-u-izobrazheniya/change-date-image-creation-from-exif.jpg&#34;
+	width=&#34;1006&#34;
+	height=&#34;421&#34;
+	
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;238&#34;
+		data-flex-basis=&#34;573px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Заходим на &lt;a class=&#34;link&#34; href=&#34;https://www.sentex.ca/~mwandel/jhead/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;сайт утилиты jhead&lt;/a&gt; и скачиваем jhead.exe. Этот файл закидываем в папку windows.&lt;/li&gt;
+&lt;li&gt;Открываем командную строку, пишем &lt;code&gt;cd&lt;/code&gt; и вставляем адрес папки с фотографиями. Получается типа &lt;code&gt;cd c:\photos&lt;/code&gt; и жмем Enter&lt;/li&gt;
+&lt;li&gt;Затем пишем &lt;code&gt;jhead -ft *.jpg&lt;/code&gt; и всё, все фотографии в папке получат дату создания и изменения из даты съемки EXIF.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Может быть актуально, например, при переносе фотографий из одного облака в другое.&lt;/p&gt;
+&lt;p&gt;Чтобы удостовериться в корректности выполненной операции, в проводнике выберите “Вид - Таблица”, затем ПКМ по столбцам - Подробнее и выбрать “Дата съемки”.&lt;/p&gt;
+&lt;p&gt;Еще команда для изменения jpg-файлов в сетевом диске:
+&lt;code&gt;jhead -ft &amp;quot;O:\Photo\Google Photo\2020\5\*.jpg&amp;quot;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;А вот команда для видео mp4 и mov, которые имеют правильную &amp;ldquo;Дату создания мультимедия&amp;rdquo; и неправильную &amp;ldquo;Дату создания&amp;rdquo;:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;exiftool &amp;quot;-FileCreateDate&amp;lt;AllDates&amp;quot; -if &amp;quot;not $datetimeoriginal&amp;quot; *.mp4 *.mov&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Exiftool нужно предварительно установить, конечно же.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Весы Xiaomi неправильно показывают мой вес!</title>
+        <link>https://asarapulov.ru/p/vesy-xiaomi-nepravilno-pokazyvayut-moy-ves/</link>
+        <pubDate>Tue, 06 Sep 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://asarapulov.ru/p/vesy-xiaomi-nepravilno-pokazyvayut-moy-ves/</guid>
+        <description>&lt;img src="https://asarapulov.ru/p/vesy-xiaomi-nepravilno-pokazyvayut-moy-ves/nepravilnyi-ves-na-vesah-xiaomi-1100x500.jpg" alt="Featured image of post Весы Xiaomi неправильно показывают мой вес!" /&gt;&lt;p&gt;Иногда весы от Сяоми начинают глючить и показывать неправильный вес — на 0,5 - 1 кг больше, чем нужно.&lt;/p&gt;
+&lt;p&gt;Чтобы решить этот вопрос, нужно выполнить простейшие действия:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Вытащить и вставить батарейки (весы перезагрузятся).&lt;/li&gt;
+&lt;li&gt;Поставить весы на ровную поверхность. Весы заново откалибруются.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Если не поможет, то по инструкции к весам Xiaomi предлагается заменить батарейки на новые.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Почему не работает интернет на Iphone?</title>
+        <link>https://asarapulov.ru/p/pochemu-ne-rabotaet-internet-na-iphone/</link>
+        <pubDate>Wed, 03 Aug 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://asarapulov.ru/p/pochemu-ne-rabotaet-internet-na-iphone/</guid>
+        <description>&lt;img src="https://asarapulov.ru/p/pochemu-ne-rabotaet-internet-na-iphone/image.jpg" alt="Featured image of post Почему не работает интернет на Iphone?" /&gt;&lt;h1 id=&#34;почему-не-работает-интернет-на-iphone&#34;&gt;Почему не работает интернет на Iphone?&lt;/h1&gt;
+&lt;p&gt;Однажды после перелёта, уже будучи в здании аэропорта, я чуть не сел в лужу с новеньким айфоном: оказалось, что мобильный интернет не работает - а он нужен, как минимум, чтобы вызвать такси. Позже я с ужасом обнаружил, что также не работают звонки.&lt;/p&gt;
+&lt;p&gt;Переключение к другим сетям, включение-выключение режима полета и роуминга, перезагрузка телефона ничего не дали.&lt;/p&gt;
+&lt;p&gt;Никогда раньше с таким не сталкивался. Но помогло следующее: нужно перейти в Настройки -&amp;gt; Основные -&amp;gt; Перенос или сброс IPhone -&amp;gt; Сброс -&amp;gt; Сбросить настройки сети.&lt;/p&gt;
+&lt;p&gt;После этого завелась связь и прилетели настройки интернета от мобильного оператора Тинькофф Мобайл. Кстати, делюсь ссылкой на симку с неделей бесплатной связи &lt;a class=&#34;link&#34; href=&#34;https://www.tinkoff.ru/sl/AQoGfQuBxSZ&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.tinkoff.ru/sl/AQoGfQuBxSZ&lt;/a&gt;, можно перейти с любого оператора.&lt;/p&gt;
+&lt;p&gt;И еще, Тинькофф Мобайл как нельзя актуален для пользователей IPhone: он позволяет на уровне оператора записывать звонки (хотя, бывает теряет записи) и другой альтернативы я не встречал.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Зелёный экран ТВ и Яндекс Модуль</title>
+        <link>https://asarapulov.ru/p/zeljonyj-ekran-tv-i-yandeks-modul/</link>
+        <pubDate>Mon, 31 Jan 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://asarapulov.ru/p/zeljonyj-ekran-tv-i-yandeks-modul/</guid>
+        <description>&lt;img src="https://asarapulov.ru/p/zeljonyj-ekran-tv-i-yandeks-modul/yandex-modul-zelenyi-ekran-1100x500.jpg" alt="Featured image of post Зелёный экран ТВ и Яндекс Модуль" /&gt;&lt;p&gt;Короткая заметка для тех, кто купил Яндекс Модуль, выполнил подключение и &amp;ldquo;словил&amp;rdquo; зелёный экран, когда картинку более менее видно, но весь интерфейс в зелёных или каких-то еще тонах. Чтобы этого не было, нужно просто перезагрузить модуль, но не с кнопки пульта, а лучше отключить его из розетки и включить по-новой.&lt;/p&gt;
+&lt;p&gt;На скриншоте - то, как &lt;strong&gt;примерно&lt;/strong&gt; выглядел экран.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Как сменить почту на Яндексе</title>
+        <link>https://asarapulov.ru/p/kak-smenit-pochtu-na-yandekse/</link>
+        <pubDate>Fri, 28 Jan 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://asarapulov.ru/p/kak-smenit-pochtu-na-yandekse/</guid>
+        <description>&lt;h1 id=&#34;как-сменить-почту-на-яндексе&#34;&gt;Как сменить почту на Яндексе&lt;/h1&gt;
+&lt;p&gt;Если ваша почта на Яндексе выглядит как-то не солидно, например, &lt;a class=&#34;link&#34; href=&#34;mailto:nagibator777@yandex.ru&#34; &gt;nagibator777@yandex.ru&lt;/a&gt; или &lt;a class=&#34;link&#34; href=&#34;mailto:lehaNax07@yandex.ru&#34; &gt;lehaNax07@yandex.ru&lt;/a&gt;, а менять ее затруднительно, проблематично или лень, то есть выход.&lt;/p&gt;
+&lt;p&gt;Переходим на страницу &lt;a class=&#34;link&#34; href=&#34;https://passport.yandex.ru/profile/phones&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Телефонные номера&lt;/a&gt;, затем включаем опцию Использовать номер телефона как логин на Яндексе и тут получаем почту типа &lt;a class=&#34;link&#34; href=&#34;mailto:79xxxxxxxxx@yandex.ru&#34; &gt;79xxxxxxxxx@yandex.ru&lt;/a&gt; и +79xxxxxxxxx@yandex.ru. Вся почта, приходящая на эти ящики, будет доступна на вашей основной, но несолидной почте.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Способ быстро заснуть 2022</title>
+        <link>https://asarapulov.ru/p/sposob-bystro-zasnut-2022/</link>
+        <pubDate>Sat, 08 Jan 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://asarapulov.ru/p/sposob-bystro-zasnut-2022/</guid>
+        <description>&lt;img src="https://asarapulov.ru/p/sposob-bystro-zasnut-2022/sleep-2022.jpg" alt="Featured image of post Способ быстро заснуть 2022" /&gt;&lt;p&gt;
+
+&lt;img src=&#34;https://asarapulov.ru/p/sposob-bystro-zasnut-2022/sleep-2022.jpg&#34;
+	width=&#34;1280&#34;
+	height=&#34;600&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;sleep-2022.jpg&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;213&#34;
+		data-flex-basis=&#34;512px&#34;
+	
+&gt;
+Чтобы быстро заснуть, например, днем, достаточно максимально комфортно лечь и начать произносить (про себя) слова и целые мысли любого содержания. Связаны они друг с другом или нет - не важно. Важна скорость, которая должна опережать обычную скорость вашего внутренного диалога. В этом потоке бреда (а иначе не назовешь) не должно быть пауз.&lt;/p&gt;
+&lt;p&gt;Если в процессе вы о задумаетесь о чем-то конкретном, то нужно остановиться и нисколько не переживая об этом, спокойно вернуться в «поток бреда», через несколько таких возвращений я обычно засыпаю. А у вас получилось? Напишите в комментариях.
+
+
+&lt;img src=&#34;https://asarapulov.ru/p/sposob-bystro-zasnut-2022/sleep-2022-2.png&#34;
+	width=&#34;1556&#34;
+	height=&#34;636&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;sleep-2022-2.png&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;244&#34;
+		data-flex-basis=&#34;587px&#34;
+	
+&gt;
+Посмотрите на скриншот с сайта &lt;a class=&#34;link&#34; href=&#34;https://fishtext.ru/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;fishtext.ru&lt;/a&gt;, который отлично умеет генерировать &amp;ldquo;текст-рыбу&amp;rdquo; для дизайнеров. Вот примерно такой же поток бреда нужно генерировать в уме, чтобы быстро заснуть.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Добавить новый пункт в шапку админ-панели MODx Revo</title>
+        <link>https://asarapulov.ru/p/dobavit-novyy-punkt-v-shapku-admin-paneli-modx-revo/</link>
+        <pubDate>Fri, 17 Dec 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://asarapulov.ru/p/dobavit-novyy-punkt-v-shapku-admin-paneli-modx-revo/</guid>
+        <description>&lt;img src="https://asarapulov.ru/p/dobavit-novyy-punkt-v-shapku-admin-paneli-modx-revo/menu-action.png" alt="Featured image of post Добавить новый пункт в шапку админ-панели MODx Revo" /&gt;&lt;h1 id=&#34;добавить-новый-пункт-в-шапку-админ-панели-modx-revo&#34;&gt;Добавить новый пункт в шапку админ-панели MODx Revo&lt;/h1&gt;
+&lt;p&gt;В этой заметке я постараюсь объяснить то, как добавить новые пункты меню в шапку админ-панели MODx Revolution. В моем случае эти пункты будут вести в раздел создания новой записи в блоге, а также в сам блог: его административную часть.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1.&lt;/strong&gt; Для начала соберем необходимые данные. Перейдем в админ-панели в свой блог и скопируем url-адрес из адресной строки:&lt;/p&gt;
+&lt;p&gt;
+
+&lt;img src=&#34;https://asarapulov.ru/p/dobavit-novyy-punkt-v-shapku-admin-paneli-modx-revo/url-1.png&#34;
+	width=&#34;365&#34;
+	height=&#34;33&#34;
+	
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;1106&#34;
+		data-flex-basis=&#34;2654px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Я получил адрес вот такого вида:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;//manager/?a=resource/update&amp;amp;id=2&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Нажмем кнопку «Новая статья» и проделаем аналогичную операцию. Удалим из полученных адресов блок &lt;code&gt;http://вашсайт/manager/?a=&lt;/code&gt;. После чего получим в итоге два выражения:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Адрес административной части блога: &lt;code&gt;resource/update&amp;amp;id=**x**&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Адрес создания новой статьи: &lt;code&gt;resource/create&amp;amp;class_key=Article&amp;amp;parent=**x**&amp;amp;context_key=web&amp;amp;template=**y**&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Очевидно, что там, где указаны &lt;strong&gt;x&lt;/strong&gt; и &lt;strong&gt;y&lt;/strong&gt; — должны быть ваши данные.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2.&lt;/strong&gt; Создадим пункт, в котором будет два подпункта. Нажатие на главный пункт обрабатываться не будет.&lt;/p&gt;
+&lt;p&gt;Переходим в раздел «Система» -&amp;gt; «Действия». Нажимаем кнопку «Добавить пункт» и вводим следующее:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;«Родитель» — topnav&lt;/li&gt;
+&lt;li&gt;«Ключ словаря» — название главного пункта&lt;/li&gt;
+&lt;li&gt;«Привелегии» — &lt;code&gt;new_document&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;И нажимаем «Сохранить».&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;3.&lt;/strong&gt; Затем &lt;strong&gt;обязательно&lt;/strong&gt; кликаем правой кнопкой мыши на новом пункте, выбираем «Редактировать» и снова нажимаем «Сохранить». В противном случае данный пункт не попадет в меню «Родитель» (такое вот странное поведение системы).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;4.&lt;/strong&gt; Сразу после этого создаем подпункт, по нажатию на который мы отправлялись бы в список всех записей в этом разделе. Снова нажимаем «Добавить пункт» и вводим следующее:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;«Родитель» — название главного пункта, созданного ранее&lt;/li&gt;
+&lt;li&gt;«Ключ словаря» — название подпункта&lt;/li&gt;
+&lt;li&gt;«Действие» — &lt;code&gt;resource/update&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;«Описание» — ваше описание подпункта (необязательно)&lt;/li&gt;
+&lt;li&gt;«Параметры» — &lt;code&gt;&amp;amp;id=x&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;«Привелегии» — &lt;code&gt;new_document&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+
+&lt;img src=&#34;https://asarapulov.ru/p/dobavit-novyy-punkt-v-shapku-admin-paneli-modx-revo/secondary-item-menu-01.png&#34;
+	width=&#34;613&#34;
+	height=&#34;739&#34;
+	
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;82&#34;
+		data-flex-basis=&#34;199px&#34;
+	
+&gt;
+И сохраняем.&lt;/p&gt;
+&lt;p&gt;Если обновить страницу, то можно увидеть, что создались два пункта один в другом.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;5.&lt;/strong&gt; Создадим второй подпункт, который отправлял бы нас в окно создания новой записи в блоге. Нажимаем «Добавить пункт». Повторюсь, если ваш главный пункт вдруг исчез из списка «Родитель», то просто пересохраняем его! Вводим следующее:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;«Родитель» — название главного пункта, созданного ранее&lt;/li&gt;
+&lt;li&gt;«Ключ словаря» — название подпункта&lt;/li&gt;
+&lt;li&gt;«Действие» — &lt;code&gt;resource/create&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;«Описание» — ваше описание подпункта (необязательно)&lt;/li&gt;
+&lt;li&gt;«Параметры» — &lt;code&gt;&amp;amp;class_key=Article&amp;amp;parent=x&amp;amp;context_key=web&amp;amp;template=y&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;«Привелегии» — &lt;code&gt;new_document&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+
+&lt;img src=&#34;https://asarapulov.ru/p/dobavit-novyy-punkt-v-shapku-admin-paneli-modx-revo/secondary-item-menu-02.png&#34;
+	width=&#34;609&#34;
+	height=&#34;738&#34;
+	
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;82&#34;
+		data-flex-basis=&#34;198px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;И сохраняем.&lt;/p&gt;
+&lt;p&gt;
+
+&lt;img src=&#34;https://asarapulov.ru/p/dobavit-novyy-punkt-v-shapku-admin-paneli-modx-revo/menu-result.png&#34;
+	width=&#34;987&#34;
+	height=&#34;169&#34;
+	
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;584&#34;
+		data-flex-basis=&#34;1401px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;В итоге мы создали три пункта меню в верхнем меню бэкенда админ панели MODx: главный и два подпункта.&lt;/p&gt;
+&lt;p&gt;Замечу один нюанс: при редактировании меню можно случайно «напороться» на то, что вновь созданный пункт вообще не поддается редактированию. Лучше всего удалить этот пункт прямо в phpmyadmin в таблице modx_menus.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Домашняя очень острая горчица от дяди Яши</title>
+        <link>https://asarapulov.ru/p/domashnyaya-ochen-ostraya-gorchica-ot-dyadi/</link>
+        <pubDate>Fri, 17 Dec 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://asarapulov.ru/p/domashnyaya-ochen-ostraya-gorchica-ot-dyadi/</guid>
+        <description>&lt;img src="https://asarapulov.ru/p/domashnyaya-ochen-ostraya-gorchica-ot-dyadi/domashnya-ochen-ostraya-gorchica-ot-dydi-yashi.jpg" alt="Featured image of post Домашняя очень острая горчица от дяди Яши" /&gt;&lt;h2 id=&#34;домашняя-очень-острая-горчица-от-дяди-яши&#34;&gt;Домашняя очень острая горчица от дяди Яши&lt;/h2&gt;
+&lt;p&gt;Публикую рецепт очень острой горчицы, который был обнаружен мною в ходе долгих поисков, ошибок и проб. На выходе получаем продукт, который обязательно вышибет слезу. Даже любители острого краснеют и покрываются потом. А это уже показатель!&lt;/p&gt;
+&lt;p&gt;Найти стабильно острую горчицу на прилавках магазинов практически невозможно. Среди огромного разнообразия есть толковые производители, но их товары часто исчезают, а иногда встречаются и обычные мошенники: на банке или тюбике изображается картина крайне острого на вкус продукта, а в составе горчицы указан красный перец. На вкус как обычная горчица, заглушенная совершенно другой остротой красного перца.&lt;/p&gt;
+&lt;iframe width=&#34;100%&#34; height=&#34;515&#34; src=&#34;https://www.youtube.com/embed/1BSLr-lMn7Q&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen=&#34;&#34;&gt;&lt;/iframe&gt;
+&lt;p&gt;Рецепт домашней очень острой горчицы был найден на Youtube-канале &lt;a class=&#34;link&#34; href=&#34;https://youtu.be/1BSLr-lMn7Q&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Готовим с Дядей Яшей&lt;/a&gt;, был несколько раз опробован и получил отличные отзывы всех дегустаторов-едоков.&lt;/p&gt;
+&lt;p&gt;
+
+&lt;img src=&#34;https://asarapulov.ru/p/domashnyaya-ochen-ostraya-gorchica-ot-dyadi/ostraya-gorchica-ot-dyadi-yashi.jpg&#34;
+	width=&#34;480&#34;
+	height=&#34;360&#34;
+	
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;133&#34;
+		data-flex-basis=&#34;320px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Рецепт простой и без изысков, но с одной хитростью:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Взять банку, в нее высыпать горчичный порошок. До половины или больше.&lt;/li&gt;
+&lt;li&gt;Залить теплой водой &lt;nobr&gt;(50-60°)&lt;/nobr&gt; до достижения той консистенции, которая вам по нраву. Тщательно перемешать. Воду можно доливать в процессе перемешивания.&lt;/li&gt;
+&lt;li&gt;Не перемешивая, влить поверх горчицы холодную воду (примерно на два пальца), убрать в холодильник на &lt;nobr&gt;10-12 часов.&lt;/nobr&gt;&lt;/li&gt;
+&lt;li&gt;Сливаем воду из банки.&lt;/li&gt;
+&lt;li&gt;Добавляем чайную ложку виноградного уксуса (или обычного уксуса), ч.л. растительного масла, щепотку сахара, большую щепотку соли. Перемешать.&lt;/li&gt;
+&lt;li&gt;Домашняя очень острая горчица готова!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;К сожалению, Якова Яковлевича теперь с нами нет, о чем сообщается на &lt;a class=&#34;link&#34; href=&#34;http://www.d-yasha.com/o-nas.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;официальном сайте&lt;/a&gt;. Светлая ему память. Его рецепты живут. Я так и называю эту горчицу — горчицей «от Дяди Яши».&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

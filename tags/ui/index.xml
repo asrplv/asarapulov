@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>UI on //asarapulov.ru</title>
+        <link>https://asarapulov.ru/tags/ui/</link>
+        <description>Recent content in UI on //asarapulov.ru</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>ru-ru</language>
+        <lastBuildDate>Thu, 14 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://asarapulov.ru/tags/ui/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Как в Яндекс Браузере скрыть значки расширений?</title>
+        <link>https://asarapulov.ru/p/kak-v-yandeks-brauzere-skryt-znachki-rasshireniy/</link>
+        <pubDate>Thu, 14 Sep 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://asarapulov.ru/p/kak-v-yandeks-brauzere-skryt-znachki-rasshireniy/</guid>
+        <description>&lt;img src="https://asarapulov.ru/p/kak-v-yandeks-brauzere-skryt-znachki-rasshireniy/index.jpg" alt="Featured image of post Как в Яндекс Браузере скрыть значки расширений?" /&gt;&lt;p&gt;Пару лет пользуюсь Яндекс Браузером, но всегда удручал вид верхней панели, в которой беспрепятственно &amp;ldquo;селились&amp;rdquo; разноцветные значки расширений.&lt;/p&gt;
+&lt;p&gt;Да, их можно скрыть по ПКМ → Скрыть расширение, но вернуть обратно будет уже не так просто: Настройки → Дополнения → прокрутить вниз, чтобы пропустить рекламный мусор и передвинуть ползунок напротив того дополнения, которое нужно вернуть на панель.&lt;/p&gt;
+&lt;p&gt;
+
+&lt;img src=&#34;https://asarapulov.ru/p/kak-v-yandeks-brauzere-skryt-znachki-rasshireniy/extensions-menu-chrome-image.jpg&#34;
+	width=&#34;1374&#34;
+	height=&#34;557&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Работа с расширениями в браузере Chrome&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;246&#34;
+		data-flex-basis=&#34;592px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;В Chrome выглядит все гораздо проще: нажатие на кнопку с иконкой пазла и можно открыть или закрепить любое дополнение.&lt;/p&gt;
+&lt;p&gt;
+
+&lt;img src=&#34;https://asarapulov.ru/p/kak-v-yandeks-brauzere-skryt-znachki-rasshireniy/extensions-menu-yabrowser-image.jpg&#34;
+	width=&#34;1374&#34;
+	height=&#34;557&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Так это выглядит в Яндекс Браузере&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;246&#34;
+		data-flex-basis=&#34;592px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Короче, в Яндекс Браузере такой кнопки нет. Как нет ни одной настройки, посвященной этому. Поэтому, чтобы убрать этот зоопарк с панели, нужно потянуть за разделитель, который начинается сразу за правым краем адресной строки. И тогда значки расширений скроется в кнопку с тремя точками. Вот такой UI в Яндекс Браузере.&lt;/p&gt;
+&lt;p&gt;
+
+&lt;img src=&#34;https://asarapulov.ru/p/kak-v-yandeks-brauzere-skryt-znachki-rasshireniy/ya-browser-extensions-hide.gif&#34;
+	width=&#34;1176&#34;
+	height=&#34;629&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;GIF: что нужно сделать, чтобы скрыть (свернуть) значки расширений в Яндекс Браузере&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;186&#34;
+		data-flex-basis=&#34;448px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;P.S. Еще бы добавили пару пикселей пэддинга снизу к панели быстрого доступа, уж больно выглядит &amp;ldquo;поджатой&amp;rdquo;.
+P.P.S. Devtools, открывающийся по F12, в Яндекс Браузере зачем-то подгружает панель быстрого доступа и имеет ограничения по минимальной ширине окна - очень неудобно.&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
